@@ -18,23 +18,44 @@ We distinguish three main concepts:
 ### Example: A single test execution
 [Ongoing]
 
-A tool called an API to generate a test result. In this case the result set is not used. 
+A tool called an API (example.org/test1) to generate a test result about the availability  
+```
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ftr: <https://w3id.org/fair_test_result#> .
+@prefix schema: <https://schema.org/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix ex: <http://example.org/fair/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-RDF (ttl representation below. Example from F-UJI).
-```
-TO DO
-```
+ex:result1 a ftr:TestResult;
+    schema:identifier "long_random_id";
+    schema:name "Result of test for checking if HTML version of the resource is reachable";
+    dqv:isQualityMeasurementOf <http://example.org/foops/test/12>; #assuming this URL will have a specification of the test
+    schema:description "A HTML version of this resource was found";
+    ftr:log """
+        LOG indicating the operations undertaken goes here
+        """;
+    prov:wasAttributedTo ex:foops;
+    prov:wasGeneratedBy ex:foopsExecution123;
+    dqv:computedOn ex:assessedResource;
+    dqv:value 1.
 
-You can do two test results:
-RDF (ttl representation below. Example from F-UJI).
+ex:foopsExecution123 a ftr:TestExecutionActivity;
+    prov:used ex:assessedResource;
+    ftr:usedAPI "https://foops.linkeddata.es/assessOntology/"^^xsd:anyURI.
+
+ex:foops a schema:SoftwareApplication;
+    schema:url "https://w3id.org/foops"^^xsd:anyURI;
+    schema:softwareVersion "0.1.0".
+
+ex:assessedResource a prov:Entity;
+    schema:url "https://w3id.org/example".
 ```
-TO DO
-```
+In this case, the set is not used, as only one test was run. A result set is useful when 
 
 ### Example: Grouping test results in a test set
 Many assessment tools run a set of tests (e.g., organized under a test collection), and they may share common metadata. In those cases, we propose a flexible approach by 
 
-RDF (ttl representation below. Example from FOOPS!)
 ```
 TO DO
 ```
