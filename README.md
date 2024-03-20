@@ -16,7 +16,6 @@ We distinguish three main concepts:
 ![diagram](./development/img/FAIRTestResult_diagram.drawio.png "test result overview")
 
 ### Example: A single test execution
-[Ongoing]
 
 A tool called an API (example.org/test1) to generate a test result about the availability  
 ```
