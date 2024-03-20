@@ -17,3 +17,5 @@ CQ15,What error is returned from a test result? In a human-readable manner,"ftr:
 CQ16,What is the log associated to a test result?,"ftr:TestResult, ftr:log, Text"
 CQ17,Are there any suggestions associated with this test?,Not addressed yet
 CQ18,What are the elements affected by the outcome of this test?,"ftr:TestResult, ftr:affectedElements, URL"
+CQ19,"How was a FAIR score computed? (i.e., which test results and metrics were used to produce a final score?)",Not addressed yet
+CQ20,Which quality metrics have been applied to a FAIR score? How are these computed?,Not addressed yet
