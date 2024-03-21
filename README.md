@@ -24,21 +24,20 @@ A tool called an API (example.org/test1) to generate a test result about the ava
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix ftr: <https://w3id.org/fair_test_result#> .
 @prefix schema: <https://schema.org/> .
-@prefix dqv: <http://www.w3.org/ns/dqv#> .
 @prefix ex: <http://example.org/fair/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:result1 a ftr:TestResult;
     schema:identifier "long_random_id";
     schema:name "Result of test for checking if HTML version of the resource is reachable";
-    dqv:isDefinedBy <http://example.org/foops/test/12>; #assuming this URL will have a specification of the test
+    ftr:isDefinedBy <http://example.org/foops/test/12>; #assuming this URL will have a specification of the test
     schema:description "A HTML version of this resource was found";
     ftr:log """
         LOG indicating the operations undertaken goes here
         """;
     prov:wasAttributedTo ex:foops;
     prov:wasGeneratedBy ex:foopsExecution123;
-    dqv:computedOn ex:assessedResource;
+    prov:wasDerivedFrom ex:assessedResource;
     prov:generatedAtTime "DATE"^^xsd:dateTime;
     ftr:status "pass".
 
