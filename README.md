@@ -5,15 +5,17 @@ Repository to track the requirements and specifications of FAIR assessment repor
 
 **Authors**:  Daniel Garijo, Mark Wilkinson, Rober Huber, Lukas Arnhold, Allyson Lister, Elli Papadopoulou, Leonidas Pispiringas, Neil Chue Hong, Clement Jonquet, Wim Hugo
 
-**Source document**: [https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing](https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing)
+**Source document**: [https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing](https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing), with contributions from an initial modeling by Robert Huber and a [diagram](https://owncloud.tuwien.ac.at/index.php/s/VaGxqnf5MxfDtzz#/files_mediaviewer/dmp-dqv.png) authored by Lukas Arnhold.
+
 
 ## Core test result representation
-We distinguish three main concepts:
-- **TestResult**: Output of running a test over a resource. A test result also should contain provenance metadata about the process followed to create it. `TestResult`is represented as an extension of `dqv:QualityMeasurement` and `prov:Entity`. A test result points to the corresponding test specification ("Metric") through the `dpv:isQualityMeasurementOf` property, following the W3C DQV specification.
+We distinguish four main concepts:
+- **TestResult**: Output of running a test over a resource. A test result also should contain provenance metadata about the process followed to create it. `TestResult`is represented as an extension of `prov:Entity`. A test result points to the corresponding test specification through the `ftr:definedBy` property.
+- **TestSpecification:** A specification stating what a test should do. 
 - **TestResultSet**: A set of FAIR test results, together with their respective metadata. Common metadata may describe the set. For example, if all results where run by a request to the same API.
 - **TestExecutionActivity**: The action carried out by an agent of calling an API in which a test (or set of tests) were run. The result of this activity is either a `TestResult` or a `TestResultSet`.
 
-![diagram](./development/img/FAIRTestResult_diagram.drawio.png "test result overview")
+![diagram](./development/img/FAIRTestResult_diagram_v1.drawio.png "Test result overview")
 
 ### Example: A single test execution
 
@@ -29,7 +31,7 @@ A tool called an API (example.org/test1) to generate a test result about the ava
 ex:result1 a ftr:TestResult;
     schema:identifier "long_random_id";
     schema:name "Result of test for checking if HTML version of the resource is reachable";
-    dqv:isQualityMeasurementOf <http://example.org/foops/test/12>; #assuming this URL will have a specification of the test
+    dqv:isDefinedBy <http://example.org/foops/test/12>; #assuming this URL will have a specification of the test
     schema:description "A HTML version of this resource was found";
     ftr:log """
         LOG indicating the operations undertaken goes here
@@ -37,7 +39,8 @@ ex:result1 a ftr:TestResult;
     prov:wasAttributedTo ex:foops;
     prov:wasGeneratedBy ex:foopsExecution123;
     dqv:computedOn ex:assessedResource;
-    dqv:value 1.
+    prov:generatedAtTime "DATE"^^xsd:dateTime;
+    ftr:status "pass".
 
 ex:foopsExecution123 a ftr:TestExecutionActivity;
     prov:used ex:assessedResource;
@@ -66,8 +69,6 @@ result is derived from)
 - What a quality metric is, and its prpovenance. For example, how two tests results may be used to generate a quality metric.
 - How a FAIR assessment score is calculated (e.g., how different quality metrics are aggregated together) 
 - How tests are supposed incorporate suggestions, and which metadata should they include.
-
-
 
 
 ## Requirements
