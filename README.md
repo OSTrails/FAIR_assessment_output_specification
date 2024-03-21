@@ -9,7 +9,7 @@ Repository to track the requirements and specifications of FAIR assessment repor
 
 ## Core test result representation
 We distinguish three main concepts:
-- **TestResult**: Assessment score resultant of running a test over a resource to analyze. A test result also should contain provenance metadata about the process followed to create it. `TestResult`is represented as an extension of `dqv:QualityMeasurement` and `prov:Entity`. A test result points to the corresponding test specification through the `dpv:isQualityMeasurementOf` property, following the W3C DQV specification.
+- **TestResult**: Output of running a test over a resource. A test result also should contain provenance metadata about the process followed to create it. `TestResult`is represented as an extension of `dqv:QualityMeasurement` and `prov:Entity`. A test result points to the corresponding test specification ("Metric") through the `dpv:isQualityMeasurementOf` property, following the W3C DQV specification.
 - **TestResultSet**: A set of FAIR test results, together with their respective metadata. Common metadata may describe the set. For example, if all results where run by a request to the same API.
 - **TestExecutionActivity**: The action carried out by an agent of calling an API in which a test (or set of tests) were run. The result of this activity is either a `TestResult` or a `TestResultSet`.
 
