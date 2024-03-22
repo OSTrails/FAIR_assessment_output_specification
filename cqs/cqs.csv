@@ -19,3 +19,5 @@ CQ17,Are there any suggestions associated with this test?,Not addressed yet
 CQ18,What are the elements affected by the outcome of this test?,"ftr:TestResult, ftr:affectedElements, URL"
 CQ19,"How was a FAIR score computed? (i.e., which test results and metrics were used to produce a final score?)",Not addressed yet
 CQ20,Which quality metrics have been applied to a FAIR score? How are these computed?,Not addressed yet
+CQ21,Who do I complain about this test result?,"ftr:TestResult/ftr:TestResultSet, schema:author, prov:Agent"
+CQ22,What are the contact details for the person/organization who posted this FAIR test result/ Set of results?,"ftr:TestResultSet, schema:contactPoint, schema:ContactPoint"
