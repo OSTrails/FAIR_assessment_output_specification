@@ -17,7 +17,7 @@ We distinguish four main concepts:
 
 ![diagram](./development/img/FAIRTestResult_diagram_v2.drawio.png "Test result overview")
 
-### Example: Dewcribing a single test result
+### Example: Describing a single test result
 
 Test results have basic metadata to understand which test did they run, an explanation and whether they passes or not (or whether they were completed to a certain extend, if applicable). Below a test result is run on a resource `ex:assessedResource` and it passes. A log and a human readable description are returned.
 
