@@ -3,6 +3,8 @@
 
 Repository to track the requirements and specifications of FAIR assessment reports.
 
+**Permanent identifier:** [https://w3id.org/ftr#](https://w3id.org/ftr#) (click to see documentation and examples beyond the README file)
+
 **Authors**:  Daniel Garijo, Mark Wilkinson, Rober Huber, Lukas Arnhold, Allyson Lister, Elli Papadopoulou, Leonidas Pispiringas, Neil Chue Hong, Clement Jonquet, Wim Hugo
 
 **Source document**: [https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing](https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing), with contributions from an initial modeling by Robert Huber and a [diagram](https://owncloud.tuwien.ac.at/index.php/s/VaGxqnf5MxfDtzz#/files_mediaviewer/dmp-dqv.png) authored by Lukas Arnhold.
@@ -15,7 +17,7 @@ We distinguish four main concepts:
 - **TestResultSet**: A set of FAIR test results, together with their respective metadata. Common metadata may describe the set. For example, if all results where run by a request to the same API.
 - **TestExecutionActivity**: The action carried out by an agent of calling an API in which a test (or set of tests) were run. The result of this activity is either a `TestResult` or a `TestResultSet`.
 
-![diagram](./development/img/FAIRTestResult_diagram_v2.drawio.png "Test result overview")
+![diagram](./development/img/FAIRTestResult_diagram_v3.drawio.png "Test result overview")
 
 ### Example: Describing a single test result
 

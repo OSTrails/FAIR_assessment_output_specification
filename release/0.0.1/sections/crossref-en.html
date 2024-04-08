@@ -1,0 +1,507 @@
+<h2 id="crossreference" class="list">Cross-reference for FAIR Test Results vocabulary classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by FAIR Test Results vocabulary.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity"> <span>Activity</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent"> <span>Agent</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#Collection" title="http://www.w3.org/ns/prov#Collection"> <span>Collection</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity"> <span>Entity</span> </a></li>
+  <li><a href="#TestExecutionActivity" title="https://w3id.org/ftr#TestExecutionActivity">Test execution activity</a></li>
+  <li><a href="#TestResult" title="https://w3id.org/ftr#TestResult">Test result</a></li>
+  <li><a href="#TestResultSet" title="https://w3id.org/ftr#TestResultSet">Test result set</a></li>
+  <li><a href="#TestSpecification" title="https://w3id.org/ftr#TestSpecification">Test specification</a></li>
+ </ul>
+ <div class="entity" id="http://www.w3.org/ns/prov#Activity">
+  <h3>Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Activity</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#">http://www.w3.org/ns/prov#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#TestExecutionActivity" title="https://w3id.org/ftr#TestExecutionActivity">Test execution activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#Agent">
+  <h3>Agent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Agent</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#">http://www.w3.org/ns/prov#</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#Collection">
+  <h3>Collection<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Collection</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#">http://www.w3.org/ns/prov#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#TestResultSet" title="https://w3id.org/ftr#TestResultSet">Test result set</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#Entity">
+  <h3>Entity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Entity</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#">http://www.w3.org/ns/prov#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#TestResult" title="https://w3id.org/ftr#TestResult">Test result</a> <sup class="type-c" title="class">c</sup>, <a href="#TestResultSet" title="https://w3id.org/ftr#TestResultSet">Test result set</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TestExecutionActivity">
+  <h3>Test execution activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ftr#TestExecutionActivity</p>
+  <div class="comment">
+   <span class="markdown">The action carried out by an agent of calling an API in which a test (or set of tests) were run. The result of this activity is either a `TestResult` or a `TestResultSet`.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#Activity" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#usedAPI" title="https://w3id.org/ftr#usedAPI">used api</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TestResult">
+  <h3>Test result<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ftr#TestResult</p>
+  <div class="comment">
+   <span class="markdown">Output of running a test over a resource. A test result also should contain provenance metadata about the process followed to create it. `TestResult`is represented as an extension of `prov:Entity`. A test result points to the corresponding test specification through the `ftr:definedBy` property.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#completion" title="https://w3id.org/ftr#completion">Percentage value of completion of a test result for a given resource. For example, if the test passes, completion is expected to be 1. Otherwise, completion is a value 0..1.</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#affectedElements" title="https://w3id.org/ftr#affectedElements">affected elements</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#definedBy" title="https://w3id.org/ftr#definedBy">defined by</a> <sup class="type-op" title="object property">op</sup>, <a href="#log" title="https://w3id.org/ftr#log">log</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TestResultSet">
+  <h3>Test result set<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ftr#TestResultSet</p>
+  <div class="comment">
+   <span class="markdown">A set of FAIR test results, together with their respective metadata. Common metadata may describe the set. For example, if all results where run by a request to the same API</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#Collection" title="http://www.w3.org/ns/prov#Collection">Collection</a> <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/ns/prov#Entity" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TestSpecification">
+  <h3>Test specification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ftr#TestSpecification</p>
+  <div class="comment">
+   <span class="markdown">A specification stating what a test should do.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#definedBy" title="https://w3id.org/ftr#definedBy">defined by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://schema.org/author" title="http://schema.org/author"> <span>author</span> </a></li>
+  <li><a href="#http://schema.org/contactPoint" title="http://schema.org/contactPoint"> <span>contact Point</span> </a></li>
+  <li><a href="#definedBy" title="https://w3id.org/ftr#definedBy">defined by</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#hadMember" title="http://www.w3.org/ns/prov#hadMember"> <span>had Member</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#used" title="http://www.w3.org/ns/prov#used"> <span>used</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#wasAssociatedWith" title="http://www.w3.org/ns/prov#wasAssociatedWith"> <span>was Associated With</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#wasAttributedTo" title="http://www.w3.org/ns/prov#wasAttributedTo"> <span>was Attributed To</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#wasDerivedFrom" title="http://www.w3.org/ns/prov#wasDerivedFrom"> <span>was Derived From</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#wasGeneratedBy" title="http://www.w3.org/ns/prov#wasGeneratedBy"> <span>was Generated By</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#wasStartedBy" title="http://www.w3.org/ns/prov#wasStartedBy"> <span>was Started By</span> </a></li>
+ </ul>
+ <div class="entity" id="http://schema.org/author">
+  <h3>author<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://schema.org/author</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://schema.org/">http://schema.org/</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://schema.org/contactPoint">
+  <h3>contact Point<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://schema.org/contactPoint</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://schema.org/">http://schema.org/</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="definedBy">
+  <h3>defined by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ftr#definedBy</p>
+  <div class="comment">
+   <span class="markdown">Property linking a test result with its corresponding test specification</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TestResult" title="https://w3id.org/ftr#TestResult">Test result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TestSpecification" title="https://w3id.org/ftr#TestSpecification">Test specification</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#hadMember">
+  <h3>had Member<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#hadMember</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#">http://www.w3.org/ns/prov#</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#used">
+  <h3>used<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#used</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#">http://www.w3.org/ns/prov#</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#wasAssociatedWith">
+  <h3>was Associated With<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasAssociatedWith</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#">http://www.w3.org/ns/prov#</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#wasAttributedTo">
+  <h3>was Attributed To<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasAttributedTo</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#">http://www.w3.org/ns/prov#</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#wasDerivedFrom">
+  <h3>was Derived From<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasDerivedFrom</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#">http://www.w3.org/ns/prov#</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#wasGeneratedBy">
+  <h3>was Generated By<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasGeneratedBy</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#">http://www.w3.org/ns/prov#</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#wasStartedBy">
+  <h3>was Started By<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasStartedBy</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#">http://www.w3.org/ns/prov#</a>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#affectedElements" title="https://w3id.org/ftr#affectedElements">affected elements</a></li>
+  <li><a href="#http://schema.org/description" title="http://schema.org/description"> <span>description</span> </a></li>
+  <li><a href="#http://schema.org/identifier" title="http://schema.org/identifier"> <span>identifier</span> </a></li>
+  <li><a href="#http://schema.org/license" title="http://schema.org/license"> <span>license</span> </a></li>
+  <li><a href="#log" title="https://w3id.org/ftr#log">log</a></li>
+  <li><a href="#http://schema.org/name" title="http://schema.org/name"> <span>name</span> </a></li>
+  <li><a href="#completion" title="https://w3id.org/ftr#completion">Percentage value of completion of a test result for a given resource. For example, if the test passes, completion is expected to be 1. Otherwise, completion is a value 0..1.</a></li>
+  <li><a href="#http://schema.org/softwareVersion" title="http://schema.org/softwareVersion"> <span>software Version</span> </a></li>
+  <li><a href="#status" title="https://w3id.org/ftr#status">status</a></li>
+  <li><a href="#http://schema.org/url" title="http://schema.org/url"> <span>url</span> </a></li>
+  <li><a href="#usedAPI" title="https://w3id.org/ftr#usedAPI">used api</a></li>
+  <li><a href="#http://schema.org/version" title="http://schema.org/version"> <span>version</span> </a></li>
+ </ul>
+ <div class="entity" id="affectedElements">
+  <h3>affected elements<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ftr#affectedElements</p>
+  <div class="comment">
+   <span class="markdown">Elements affected by the test execution. For example, if a test assesses whether the contents of a resource comply agains a standard, this property may be used to indicate which elements within the resource have issues.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TestResult" title="https://w3id.org/ftr#TestResult">Test result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://schema.org/description">
+  <h3>description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://schema.org/description</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://schema.org/">http://schema.org/</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://schema.org/identifier">
+  <h3>identifier<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://schema.org/identifier</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://schema.org/">http://schema.org/</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://schema.org/license">
+  <h3>license<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://schema.org/license</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://schema.org/">http://schema.org/</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="log">
+  <h3>log<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ftr#log</p>
+  <div class="comment">
+   <span class="markdown">Log associated with the test (if any)</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TestResult" title="https://w3id.org/ftr#TestResult">Test result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://schema.org/name">
+  <h3>name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://schema.org/name</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://schema.org/">http://schema.org/</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="completion">
+  <h3>Percentage value of completion of a test result for a given resource. For example, if the test passes, completion is expected to be 1. Otherwise, completion is a value 0..1.<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ftr#completion</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TestResult" title="https://w3id.org/ftr#TestResult">Test result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://schema.org/softwareVersion">
+  <h3>software Version<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://schema.org/softwareVersion</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://schema.org/">http://schema.org/</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="status">
+  <h3>status<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ftr#status</p>
+  <div class="comment">
+   <span class="markdown">Status of the test result: pass/fail/unknown</span>
+  </div>
+ </div>
+ <div class="entity" id="http://schema.org/url">
+  <h3>url<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://schema.org/url</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://schema.org/">http://schema.org/</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="usedAPI">
+  <h3>used api<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ftr#usedAPI</p>
+  <div class="comment">
+   <span class="markdown">API used in a test execution activity (if known)</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TestExecutionActivity" title="https://w3id.org/ftr#TestExecutionActivity">Test execution activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://schema.org/version">
+  <h3>version<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://schema.org/version</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://schema.org/">http://schema.org/</a>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>

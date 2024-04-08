@@ -1,0 +1,886 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://schema.org", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://www.w3.org/2001/XMLSchema", "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104" ],
+    "title" : {
+      "en" : "FAIR Test Results vocabulary"
+    },
+    "iri" : "https://w3id.org/ftr#",
+    "version" : "0.0.1",
+    "author" : [ "Allyson Lister", "Wim Hugo", "Lukas Arnhold", "Mark Wilkinson", "Neil Chue Hong", "Elli Papadopoulou", "Rober Huber", "Clement Jonquet", "Leonidas Pispiringas", "Daniel Garijo" ],
+    "description" : {
+      "en" : "A vocabulary to define FAIR test results."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/2.0/",
+        "type" : "iri"
+      } ],
+      "image" : [ {
+        "identifier" : "image",
+        "language" : "undefined",
+        "value" : "https://ostrails.github.io/FAIR_assessment_output_specification/development/img/FAIRTestResult_diagram_v3.drawio.png",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Lukas Arnhold",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Neil Chue Hong",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Leonidas Pispiringas",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Allyson Lister",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Mark Wilkinson",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Rober Huber",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Wim Hugo",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Elli Papadopoulou",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Daniel Garijo",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Clement Jonquet",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "en",
+        "value" : "April 8th, 2024",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "en",
+        "value" : "ftr",
+        "type" : "label"
+      } ],
+      "codeRepository" : [ {
+        "identifier" : "codeRepository",
+        "language" : "undefined",
+        "value" : "https://github.com/OSTrails/FAIR_assessment_output_specification",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "A vocabulary to define FAIR test results.",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/OSTrails/FAIR_assessment_output_specification/main/cqs/cqs.csv",
+        "type" : "label"
+      }, {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ftr#",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "0.0.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "FAIR Test Results vocabulary",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/ns/prov#Activity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Activity"
+    },
+    "subClasses" : [ "4" ],
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Entity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Entity"
+    },
+    "subClasses" : [ "12", "1" ],
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104/TestSpecification",
+    "baseIri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TestSpecification",
+      "en" : "Test specification"
+    },
+    "comment" : {
+      "en" : "A specification stating what a test should do."
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Agent",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104/TestResult",
+    "baseIri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TestResult",
+      "en" : "Test result"
+    },
+    "comment" : {
+      "undefined" : "Output of running a test over a resource. A test result also should contain provenance metadata about the process followed to create it. `TestResult`is represented as an extension of `prov:Entity`. A test result points to the corresponding test specification through the `ftr:definedBy` property."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "23",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "6",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Collection",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Collection"
+    },
+    "subClasses" : [ "12" ],
+    "attributes" : [ "external" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104/TestResultSet",
+    "baseIri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TestResultSet",
+      "en" : "Test result set"
+    },
+    "comment" : {
+      "en" : "A set of FAIR test results, together with their respective metadata. Common metadata may describe the set. For example, if all results where run by a request to the same API"
+    },
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "11", "33" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104/TestExecutionActivity",
+    "baseIri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TestExecutionActivity",
+      "en" : "Test execution activity"
+    },
+    "comment" : {
+      "en" : "The action carried out by an agent of calling an API in which a test (or set of tests) were run. The result of this activity is either a `TestResult` or a `TestResultSet`."
+    },
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "3" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104/definedBy",
+    "baseIri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "definedBy",
+      "undefined" : "defined by"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Property linking a test result with its corresponding test specification"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasDerivedFrom"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "object" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://schema.org/softwareVersion",
+    "baseIri" : "http://schema.org",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "softwareVersion"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#used",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "used"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasStartedBy",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasStartedBy"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "object" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104/completion",
+    "baseIri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "completion",
+      "en" : "completion"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://schema.org/identifier",
+    "baseIri" : "http://schema.org",
+    "range" : "16",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasAssociatedWith",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasAssociatedWith"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104/affectedElements",
+    "baseIri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "affectedElements",
+      "en" : "affected elements"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Elements affected by the test execution. For example, if a test assesses whether the contents of a resource comply agains a standard, this property may be used  to indicate which elements within the resource have issues."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104/status",
+    "baseIri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "status",
+      "en" : "status"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Status of the test result: pass/fail/unknown"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104/usedAPI",
+    "baseIri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "usedAPI",
+      "en" : "used api"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "API used in a test execution activity (if known)"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://schema.org/description",
+    "baseIri" : "http://schema.org",
+    "range" : "25",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "description"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://schema.org/name",
+    "baseIri" : "http://schema.org",
+    "range" : "27",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "26"
+  }, {
+    "range" : "11",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
+  }, {
+    "range" : "3",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://schema.org/version",
+    "baseIri" : "http://schema.org",
+    "range" : "31",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "version"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "30"
+  }, {
+    "range" : "33",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "range" : "11",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasGeneratedBy",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasGeneratedBy"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "object" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://schema.org/url",
+    "baseIri" : "http://schema.org",
+    "range" : "39",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "url"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104/log",
+    "baseIri" : "http://www.semanticweb.org/dgarijo/ontologies/2024/3/untitled-ontology-104",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "log",
+      "en" : "log"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Log associated with the test (if any)"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://schema.org/author",
+    "baseIri" : "http://schema.org",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "author"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "object" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#hadMember",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hadMember"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "object" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://schema.org/contactPoint",
+    "baseIri" : "http://schema.org",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "contactPoint"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasAttributedTo",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasAttributedTo"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://schema.org/license",
+    "baseIri" : "http://schema.org",
+    "range" : "36",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "license"
+    },
+    "domain" : "6",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "46"
+  } ]
+}
