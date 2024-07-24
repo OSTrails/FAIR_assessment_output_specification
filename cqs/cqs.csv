@@ -1,9 +1,9 @@
 CQ id,CQ,Terms used to address CQ
-CQ1,What is the id for a test result/test set?,"ftr:TestResult, schema:identifier, Text/URL"
-CQ2,What is the status of the test result? (pass/fail/other?),"ftr:TestResult, dqv:value, Text/Number"
-CQ3,What is the name of the test associated with a test result?,"ftr:TestResult, dqv:isQualityMeasurementOf, schema:name"
-CQ4,What is the description of the test associated with a test result?,"ftr:TestResult, dqv:isQualityMeasurementOf, schema:description"
-CQ5,What test did this result run?,"ftr:TestResult, dqv:isQualityMeasurementOf, dqv:Metric"
+CQ1,What is the id for a test result/test set?,"ftr:TestResult, dcterms:identifier, xsd:anyURI"
+CQ2,What is the status of the test result? (pass/fail/other?),"ftr:TestResult, ftr:status, Literal"
+CQ3,What is the name of the test associated with a test result?,"ftr:TestResult, ftr:outputFromtest, ftr:Test, dcterms:title"
+CQ4,What is the description of the test associated with a test result?,"ftr:TestResult, ftr:outputFromtest, ftr:Test, dcterms:description"
+CQ5,What test did this result run?,"ftr:TestResult, ftr:outputFromtest, ftr:Test"
 CQ6,Which URL/API was used to obtain this result?,"ftr:TestResult, prov:wasGeneratedBy, ftr:usedAPI"
 CQ7,Which tool was run to obtain this result?,"ftr:AssessmentActivity, prov:wasAttributedTo, ftr:AssessmentTool"
 CQ8,Which version of the tool was used to obtain a test result?,"ftr:AssessmentTool, schema:softwareVersion, Text"
@@ -21,3 +21,12 @@ CQ19,"How was a FAIR score computed? (i.e., which test results and metrics were 
 CQ20,Which quality metrics have been applied to a FAIR score? How are these computed?,Not addressed yet
 CQ21,Who do I complain about this test result?,"ftr:TestResult/ftr:TestResultSet, schema:author, prov:Agent"
 CQ22,What are the contact details for the person/organization who posted this FAIR test result/ Set of results?,"ftr:TestResultSet, schema:contactPoint, schema:ContactPoint"
+CQ23,What is the unique id of a test?,
+CQ24,What is the name and url of the organization responsible for this test?,
+CQ25,Who created a test?,
+CQ26,Who to contact about a test?,
+CQ27,What is the description of a test?,
+CQ28,What is the indicator associated with a test?,
+CQ29,What are the keywords associated with a test?,
+CQ30,What is the API URL associated with a test?,
+CQ31,"What is the API description of a test? (e.g., OpenAPI description)",

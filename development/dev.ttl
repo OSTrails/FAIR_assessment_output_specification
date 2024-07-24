@@ -7,7 +7,7 @@
 @base <https://w3id.org/ftr#> .
 
 <https://w3id.org/ftr#> rdf:type owl:Ontology ;
-                         owl:versionIRI <https://w3id.org/ftr/0.0.1> ;
+                         owl:versionIRI <https://w3id.org/ftr/0.0.2> ;
                          <http://purl.org/dc/elements/1.1/description> "A vocabulary to define FAIR test results."@en ;
                          <http://purl.org/dc/elements/1.1/title> "FAIR Test Results vocabulary"@en ;
                          <http://purl.org/dc/terms/abstract> "A vocabulary to define FAIR test results."@en ;
@@ -27,7 +27,7 @@
                                                            "https://raw.githubusercontent.com/OSTrails/FAIR_assessment_output_specification/main/cqs/cqs.csv"^^xsd:anyURI ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "ftr"@en ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ftr#" ;
-                         owl:versionInfo "0.0.1"@en ;
+                         owl:versionInfo "0.0.2"@en ;
                          <https://schema.org/codeRepository> "https://github.com/OSTrails/FAIR_assessment_output_specification"^^xsd:anyURI ;
                          <https://schema.org/image> "https://ostrails.github.io/FAIR_assessment_output_specification/development/img/FAIRTestResult_diagram_v3.drawio.png"^^xsd:anyURI .
 
