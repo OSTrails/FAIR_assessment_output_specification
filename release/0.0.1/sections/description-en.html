@@ -9,7 +9,7 @@
 
 Test results have basic metadata to understand which test did they run, an explanation and whether they passes or not (or whether they were completed to a certain extend, if applicable). Below a test result is run on a resource `ex:assessedResource` and it passes. A log and a human readable description are returned.
 
-<pre>
+```
 @prefix schema: &lt;http://schema.org/&gt; .
 @prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
@@ -28,12 +28,12 @@ Test results have basic metadata to understand which test did they run, an expla
     ftr:definedBy &lt;https://purl.org/fair-metrics/Gen2_FM_A1.2&gt; ;
     ftr:status "pass"@en ;
     ftr:summary "Summary of test results: SUCCESS: The identifier  is recognized as a uri, which is resolvable by an protocol that allows authorization/authentication."@en .
-</pre>
+```
 
 ### Example: Grouping test results in a test set
 Many assessment tools run a set of tests (e.g., organized under a test collection), and they may share common provenance metadata. In those cases, we propose a flexible approach by using a test set to record their provenance information. For example, let us have two tests from an assessment service run over a single resource:
 
-<pre>
+```
 @prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
 @prefix ftr: &lt;https://w3id.org/fair_test_result#&gt; .
 @prefix schema: &lt;https://schema.org/&gt; .
@@ -83,5 +83,5 @@ ex:foopsExecution123 a ftr:TestExecutionActivity;
 ex:foops a schema:SoftwareApplication;
     schema:url "https://w3id.org/foops"^^xsd:anyURI;
     schema:softwareVersion "0.1.0".
-</pre>
+```
 </span>
