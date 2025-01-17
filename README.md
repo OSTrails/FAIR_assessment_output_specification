@@ -15,7 +15,7 @@ Repository to track the requirements and specifications of FAIR assessment repor
 ## Core test result representation
 We distinguish four main concepts:
 - **TestResult**: Output of running a test over a resource. A test result also should contain provenance metadata about the process followed to create it. `TestResult`is represented as an extension of `prov:Entity`. A test result points to the corresponding test specification through the `ftr:definedBy` property.
-- **Test**: Service, formed by an API and associated piece of code that implements a Metric, and is executed (by an algorithm), retrieving a particular and standardised result.
+- **Test**: Service, formed by an API and associated piece of code that implements a Metric, and is executed (by a FAIR assessment tool), retrieving a particular and standardised result.
 - **TestResultSet**: A set of FAIR test results, together with their respective metadata. Common metadata may describe the set. For example, if all results where run by a request to the same API.
 - **TestExecutionActivity**: The action carried out by an agent of calling an API in which a test (or set of tests) were run. The result of this activity is either a `TestResult` or a `TestResultSet`.
 - **Metric**: Narrative domain-agnostic description that a Test must wholly implement.
