@@ -1,0 +1,46 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX ftr: <https://www.w3id.org/ftr#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX vivo: <http://vivoweb.org/ontology/core#>
+PREFIX doap: <http://usefulinc.com/ns/doap#>
+PREFIX dqv: <http://www.w3.org/ns/dqv#>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX : <http://www.example.org/me#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:organizationShape IRI {
+   vcard:organization-name xsd:string? ;
+   a [vcard:Organization] ;
+}
+
+:individualShape IRI {
+   vcard:fn xsd:string? ;
+   vcard:hasEmail IRI? ;
+   a [vcard:Individual] ;
+}
+
+:metricShape IRI {
+	a [dqv:Metric] ;
+	dcterms:identifier IRI ;
+	dcterms:title xsd:string ;
+	dcterms:description xsd:string ;
+	dcat:keyword xsd:string * ;
+	dqv:inDimension IRI * ;
+	vivo:abbreviation xsd:string * ;
+	dcat:landingPage IRI * ;
+	dcat:version xsd:string ;
+	dcat:theme IRI * ;
+	ftr:status xsd:string * ;
+	ftr:hasBenchmark @:benchmarkShape ;
+    dcat:contactPoint @:organizationShape or @:individualShape * ;
+    dcterms:creator @:organizationShape or @:individualShape * ;
+}
+
+:benchmarkShape IRI {
+	a [ftr:Benchmark] ;
+}
