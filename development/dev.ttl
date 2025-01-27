@@ -1,36 +1,40 @@
 @prefix : <https://w3id.org/ftr#> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://w3id.org/ftr#> .
 
 <https://w3id.org/ftr#> rdf:type owl:Ontology ;
                          owl:versionIRI <https://w3id.org/ftr/1.0.0> ;
-                         <http://purl.org/dc/elements/1.1/description> "A vocabulary to define FAIR test results."@en ;
+                         <http://purl.org/dc/elements/1.1/description> "A vocabulary to define FAIR test results, metrics, and benchmarks"@en ;
                          <http://purl.org/dc/elements/1.1/title> "FAIR Test Results vocabulary"@en ;
                          <http://purl.org/dc/terms/abstract> "A vocabulary to define FAIR test results."@en ;
-                         <http://purl.org/dc/terms/created> "April 8th, 2024"@en ;
+                         <http://purl.org/dc/terms/created> "January 27th, 2025"@en ;
                          <http://purl.org/dc/terms/creator> "Allyson Lister"@en ,
                                                             "Clement Jonquet"@en ,
                                                             "Daniel Garijo"@en ,
-                                                            "Pablo Alarcón"@en ,
                                                             "Elli Papadopoulou"@en ,
                                                             "Leonidas Pispiringas"@en ,
                                                             "Lukas Arnhold"@en ,
                                                             "Mark Wilkinson"@en ,
                                                             "Neil Chue Hong"@en ,
+                                                            "Pablo Alarcón"@en ,
                                                             "Rober Huber"@en ,
                                                             "Wim Hugo"@en ;
-                         <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/2.0/> ;
+                         <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
                          <http://purl.org/dc/terms/source> "https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing"^^xsd:anyURI ,
                                                            "https://raw.githubusercontent.com/OSTrails/FAIR_assessment_output_specification/main/cqs/cqs.csv"^^xsd:anyURI ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "ftr"@en ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ftr#" ;
+                         owl:priorVersion <https://w3id.org/ftr/0.0.1> ;
                          owl:versionInfo "1.0.0"@en ;
                          <https://schema.org/codeRepository> "https://github.com/OSTrails/FAIR_assessment_output_specification"^^xsd:anyURI ;
-                         <https://schema.org/image> "https://ostrails.github.io/FAIR_assessment_output_specification/development/img/FAIRTestResult_diagram_v3.drawio.png"^^xsd:anyURI .
+                         <https://schema.org/image> "https://ostrails.github.io/FAIR_assessment_output_specification/development/img/FAIRTestResult_diagram_v8.drawio.png"^^xsd:anyURI .
 
 #################################################################
 #    Annotation properties
@@ -84,81 +88,103 @@
 #    Object Properties
 #################################################################
 
-###  http://schema.org/author
-<http://schema.org/author> rdf:type owl:ObjectProperty ;
-                           rdfs:isDefinedBy <http://schema.org/> .
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:ObjectProperty .
 
 
-###  http://schema.org/contactPoint
-<http://schema.org/contactPoint> rdf:type owl:ObjectProperty ;
-                                 rdfs:isDefinedBy <http://schema.org/> .
+###  http://www.w3.org/ns/dcat#contactPoint
+dcat:contactPoint rdf:type owl:ObjectProperty ;
+                  rdfs:isDefinedBy <http://schema.org/> .
 
 
 ###  http://www.w3.org/ns/prov#hadMember
-<http://www.w3.org/ns/prov#hadMember> rdf:type owl:ObjectProperty ;
-                                      rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
+prov:hadMember rdf:type owl:ObjectProperty ;
+               rdfs:isDefinedBy prov: .
 
 
 ###  http://www.w3.org/ns/prov#used
-<http://www.w3.org/ns/prov#used> rdf:type owl:ObjectProperty ;
-                                 rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
+prov:used rdf:type owl:ObjectProperty ;
+          rdfs:isDefinedBy prov: .
 
 
 ###  http://www.w3.org/ns/prov#wasAssociatedWith
-<http://www.w3.org/ns/prov#wasAssociatedWith> rdf:type owl:ObjectProperty ;
-                                              rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
+prov:wasAssociatedWith rdf:type owl:ObjectProperty ;
+                       rdfs:isDefinedBy prov: .
 
 
 ###  http://www.w3.org/ns/prov#wasAttributedTo
-<http://www.w3.org/ns/prov#wasAttributedTo> rdf:type owl:ObjectProperty ;
-                                            rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
+prov:wasAttributedTo rdf:type owl:ObjectProperty ;
+                     rdfs:isDefinedBy prov: .
 
 
 ###  http://www.w3.org/ns/prov#wasDerivedFrom
-<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:ObjectProperty ;
-                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
+prov:wasDerivedFrom rdf:type owl:ObjectProperty ;
+                    rdfs:isDefinedBy prov: .
 
 
 ###  http://www.w3.org/ns/prov#wasGeneratedBy
-<http://www.w3.org/ns/prov#wasGeneratedBy> rdf:type owl:ObjectProperty ;
-                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
+prov:wasGeneratedBy rdf:type owl:ObjectProperty ;
+                    rdfs:isDefinedBy prov: .
 
 
 ###  http://www.w3.org/ns/prov#wasStartedBy
-<http://www.w3.org/ns/prov#wasStartedBy> rdf:type owl:ObjectProperty ;
-                                         rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
+prov:wasStartedBy rdf:type owl:ObjectProperty ;
+                  rdfs:isDefinedBy prov: .
 
 
 ###  https://w3id.org/ftr#definedBy
 :definedBy rdf:type owl:ObjectProperty ;
            rdfs:domain :TestResult ;
-           rdfs:range :TestSpecification ;
+           rdfs:range :Test ;
            rdfs:comment "Property linking a test result with its corresponding test specification"@en ;
            rdfs:label "defined by" .
+
+
+###  https://w3id.org/ftr#hasAssociatedMetric
+:hasAssociatedMetric rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :hasBenchmark ;
+                     rdfs:domain :Benchmark ;
+                     rdfs:range :Metric ;
+                     rdfs:comment "Property used to link a benchmark with the metrics included in it. A benchmark may contain many metrics" ;
+                     rdfs:label "has associated metric"@en .
+
+
+###  https://w3id.org/ftr#hasBenchmark
+:hasBenchmark rdf:type owl:ObjectProperty ;
+              rdfs:domain :Metric ;
+              rdfs:range :Benchmark ;
+              rdfs:comment "Property used to link a metric to the benchmarks it belongs to. A metric may belong to many benchmarks."@en ;
+              rdfs:label "has benchmark"@en .
+
+
+###  https://w3id.org/ftr#outputFromTest
+:outputFromTest rdf:type owl:ObjectProperty ;
+                rdfs:domain :TestResult ;
+                rdfs:range :Test .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
+                                      rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
+                                 rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+
 ###  http://schema.org/description
 <http://schema.org/description> rdf:type owl:DatatypeProperty ;
                                 rdfs:isDefinedBy <http://schema.org/> .
 
 
-###  http://schema.org/identifier
-<http://schema.org/identifier> rdf:type owl:DatatypeProperty ;
-                               rdfs:isDefinedBy <http://schema.org/> .
-
-
 ###  http://schema.org/license
 <http://schema.org/license> rdf:type owl:DatatypeProperty ;
                             rdfs:isDefinedBy <http://schema.org/> .
-
-
-###  http://schema.org/name
-<http://schema.org/name> rdf:type owl:DatatypeProperty ;
-                         rdfs:isDefinedBy <http://schema.org/> .
 
 
 ###  http://schema.org/softwareVersion
@@ -202,7 +228,8 @@
 
 ###  https://w3id.org/ftr#status
 :status rdf:type owl:DatatypeProperty ;
-        rdfs:comment "Status of the test result: pass/fail/unknown"@en ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Status of the resource: For example, if status is describing a test result this may be pass/fail/unknown. If status describes a test, it may be whether it's active or deprecated."@en ;
         rdfs:label "status"@en .
 
 
@@ -218,52 +245,95 @@
 #    Classes
 #################################################################
 
+###  http://www.w3.org/ns/dcat#DataService
+dcat:DataService rdf:type owl:Class ;
+                 rdfs:isDefinedBy dcat: .
+
+
+###  http://www.w3.org/ns/dqv#Dimension
+dqv:Dimension rdf:type owl:Class ;
+              rdfs:isDefinedBy dqv: .
+
+
+###  http://www.w3.org/ns/dqv#Metric
+dqv:Metric rdf:type owl:Class ;
+           rdfs:isDefinedBy <https://www.w3.org/TR/vocab-dqv/> .
+
+
 ###  http://www.w3.org/ns/prov#Activity
-<http://www.w3.org/ns/prov#Activity> rdf:type owl:Class ;
-                                     rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
+prov:Activity rdf:type owl:Class ;
+              rdfs:isDefinedBy prov: .
 
 
 ###  http://www.w3.org/ns/prov#Agent
-<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
-                                  rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
+prov:Agent rdf:type owl:Class ;
+           rdfs:isDefinedBy prov: .
 
 
 ###  http://www.w3.org/ns/prov#Collection
-<http://www.w3.org/ns/prov#Collection> rdf:type owl:Class ;
-                                       rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
+prov:Collection rdf:type owl:Class ;
+                rdfs:isDefinedBy prov: .
 
 
 ###  http://www.w3.org/ns/prov#Entity
-<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class ;
-                                   rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
+prov:Entity rdf:type owl:Class ;
+            rdfs:isDefinedBy prov: .
+
+
+###  https://w3id.org/ftr#Algorithm
+:Algorithm rdf:type owl:Class ;
+           rdfs:comment "Piece of code that contextualises the sum of all test results for a given benchmark, into a final quantitative assessment result. The execution of an algorithm yields an assessment result." ;
+           rdfs:label "Algorithm"@en .
+
+
+###  https://w3id.org/ftr#Benchmark
+:Benchmark rdf:type owl:Class ;
+           rdfs:comment "Benchmarks are community-specific groupings of a set of Metrics that provides a narrative of those particular ways in which that community defines FAIR for assessment purposes."@en ;
+           rdfs:label "Benchmark"@en .
+
+
+###  https://w3id.org/ftr#Metric
+:Metric rdf:type owl:Class ;
+        rdfs:subClassOf dqv:Metric ;
+        rdfs:comment "Narrative domain-agnostic description that a Test must wholly implement."@en ;
+        rdfs:label "Metric"@en .
+
+
+###  https://w3id.org/ftr#Test
+:Test rdf:type owl:Class ;
+      rdfs:subClassOf dcat:DataService ,
+                      prov:Agent ;
+      rdfs:comment "Service, formed by an API and associated piece of code that implements a Metric, and is executed (by a FAIR assessment tool), retrieving a particular result."@en ;
+      rdfs:label "Test"@en .
 
 
 ###  https://w3id.org/ftr#TestExecutionActivity
 :TestExecutionActivity rdf:type owl:Class ;
-                       rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
+                       rdfs:subClassOf prov:Activity ;
                        rdfs:comment "The action carried out by an agent of calling an API in which a test (or set of tests) were run. The result of this activity is either a `TestResult` or a `TestResultSet`."@en ;
                        rdfs:label "Test execution activity"@en .
 
 
 ###  https://w3id.org/ftr#TestResult
 :TestResult rdf:type owl:Class ;
-            rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+            rdfs:subClassOf prov:Entity ;
             rdfs:comment "Output of running a test over a resource. A test result also should contain provenance metadata about the process followed to create it. `TestResult`is represented as an extension of `prov:Entity`. A test result points to the corresponding test specification through the `ftr:definedBy` property." ;
             rdfs:label "Test result"@en .
 
 
 ###  https://w3id.org/ftr#TestResultSet
 :TestResultSet rdf:type owl:Class ;
-               rdfs:subClassOf <http://www.w3.org/ns/prov#Collection> ,
-                               <http://www.w3.org/ns/prov#Entity> ;
-               rdfs:comment "A set of FAIR test results, together with their respective metadata. Common metadata may describe the set. For example, if all results where run by a request to the same API"@en ;
+               rdfs:subClassOf prov:Collection ,
+                               prov:Entity ;
+               rdfs:comment "A set of FAIR test results, together with their respective metadata. Common metadata may describe the set. For example, if all results where run by a request to the same API."@en ;
                rdfs:label "Test result set"@en .
 
 
-###  https://w3id.org/ftr#TestSpecification
-:TestSpecification rdf:type owl:Class ;
-                   rdfs:comment "A specification stating what a test should do."@en ;
-                   rdfs:label "Test specification"@en .
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/terms/creator> rdfs:isDefinedBy <http://purl.org/dc/terms/> .
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
