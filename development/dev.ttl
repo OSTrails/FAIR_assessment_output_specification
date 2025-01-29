@@ -92,9 +92,43 @@
 <http://purl.org/dc/terms/creator> rdf:type owl:ObjectProperty .
 
 
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:ObjectProperty .
+
+
+###  http://usefulinc.com/ns/doap#repository
+<http://usefulinc.com/ns/doap#repository> rdf:type owl:ObjectProperty ;
+                                          rdfs:isDefinedBy <http://usefulinc.com/ns/doap#> .
+
+
 ###  http://www.w3.org/ns/dcat#contactPoint
 dcat:contactPoint rdf:type owl:ObjectProperty ;
                   rdfs:isDefinedBy <http://schema.org/> .
+
+
+###  http://www.w3.org/ns/dcat#endpointDescription
+dcat:endpointDescription rdf:type owl:ObjectProperty ;
+                         rdfs:isDefinedBy dcat: .
+
+
+###  http://www.w3.org/ns/dcat#endpointURL
+dcat:endpointURL rdf:type owl:ObjectProperty ;
+                 rdfs:isDefinedBy dcat: .
+
+
+###  http://www.w3.org/ns/dcat#landingPage
+dcat:landingPage rdf:type owl:ObjectProperty ;
+                 rdfs:isDefinedBy dcat: .
+
+
+###  http://www.w3.org/ns/dcat#theme
+dcat:theme rdf:type owl:ObjectProperty ;
+           rdfs:isDefinedBy dcat: .
+
+
+###  http://www.w3.org/ns/dqv#inDimension
+dqv:inDimension rdf:type owl:ObjectProperty ;
+                rdfs:isDefinedBy dqv: .
 
 
 ###  http://www.w3.org/ns/prov#hadMember
@@ -132,12 +166,16 @@ prov:wasStartedBy rdf:type owl:ObjectProperty ;
                   rdfs:isDefinedBy prov: .
 
 
-###  https://w3id.org/ftr#definedBy
-:definedBy rdf:type owl:ObjectProperty ;
-           rdfs:domain :TestResult ;
-           rdfs:range :Test ;
-           rdfs:comment "Property linking a test result with its corresponding test specification"@en ;
-           rdfs:label "defined by" .
+###  https://semanticscience.org/resource/SIO_000233
+<https://semanticscience.org/resource/SIO_000233> rdf:type owl:ObjectProperty ;
+                                                  rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+                                                  rdfs:label "is implementation of" .
+
+
+###  https://semanticscience.org/resource/SIO_000234
+<https://semanticscience.org/resource/SIO_000234> rdf:type owl:ObjectProperty ;
+                                                  rdfs:isDefinedBy <http://semanticscience.org/ontology/sio.owl> ;
+                                                  rdfs:label "has implementation" .
 
 
 ###  https://w3id.org/ftr#hasAssociatedMetric
@@ -160,12 +198,19 @@ prov:wasStartedBy rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/ftr#outputFromTest
 :outputFromTest rdf:type owl:ObjectProperty ;
                 rdfs:domain :TestResult ;
-                rdfs:range :Test .
+                rdfs:range :Test ;
+                rdfs:comment "Property linking a test result with its corresponding test"@en ;
+                rdfs:label "output from test" .
 
 
 #################################################################
 #    Data properties
 #################################################################
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
 
 ###  http://purl.org/dc/terms/identifier
 <http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
@@ -177,29 +222,19 @@ prov:wasStartedBy rdf:type owl:ObjectProperty ;
                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> .
 
 
-###  http://schema.org/description
-<http://schema.org/description> rdf:type owl:DatatypeProperty ;
-                                rdfs:isDefinedBy <http://schema.org/> .
+###  http://vivoweb.org/ontology/core#abbreviation
+<http://vivoweb.org/ontology/core#abbreviation> rdf:type owl:DatatypeProperty ;
+                                                rdfs:isDefinedBy <http://vivoweb.org/ontology/core#> .
 
 
-###  http://schema.org/license
-<http://schema.org/license> rdf:type owl:DatatypeProperty ;
-                            rdfs:isDefinedBy <http://schema.org/> .
+###  http://www.w3.org/ns/dcat#keyword
+dcat:keyword rdf:type owl:DatatypeProperty ;
+             rdfs:comment dcat: .
 
 
-###  http://schema.org/softwareVersion
-<http://schema.org/softwareVersion> rdf:type owl:DatatypeProperty ;
-                                    rdfs:isDefinedBy <http://schema.org/> .
-
-
-###  http://schema.org/url
-<http://schema.org/url> rdf:type owl:DatatypeProperty ;
-                        rdfs:isDefinedBy <http://schema.org/> .
-
-
-###  http://schema.org/version
-<http://schema.org/version> rdf:type owl:DatatypeProperty ;
-                            rdfs:isDefinedBy <http://schema.org/> .
+###  http://www.w3.org/ns/dcat#version
+dcat:version rdf:type owl:DatatypeProperty ;
+             rdfs:isDefinedBy dcat: .
 
 
 ###  https://w3id.org/ftr#affectedElements
@@ -334,6 +369,9 @@ prov:Entity rdf:type owl:Class ;
 #################################################################
 
 <http://purl.org/dc/terms/creator> rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+
+<http://purl.org/dc/terms/license> rdfs:isDefinedBy <http://purl.org/dc/terms/> .
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
