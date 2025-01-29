@@ -1,11 +1,8 @@
 @prefix : <https://w3id.org/ftr#> .
-@prefix dqv: <http://www.w3.org/ns/dqv#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://w3id.org/ftr#> .
 
@@ -26,7 +23,6 @@
                                                             "Pablo Alarcón"@en ,
                                                             "Rober Huber"@en ,
                                                             "Wim Hugo"@en ;
-                         <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
                          <http://purl.org/dc/terms/source> "https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing"^^xsd:anyURI ,
                                                            "https://raw.githubusercontent.com/OSTrails/FAIR_assessment_output_specification/main/cqs/cqs.csv"^^xsd:anyURI ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "ftr"@en ;
@@ -102,68 +98,68 @@
 
 
 ###  http://www.w3.org/ns/dcat#contactPoint
-dcat:contactPoint rdf:type owl:ObjectProperty ;
-                  rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> .
+<http://www.w3.org/ns/dcat#contactPoint> rdf:type owl:ObjectProperty ;
+                                         rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> .
 
 
 ###  http://www.w3.org/ns/dcat#endpointDescription
-dcat:endpointDescription rdf:type owl:ObjectProperty ;
-                         rdfs:isDefinedBy dcat: .
+<http://www.w3.org/ns/dcat#endpointDescription> rdf:type owl:ObjectProperty ;
+                                                rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> .
 
 
 ###  http://www.w3.org/ns/dcat#endpointURL
-dcat:endpointURL rdf:type owl:ObjectProperty ;
-                 rdfs:isDefinedBy dcat: .
+<http://www.w3.org/ns/dcat#endpointURL> rdf:type owl:ObjectProperty ;
+                                        rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> .
 
 
 ###  http://www.w3.org/ns/dcat#landingPage
-dcat:landingPage rdf:type owl:ObjectProperty ;
-                 rdfs:isDefinedBy dcat: .
+<http://www.w3.org/ns/dcat#landingPage> rdf:type owl:ObjectProperty ;
+                                        rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> .
 
 
 ###  http://www.w3.org/ns/dcat#theme
-dcat:theme rdf:type owl:ObjectProperty ;
-           rdfs:isDefinedBy dcat: .
+<http://www.w3.org/ns/dcat#theme> rdf:type owl:ObjectProperty ;
+                                  rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> .
 
 
 ###  http://www.w3.org/ns/dqv#inDimension
-dqv:inDimension rdf:type owl:ObjectProperty ;
-                rdfs:isDefinedBy dqv: .
+<http://www.w3.org/ns/dqv#inDimension> rdf:type owl:ObjectProperty ;
+                                       rdfs:isDefinedBy <http://www.w3.org/ns/dqv#> .
 
 
 ###  http://www.w3.org/ns/prov#hadMember
-prov:hadMember rdf:type owl:ObjectProperty ;
-               rdfs:isDefinedBy prov: .
+<http://www.w3.org/ns/prov#hadMember> rdf:type owl:ObjectProperty ;
+                                      rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
 
 
 ###  http://www.w3.org/ns/prov#used
-prov:used rdf:type owl:ObjectProperty ;
-          rdfs:isDefinedBy prov: .
+<http://www.w3.org/ns/prov#used> rdf:type owl:ObjectProperty ;
+                                 rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
 
 
 ###  http://www.w3.org/ns/prov#wasAssociatedWith
-prov:wasAssociatedWith rdf:type owl:ObjectProperty ;
-                       rdfs:isDefinedBy prov: .
+<http://www.w3.org/ns/prov#wasAssociatedWith> rdf:type owl:ObjectProperty ;
+                                              rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
 
 
 ###  http://www.w3.org/ns/prov#wasAttributedTo
-prov:wasAttributedTo rdf:type owl:ObjectProperty ;
-                     rdfs:isDefinedBy prov: .
+<http://www.w3.org/ns/prov#wasAttributedTo> rdf:type owl:ObjectProperty ;
+                                            rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
 
 
 ###  http://www.w3.org/ns/prov#wasDerivedFrom
-prov:wasDerivedFrom rdf:type owl:ObjectProperty ;
-                    rdfs:isDefinedBy prov: .
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:ObjectProperty ;
+                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
 
 
 ###  http://www.w3.org/ns/prov#wasGeneratedBy
-prov:wasGeneratedBy rdf:type owl:ObjectProperty ;
-                    rdfs:isDefinedBy prov: .
+<http://www.w3.org/ns/prov#wasGeneratedBy> rdf:type owl:ObjectProperty ;
+                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
 
 
 ###  http://www.w3.org/ns/prov#wasStartedBy
-prov:wasStartedBy rdf:type owl:ObjectProperty ;
-                  rdfs:isDefinedBy prov: .
+<http://www.w3.org/ns/prov#wasStartedBy> rdf:type owl:ObjectProperty ;
+                                         rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
 
 
 ###  https://semanticscience.org/resource/SIO_000233
@@ -228,13 +224,13 @@ prov:wasStartedBy rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.w3.org/ns/dcat#keyword
-dcat:keyword rdf:type owl:DatatypeProperty ;
-             rdfs:comment dcat: .
+<http://www.w3.org/ns/dcat#keyword> rdf:type owl:DatatypeProperty ;
+                                    rdfs:comment <http://www.w3.org/ns/dcat#> .
 
 
 ###  http://www.w3.org/ns/dcat#version
-dcat:version rdf:type owl:DatatypeProperty ;
-             rdfs:isDefinedBy dcat: .
+<http://www.w3.org/ns/dcat#version> rdf:type owl:DatatypeProperty ;
+                                    rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> .
 
 
 ###  https://w3id.org/ftr#affectedElements
@@ -281,38 +277,38 @@ dcat:version rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://www.w3.org/ns/dcat#DataService
-dcat:DataService rdf:type owl:Class ;
-                 rdfs:isDefinedBy dcat: .
+<http://www.w3.org/ns/dcat#DataService> rdf:type owl:Class ;
+                                        rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> .
 
 
 ###  http://www.w3.org/ns/dqv#Dimension
-dqv:Dimension rdf:type owl:Class ;
-              rdfs:isDefinedBy dqv: .
+<http://www.w3.org/ns/dqv#Dimension> rdf:type owl:Class ;
+                                     rdfs:isDefinedBy <http://www.w3.org/ns/dqv#> .
 
 
 ###  http://www.w3.org/ns/dqv#Metric
-dqv:Metric rdf:type owl:Class ;
-           rdfs:isDefinedBy <https://www.w3.org/TR/vocab-dqv/> .
+<http://www.w3.org/ns/dqv#Metric> rdf:type owl:Class ;
+                                  rdfs:isDefinedBy <https://www.w3.org/TR/vocab-dqv/> .
 
 
 ###  http://www.w3.org/ns/prov#Activity
-prov:Activity rdf:type owl:Class ;
-              rdfs:isDefinedBy prov: .
+<http://www.w3.org/ns/prov#Activity> rdf:type owl:Class ;
+                                     rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
 
 
 ###  http://www.w3.org/ns/prov#Agent
-prov:Agent rdf:type owl:Class ;
-           rdfs:isDefinedBy prov: .
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
+                                  rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
 
 
 ###  http://www.w3.org/ns/prov#Collection
-prov:Collection rdf:type owl:Class ;
-                rdfs:isDefinedBy prov: .
+<http://www.w3.org/ns/prov#Collection> rdf:type owl:Class ;
+                                       rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
 
 
 ###  http://www.w3.org/ns/prov#Entity
-prov:Entity rdf:type owl:Class ;
-            rdfs:isDefinedBy prov: .
+<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class ;
+                                   rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
 
 
 ###  https://w3id.org/ftr#Algorithm
@@ -329,39 +325,52 @@ prov:Entity rdf:type owl:Class ;
 
 ###  https://w3id.org/ftr#Metric
 :Metric rdf:type owl:Class ;
-        rdfs:subClassOf dqv:Metric ;
+        rdfs:subClassOf <http://www.w3.org/ns/dqv#Metric> ;
         rdfs:comment "Narrative domain-agnostic description that a Test must wholly implement."@en ;
         rdfs:label "Metric"@en .
 
 
 ###  https://w3id.org/ftr#Test
 :Test rdf:type owl:Class ;
-      rdfs:subClassOf dcat:DataService ,
-                      prov:Agent ;
+      rdfs:subClassOf <http://www.w3.org/ns/dcat#DataService> ,
+                      <http://www.w3.org/ns/prov#Agent> ;
       rdfs:comment "Service, formed by an API and associated piece of code that implements a Metric, and is executed (by a FAIR assessment tool), retrieving a particular result."@en ;
       rdfs:label "Test"@en .
 
 
 ###  https://w3id.org/ftr#TestExecutionActivity
 :TestExecutionActivity rdf:type owl:Class ;
-                       rdfs:subClassOf prov:Activity ;
+                       rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
                        rdfs:comment "The action carried out by an agent of calling an API in which a test (or set of tests) were run. The result of this activity is either a `TestResult` or a `TestResultSet`."@en ;
                        rdfs:label "Test execution activity"@en .
 
 
 ###  https://w3id.org/ftr#TestResult
 :TestResult rdf:type owl:Class ;
-            rdfs:subClassOf prov:Entity ;
+            rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
             rdfs:comment "Output of running a test over a resource. A test result also should contain provenance metadata about the process followed to create it. `TestResult`is represented as an extension of `prov:Entity`. A test result points to the corresponding test specification through the `ftr:definedBy` property." ;
             rdfs:label "Test result"@en .
 
 
 ###  https://w3id.org/ftr#TestResultSet
 :TestResultSet rdf:type owl:Class ;
-               rdfs:subClassOf prov:Collection ,
-                               prov:Entity ;
+               rdfs:subClassOf <http://www.w3.org/ns/prov#Collection> ,
+                               <http://www.w3.org/ns/prov#Entity> ;
                rdfs:comment "A set of FAIR test results, together with their respective metadata. Common metadata may describe the set. For example, if all results where run by a request to the same API."@en ;
                rdfs:label "Test result set"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://creativecommons.org/licenses/by/4.0/
+<http://creativecommons.org/licenses/by/4.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ftr#
+<https://w3id.org/ftr#> rdf:type owl:NamedIndividual ;
+                        <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> .
 
 
 #################################################################
@@ -374,4 +383,4 @@ prov:Entity rdf:type owl:Class ;
 <http://purl.org/dc/terms/license> rdfs:isDefinedBy <http://purl.org/dc/terms/> .
 
 
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

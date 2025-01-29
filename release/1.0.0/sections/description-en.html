@@ -1,18 +1,10 @@
-# FAIR_assessment_output_specification
-[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip) (work in progress)
+<h2 id="desc" class="list">FAIR Test Results vocabulary: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
-Repository to track the requirements and specifications of FAIR assessment reports.
+<span class="markdown">A vocabulary to define FAIR test results. The figure below shows an overview of the main classes and properties defined in FTR: </span>
 
-**Permanent identifier:** [https://w3id.org/ftr#](https://w3id.org/ftr#) (click to see documentation and examples beyond the README file)
+<img src="https://ostrails.github.io/FAIR_assessment_output_specification/release/1.0.0/img/FAIRTestResult_diagram_v8.drawio">
 
-**Authors**:  Daniel Garijo, Mark Wilkinson, Pablo Alarcón, Rober Huber, Lukas Arnhold, Allyson Lister, Elli Papadopoulou, Leonidas Pispiringas, Neil Chue Hong, Clement Jonquet, Wim Hugo
-
-**Source document**: [https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing](https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing), with contributions from an initial modeling by Robert Huber and a [diagram](https://owncloud.tuwien.ac.at/index.php/s/VaGxqnf5MxfDtzz#/files_mediaviewer/dmp-dqv.png) authored by Lukas Arnhold.
-
-**Ongoing document**: [Assessment components glossary and description](https://docs.google.com/document/d/1_dFj5bi6JKlcGZt40BEzVWUg6NjG1CBzGnCWAaad6NU/edit?usp=sharing) and [Metadata elements for FAIR assessment](https://docs.google.com/spreadsheets/d/1QKOoy-YJLNgnQywe6wOTTCBqCg0YuRWmIT-xFoB3ZCo/edit?usp=sharing)
-
-
-## Core test result representation
+<span class="markdown">
 We distinguish the following main concepts:
 - **TestResult**: Output of running a test over a resource. A test result also should contain provenance metadata about the process followed to create it. `TestResult`is represented as an extension of `prov:Entity`. A test result points to the corresponding test specification through the `ftr:definedBy` property.
 - **Test**: Service, formed by an API and associated piece of code that implements a Metric, and is executed (by a FAIR assessment tool), retrieving a particular and standardised result.
@@ -21,12 +13,11 @@ We distinguish the following main concepts:
 - **Metric**: Narrative domain-agnostic description that a Test must wholly implement.
 - **Benchmark**: Benchmarks are community-specific groupings of a set of Metrics that provides a narrative of those particular ways in which that community defines FAIR for assessment purposes.
 - **Algorithm**: Piece of code that contextualises the sum of all test results for a given benchmark, into a final quantitative assessment result. 
+    
 
-![diagram](./development/img/FAIRTestResult_diagram_v8.drawio.png "Test result overview")
+### Example: Describing a single test result
 
-## Exemplar metadata
-
-### Test Result 
+Test results have basic metadata to understand which test did they run, an explanation and whether they passes or not (or whether they were completed to a certain extend, if applicable). Below a test result is run on a resource `ex:assessedResource` and it passes. A log and a human readable description are returned.
 
 Test results have basic metadata to understand which test did they run, an explanation and whether they passes or not (or whether they were completed to a certain extend, if applicable).
 
@@ -78,8 +69,7 @@ PASS:  The GUID of the metadata is a uri, which is known to be allow authenticat
    prov:wasAssociatedWith <urn:ostrails:fairtestsoftware:e5e67c2a-769a-4efd-aa1c-c9cc96148e22> .
 ```
 
-
-### Metric 
+### Example: Defining a Metric and associating it with a test
 
 FAIR Metric contains basic metadata to undertand the test must wholly implement. This is exemplar representation of a Metric:
 
@@ -157,7 +147,7 @@ Valid results occur if the ontology is accessible in at least one specified RDF 
 ```
 
 
-### Test results set
+### Example: Grouping test results in a test set
 Many assessment tools run a set of tests (e.g., organized under a test collection), and they may share common provenance metadata. In those cases, we propose a flexible approach by using a test set to record their provenance information. For example, let us have two tests from an assessment service run over a single resource:
 
 ```turtle
@@ -213,7 +203,7 @@ ex:foops a schema:SoftwareApplication;
 ```
 
 
-### Benchmark
+### Example: Declaring a benchamrk with a set of defined metrics
 
 This exemplar metadata describes are community-specific groupings of a set of Metrics that provides a narrative of those particular ways in which that community defines FAIR for assessment purposes.
 
@@ -366,15 +356,5 @@ This exemplar metadata describes are community-specific groupings of a set of Me
 	dcterms:identifier <https://w3id.org/foops/metric/VOC4> ;
 	rdfs:label "Metric VOC4"^^xsd:string ;
     vivo:abbreviation "Metric VOC4"^^xsd:string .
-
 ```
-
-## Scope
-Future releases will address:
-- How a FAIR assessment score is calculated by an algorithm and its metadata
-
-
-## Requirements
-The proposed vocabulary is derived from a set of competency questions, available at the `cqs` folder. CQs come from:
-* Requirements based on the experience of the authors (as FAIR assessment tool developers)
-* The [open document](https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing) where experts from various projects regarding FAIR assessment have gathered.
+</span>

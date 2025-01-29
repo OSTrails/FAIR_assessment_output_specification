@@ -1,0 +1,128 @@
+<div id="changelog">
+<h2 id="changes" class="list">Changes from last version</h2>
+<h3 id="changeClass" class="list">Classes</h3>
+<details><summary><u>Modified classes</u></summary>
+<ul><li><a href="#TestResultSet">https://w3id.org/ftr#TestResultSet</a>
+<ul>
+<li>Added: rdfs:comment "A set of FAIR test results, together with their respective metadata. Common metadata may describe the set. For example, if all results where run by a request to the same API."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A set of FAIR test results, together with their respective metadata. Common metadata may describe the set. For example, if all results where run by a request to the same API"@en</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added classes</u></summary>
+<ul><li><a href="#http://www.w3.org/ns/dcat#DataService">http://www.w3.org/ns/dcat#DataService</a>
+</li>
+<li><a href="#http://www.w3.org/ns/dqv#Dimension">http://www.w3.org/ns/dqv#Dimension</a>
+</li>
+<li><a href="#http://www.w3.org/ns/dqv#Metric">http://www.w3.org/ns/dqv#Metric</a>
+</li>
+<li><a href="#Algorithm">https://w3id.org/ftr#Algorithm</a>
+</li>
+<li><a href="#Benchmark">https://w3id.org/ftr#Benchmark</a>
+</li>
+<li><a href="#Metric">https://w3id.org/ftr#Metric</a>
+<ul>
+<li>Added: SubClass of http://www.w3.org/ns/dqv#Metric</li>
+</ul>
+</li>
+<li><a href="#Test">https://w3id.org/ftr#Test</a>
+<ul>
+<li>Added: SubClass of http://www.w3.org/ns/prov#Agent</li>
+<li>Added: SubClass of http://www.w3.org/ns/dcat#DataService</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted classes</u></summary>
+<ul><li><a href="#TestSpecification">https://w3id.org/ftr#TestSpecification</a>
+</li>
+</ul></details><h3 id="changeProp" class="list">Object Properties</h3>
+<details><summary><u>Added object properties</u></summary>
+<ul><li><a href="#http://purl.org/dc/terms/creator">http://purl.org/dc/terms/creator</a>
+</li>
+<li><a href="#http://purl.org/dc/terms/license">http://purl.org/dc/terms/license</a>
+</li>
+<li><a href="#http://usefulinc.com/ns/doap#repository">http://usefulinc.com/ns/doap#repository</a>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#contactPoint">http://www.w3.org/ns/dcat#contactPoint</a>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#endpointDescription">http://www.w3.org/ns/dcat#endpointDescription</a>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#endpointURL">http://www.w3.org/ns/dcat#endpointURL</a>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#landingPage">http://www.w3.org/ns/dcat#landingPage</a>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#theme">http://www.w3.org/ns/dcat#theme</a>
+</li>
+<li><a href="#http://www.w3.org/ns/dqv#inDimension">http://www.w3.org/ns/dqv#inDimension</a>
+</li>
+<li><a href="#https://semanticscience.org/resource/SIO_000233">https://semanticscience.org/resource/SIO_000233</a>
+</li>
+<li><a href="#https://semanticscience.org/resource/SIO_000234">https://semanticscience.org/resource/SIO_000234</a>
+</li>
+<li><a href="#hasAssociatedMetric">https://w3id.org/ftr#hasAssociatedMetric</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/ftr#hasAssociatedMetric&gt; &lt;https://w3id.org/ftr#hasBenchmark&gt;)</li>
+<li>Added: Range https://w3id.org/ftr#Metric</li>
+<li>Added: domain https://w3id.org/ftr#Benchmark</li>
+</ul>
+</li>
+<li><a href="#hasBenchmark">https://w3id.org/ftr#hasBenchmark</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/ftr#hasAssociatedMetric&gt; &lt;https://w3id.org/ftr#hasBenchmark&gt;)</li>
+<li>Added: Range https://w3id.org/ftr#Benchmark</li>
+<li>Added: domain https://w3id.org/ftr#Metric</li>
+</ul>
+</li>
+<li><a href="#outputFromTest">https://w3id.org/ftr#outputFromTest</a>
+<ul>
+<li>Added: domain https://w3id.org/ftr#TestResult</li>
+<li>Added: Range https://w3id.org/ftr#Test</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted object properties</u></summary>
+<ul><li><a href="#http://schema.org/author">http://schema.org/author</a>
+</li>
+<li><a href="#http://schema.org/contactPoint">http://schema.org/contactPoint</a>
+</li>
+<li><a href="#definedBy">https://w3id.org/ftr#definedBy</a>
+</li>
+</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
+<details><summary><u>Modified data properties</u></summary>
+<ul><li><a href="#status">https://w3id.org/ftr#status</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: rdfs:comment "Status of the resource: For example, if status is describing a test result this may be pass/fail/unknown. If status describes a test, it may be whether it's active or deprecated."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Status of the test result: pass/fail/unknown"@en</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added data properties</u></summary>
+<ul><li><a href="#http://purl.org/dc/terms/description">http://purl.org/dc/terms/description</a>
+</li>
+<li><a href="#http://purl.org/dc/terms/identifier">http://purl.org/dc/terms/identifier</a>
+</li>
+<li><a href="#http://purl.org/dc/terms/title">http://purl.org/dc/terms/title</a>
+</li>
+<li><a href="#http://vivoweb.org/ontology/core#abbreviation">http://vivoweb.org/ontology/core#abbreviation</a>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#keyword">http://www.w3.org/ns/dcat#keyword</a>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#version">http://www.w3.org/ns/dcat#version</a>
+</li>
+</ul></details><details><summary><u>Deleted data properties</u></summary>
+<ul><li><a href="#http://schema.org/description">http://schema.org/description</a>
+</li>
+<li><a href="#http://schema.org/identifier">http://schema.org/identifier</a>
+</li>
+<li><a href="#http://schema.org/license">http://schema.org/license</a>
+</li>
+<li><a href="#http://schema.org/name">http://schema.org/name</a>
+</li>
+<li><a href="#http://schema.org/softwareVersion">http://schema.org/softwareVersion</a>
+</li>
+<li><a href="#http://schema.org/url">http://schema.org/url</a>
+</li>
+<li><a href="#http://schema.org/version">http://schema.org/version</a>
+</li>
+</ul></details></div>

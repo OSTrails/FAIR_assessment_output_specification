@@ -1,0 +1,1211 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://usefulinc.com/ns/doap", "https://semanticscience.org/resource", "https://w3id.org/ftr", "http://www.w3.org/2000/01/rdf-schema", "http://vivoweb.org/ontology/core", "http://www.w3.org/ns/prov", "http://www.w3.org/ns/dqv", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/ns/dcat" ],
+    "title" : {
+      "en" : "FAIR Test Results vocabulary"
+    },
+    "iri" : "https://w3id.org/ftr#",
+    "version" : "1.0.0",
+    "author" : [ "Wim Hugo", "Allyson Lister", "Lukas Arnhold", "Mark Wilkinson", "Neil Chue Hong", "Elli Papadopoulou", "Rober Huber", "Clement Jonquet", "Leonidas Pispiringas", "Daniel Garijo", "Pablo Alarcón" ],
+    "description" : {
+      "en" : "A vocabulary to define FAIR test results, metrics, and benchmarks"
+    },
+    "other" : {
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ftr/0.0.1",
+        "type" : "iri"
+      } ],
+      "image" : [ {
+        "identifier" : "image",
+        "language" : "undefined",
+        "value" : "https://ostrails.github.io/FAIR_assessment_output_specification/development/img/FAIRTestResult_diagram_v8.drawio.png",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Elli Papadopoulou",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Wim Hugo",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Mark Wilkinson",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Pablo Alarcón",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Clement Jonquet",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Daniel Garijo",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Lukas Arnhold",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Neil Chue Hong",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Allyson Lister",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Rober Huber",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Leonidas Pispiringas",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "en",
+        "value" : "January 27th, 2025",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "en",
+        "value" : "ftr",
+        "type" : "label"
+      } ],
+      "codeRepository" : [ {
+        "identifier" : "codeRepository",
+        "language" : "undefined",
+        "value" : "https://github.com/OSTrails/FAIR_assessment_output_specification",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "A vocabulary to define FAIR test results.",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ftr#",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/OSTrails/FAIR_assessment_output_specification/main/cqs/cqs.csv",
+        "type" : "label"
+      }, {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "FAIR Test Results vocabulary",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/ns/prov#Activity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Activity"
+    },
+    "subClasses" : [ "3" ],
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/ftr#TestResult",
+    "baseIri" : "https://w3id.org/ftr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TestResult",
+      "en" : "Test result"
+    },
+    "comment" : {
+      "undefined" : "Output of running a test over a resource. A test result also should contain provenance metadata about the process followed to create it. `TestResult`is represented as an extension of `prov:Entity`. A test result points to the corresponding test specification through the `ftr:definedBy` property."
+    },
+    "id" : "5",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "https://w3id.org/ftr#Metric",
+    "baseIri" : "https://w3id.org/ftr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Metric",
+      "en" : "Metric"
+    },
+    "comment" : {
+      "en" : "Narrative domain-agnostic description that a Test must wholly implement."
+    },
+    "id" : "9",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dqv#Metric",
+    "baseIri" : "http://www.w3.org/ns/dqv",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/TR/vocab-dqv/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Metric"
+    },
+    "subClasses" : [ "9" ],
+    "attributes" : [ "external" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Entity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Entity"
+    },
+    "subClasses" : [ "5", "14" ],
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.w3.org/ns/dqv#Dimension",
+    "baseIri" : "http://www.w3.org/ns/dqv",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dqv#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Dimension"
+    },
+    "attributes" : [ "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/ftr#Benchmark",
+    "baseIri" : "https://w3id.org/ftr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Benchmark",
+      "en" : "Benchmark"
+    },
+    "comment" : {
+      "en" : "Benchmarks are community-specific groupings of a set of Metrics that provides a narrative of those particular ways in which that community defines FAIR for assessment purposes."
+    },
+    "id" : "26"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Agent",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "subClasses" : [ "18" ],
+    "attributes" : [ "external" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/ftr#TestExecutionActivity",
+    "baseIri" : "https://w3id.org/ftr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TestExecutionActivity",
+      "en" : "Test execution activity"
+    },
+    "comment" : {
+      "en" : "The action carried out by an agent of calling an API in which a test (or set of tests) were run. The result of this activity is either a `TestResult` or a `TestResultSet`."
+    },
+    "id" : "3",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/ftr#Algorithm",
+    "baseIri" : "https://w3id.org/ftr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Algorithm",
+      "en" : "Algorithm"
+    },
+    "comment" : {
+      "undefined" : "Piece of code that contextualises the sum of all test results for a given benchmark, into a final quantitative assessment result. The execution of an algorithm yields an assessment result."
+    },
+    "id" : "53"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "13",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "1",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "55",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Collection",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Collection"
+    },
+    "subClasses" : [ "14" ],
+    "attributes" : [ "external" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/ftr#TestResultSet",
+    "baseIri" : "https://w3id.org/ftr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TestResultSet",
+      "en" : "Test result set"
+    },
+    "comment" : {
+      "en" : "A set of FAIR test results, together with their respective metadata. Common metadata may describe the set. For example, if all results where run by a request to the same API."
+    },
+    "id" : "14",
+    "superClasses" : [ "6", "38" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#DataService",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DataService"
+    },
+    "subClasses" : [ "18" ],
+    "attributes" : [ "external" ],
+    "id" : "34"
+  }, {
+    "iri" : "https://w3id.org/ftr#Test",
+    "baseIri" : "https://w3id.org/ftr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Test",
+      "en" : "Test"
+    },
+    "comment" : {
+      "en" : "Service, formed by an API and associated piece of code that implements a Metric, and is executed (by a FAIR assessment tool), retrieving a particular result."
+    },
+    "id" : "18",
+    "superClasses" : [ "34", "45" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://semanticscience.org/resource/SIO_000233",
+    "baseIri" : "https://semanticscience.org/resource",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://semanticscience.org/ontology/sio.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SIO_000233",
+      "undefined" : "is implementation of"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasDerivedFrom"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#used",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "used"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasStartedBy",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasStartedBy"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#theme",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "theme"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/ftr#log",
+    "baseIri" : "https://w3id.org/ftr",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "log",
+      "en" : "log"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Log associated with the test (if any)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/ftr#status",
+    "baseIri" : "https://w3id.org/ftr",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "status",
+      "en" : "status"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Status of the resource: For example, if status is describing a test result this may be pass/fail/unknown. If status describes a test, it may be whether it's active or deprecated."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/ftr#outputFromTest",
+    "baseIri" : "https://w3id.org/ftr",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "outputFromTest",
+      "undefined" : "output from test"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Property linking a test result with its corresponding test"
+    },
+    "attributes" : [ "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#endpointURL",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "endpointURL"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasAssociatedWith",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasAssociatedWith"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.w3.org/ns/dqv#inDimension",
+    "baseIri" : "http://www.w3.org/ns/dqv",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dqv#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "inDimension"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://purl.org/dc/terms/license",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "license"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#version",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "24",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "version"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://vivoweb.org/ontology/core#abbreviation",
+    "baseIri" : "http://vivoweb.org/ontology/core",
+    "range" : "28",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vivoweb.org/ontology/core#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "abbreviation"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/ftr#completion",
+    "baseIri" : "https://w3id.org/ftr",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "completion",
+      "en" : "Percentage value of completion of a test result for a given resource. For example, if the test passes, completion is expected to be 1. Otherwise, completion is a value 0..1."
+    },
+    "domain" : "5",
+    "attributes" : [ "datatype" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "32",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "31"
+  }, {
+    "range" : "34",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://w3id.org/ftr#affectedElements",
+    "baseIri" : "https://w3id.org/ftr",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "affectedElements",
+      "en" : "affected elements"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Elements affected by the test execution. For example, if a test assesses whether the contents of a resource comply agains a standard, this property may be used  to indicate which elements within the resource have issues."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "35"
+  }, {
+    "range" : "38",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#endpointDescription",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "endpointDescription"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "39"
+  }, {
+    "range" : "6",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "range" : "10",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://purl.org/dc/terms/description",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "43",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "description"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "42"
+  }, {
+    "range" : "45",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "44"
+  }, {
+    "range" : "6",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://semanticscience.org/resource/SIO_000234",
+    "baseIri" : "https://semanticscience.org/resource",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://semanticscience.org/ontology/sio.owl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SIO_000234",
+      "undefined" : "has implementation"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "47"
+  }, {
+    "range" : "2",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasGeneratedBy",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasGeneratedBy"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "50"
+  }, {
+    "iri" : "https://w3id.org/ftr#hasAssociatedMetric",
+    "inverse" : "52",
+    "baseIri" : "https://w3id.org/ftr",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasAssociatedMetric",
+      "en" : "has associated metric"
+    },
+    "domain" : "26",
+    "comment" : {
+      "undefined" : "Property used to link a benchmark with the metrics included in it. A benchmark may contain many metrics"
+    },
+    "attributes" : [ "object" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://w3id.org/ftr#hasBenchmark",
+    "baseIri" : "https://w3id.org/ftr",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "hasBenchmark",
+      "en" : "has benchmark"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Property used to link a metric to the benchmarks it belongs to. A metric may belong to many benchmarks."
+    },
+    "attributes" : [ "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#hadMember",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hadMember"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#keyword",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "keyword"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "http://www.w3.org/ns/dcat#"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://w3id.org/ftr#usedAPI",
+    "baseIri" : "https://w3id.org/ftr",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "usedAPI",
+      "en" : "used api"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "API used in a test execution activity (if known)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasAttributedTo",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasAttributedTo"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://usefulinc.com/ns/doap#repository",
+    "baseIri" : "http://usefulinc.com/ns/doap",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://usefulinc.com/ns/doap#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "repository"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#contactPoint",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "contactPoint"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#landingPage",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "landingPage"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://purl.org/dc/terms/creator",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "creator"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://purl.org/dc/terms/title",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "49",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "title"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "64"
+  } ]
+}
