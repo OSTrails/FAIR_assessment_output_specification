@@ -22,7 +22,7 @@ We distinguish the following main concepts:
 - **Benchmark**: Benchmarks are community-specific groupings of a set of Metrics that provides a narrative of those particular ways in which that community defines FAIR for assessment purposes.
 - **Algorithm**: Piece of code that contextualises the sum of all test results for a given benchmark, into a final quantitative assessment result. 
 
-![diagram](./development/img/FAIRTestResult_diagram_v8.drawio.png "Test result overview")
+![diagram](./development/img/FAIRTestResult_diagram_v9.drawio.png "Test result overview")
 
 ## Exemplar metadata
 
