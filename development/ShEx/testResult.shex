@@ -1,0 +1,51 @@
+PREFIX pro: <http://purl.org/hpi/patchr#>
+PREFIX pr: <http://purl.org/ontology/prv/core#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX ftr: <https://w3id.org/ftr#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX vivo: <http://vivoweb.org/ontology/core#>
+PREFIX doap: <http://usefulinc.com/ns/doap#>
+PREFIX dqv: <http://www.w3.org/ns/dqv#>
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
+PREFIX : <http://www.example.org/me#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema: <http://schema.org/>
+
+:testShape IRI {
+   a [ftr:Test schema:SoftwareApplication dcat:DataService]+ ;
+   sio:SIO_000233 @:metricShape ;
+}
+
+:entityShape{
+   a [prov:Entity]
+}
+
+:testResultShape IRI {
+   a [ftr:TestResult] ;
+   dcterms:identifier IRI ;
+   dcterms:title xsd:string ;
+   dcterms:description xsd:string ;
+   dcterms:license IRI ;
+   prov:value xsd:string ;
+   ftr:log xsd:string ;
+   ftr:completion xsd:int *;
+   ftr:affectedElements IRI *;
+   ftr:outputFromTest @:testShape ;
+   prov:wasDerivedFrom @:entityShape
+}
+
+:testExecutionActivity{
+   a [ftr:TestExecutionActivity] ;
+   prov:generated @:testResultShape ;
+   prov:used @:entityShape ;
+   prov:wasAssociatedWith @:testShape
+}
+
+:metricShape IRI {
+        a [dqv:Metric]
+}

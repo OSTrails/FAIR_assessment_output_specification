@@ -16,8 +16,19 @@ PREFIX : <http://www.example.org/me#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX schema: <http://schema.org/>
 
+
+:testResultSetShape{
+   a [ftr:TestResultSet]+ ;
+   dcterms:identifier IRI ;
+   dcterms:title xsd:string ;
+   dcterms:license IRI; 
+   prov:wasGeneratedby @:testExecutionActivity ;
+   prov:wasDerivedFrom @:entityShape ;
+   prov:hadMember @:testResultShape
+}
+
 :testShape IRI {
-   a [ftr:Test schema:SoftwareApplication dcat:DataService]+ ;
+   a [ftr:Test dcat:DataService]+ ;
 }
 
 :entityShape{

@@ -38,7 +38,7 @@ prefix xsd: <http://www.w3.org/2001/XMLSchema#>
    dcterms:type IRI? ;
    dcterms:license IRI ;
    dcat:theme IRI? ;
-   dcat:version xsd:string ; # It was dcterms:version before
+   dcat:version xsd:string ;
    adms:versionNotes xsd:string? ;
    ftr:status xsd:string * ;
    dcat:contactPoint @:organizationShape or @:individualShape + ;
