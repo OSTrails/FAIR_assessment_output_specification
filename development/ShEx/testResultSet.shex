@@ -14,13 +14,11 @@ PREFIX dqv: <http://www.w3.org/ns/dqv#>
 PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
 PREFIX : <http://www.example.org/me#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX schema: <http://schema.org/>
-
 
 :testResultSetShape{
    a [ftr:TestResultSet]+ ;
    dcterms:identifier IRI ;
-   dcterms:title xsd:string ;
+   dcterms:title xsd:string or rdf:langString ;
    dcterms:license IRI; 
    prov:wasGeneratedby @:testExecutionActivity ;
    prov:wasDerivedFrom @:entityShape ;
@@ -38,11 +36,11 @@ PREFIX schema: <http://schema.org/>
 :testResultShape IRI {
    a [ftr:TestResult] ;
    dcterms:identifier IRI ;
-   dcterms:title xsd:string ;
-   dcterms:description xsd:string ;
+   dcterms:title xsd:string or rdf:langString ;
+   dcterms:description xsd:string or rdf:langString ;
    dcterms:license IRI ;
-   ftr:status xsd:string ;
-   ftr:log xsd:string ;
+   ftr:status xsd:string or rdf:langString ;
+   ftr:log xsd:string or rdf:langString ;
    ftr:completion xsd:int *;
    ftr:affectedElements IRI *;
    ftr:outputFromTest @:testShape ;
