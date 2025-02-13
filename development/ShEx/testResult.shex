@@ -17,10 +17,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :testShape IRI {
    a [ftr:Test dcat:DataService]+ ;
-   sio:SIO_000233 @:metricShape ;
+   sio:SIO_000233 @:metricShape ; 
 }
 
-:entityShape{
+:entityShape IRI {
    a [prov:Entity]
 }
 
@@ -38,7 +38,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
    prov:wasDerivedFrom @:entityShape
 }
 
-:testExecutionActivity{
+:testExecutionActivity IRI {
    a [ftr:TestExecutionActivity] ;
    prov:generated @:testResultShape ;
    prov:used @:entityShape ;

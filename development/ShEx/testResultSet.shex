@@ -16,13 +16,13 @@ PREFIX : <http://www.example.org/me#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :testResultSetShape{
-   a [ftr:TestResultSet]+ ;
+   a [ftr:TestResultSet prov:Collection]+ ;
    dcterms:identifier IRI ;
    dcterms:title xsd:string or rdf:langString ;
    dcterms:license IRI; 
-   prov:wasGeneratedby @:testExecutionActivity ;
+   prov:wasGeneratedBy @:testExecutionSetActivity ;
    prov:wasDerivedFrom @:entityShape ;
-   prov:hadMember @:testResultShape
+   prov:hadMember @:testResultShape +
 }
 
 :testShape IRI {
@@ -39,7 +39,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
    dcterms:title xsd:string or rdf:langString ;
    dcterms:description xsd:string or rdf:langString ;
    dcterms:license IRI ;
-   ftr:status xsd:string or rdf:langString ;
+   prov:value xsd:string or rdf:langString ;
    ftr:log xsd:string or rdf:langString ;
    ftr:completion xsd:int *;
    ftr:affectedElements IRI *;
@@ -52,4 +52,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
    prov:generated @:testResultShape ;
    prov:used @:entityShape ;
    prov:wasAssociatedWith @:testShape
+}
+
+:testExecutionSetActivity{
+   a [ftr:TestExecutionActivity] ;
 }
