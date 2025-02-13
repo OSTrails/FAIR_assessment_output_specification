@@ -1,0 +1,143 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ftr: <https://www.w3id.org/ftr#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix vivo: <http://vivoweb.org/ontology/core#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ex: <http://www.example.org/me#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+# Organization Shape
+ex:OrganizationShape a sh:NodeShape ;
+    sh:targetClass vcard:Organization ;
+    sh:property [
+        sh:path vcard:organization-name ;
+        sh:or (
+            [ sh:datatype xsd:string ]
+            [ sh:datatype rdf:langString ]
+        ) ;
+        sh:maxCount 1 ;
+    ] .
+
+# Individual Shape
+ex:IndividualShape a sh:NodeShape ;
+    sh:targetClass vcard:Individual ;
+    sh:property [
+        sh:path vcard:fn ;
+        sh:or (
+            [ sh:datatype xsd:string ]
+            [ sh:datatype rdf:langString ]
+        ) ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path vcard:hasEmail ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+    ] .
+
+# Benchmark Shape
+ex:BenchmarkShape a sh:NodeShape ;
+    sh:targetClass ftr:Benchmark .
+
+# Metric Shape
+ex:MetricShape a sh:NodeShape ;
+    sh:targetClass dqv:Metric ;
+
+    sh:property [
+        sh:path dcterms:identifier ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path dcterms:title ;
+        sh:or (
+            [ sh:datatype xsd:string ]
+            [ sh:datatype rdf:langString ]
+        ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path dcterms:description ;
+        sh:or (
+            [ sh:datatype xsd:string ]
+            [ sh:datatype rdf:langString ]
+        ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path dcat:keyword ;
+        sh:or (
+            [ sh:datatype xsd:string ]
+            [ sh:datatype rdf:langString ]
+        ) ;
+    ] ;
+
+    sh:property [
+        sh:path dqv:inDimension ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+
+    sh:property [
+        sh:path vivo:abbreviation ;
+        sh:or (
+            [ sh:datatype xsd:string ]
+            [ sh:datatype rdf:langString ]
+        ) ;
+    ] ;
+
+    sh:property [
+        sh:path dcat:landingPage ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+
+    sh:property [
+        sh:path dcat:version ;
+        sh:or (
+            [ sh:datatype xsd:string ]
+            [ sh:datatype rdf:langString ]
+        ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path dcat:theme ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+
+    sh:property [
+        sh:path ftr:status ;
+        sh:or (
+            [ sh:datatype xsd:string ]
+            [ sh:datatype rdf:langString ]
+        ) ;
+    ] ;
+
+    sh:property [
+        sh:path ftr:hasBenchmark ;
+        sh:node ex:BenchmarkShape ;
+    ] ;
+
+    sh:property [
+        sh:path dcat:contactPoint ;
+        sh:node ex:OrganizationShape, ex:IndividualShape ;
+    ] ;
+
+    sh:property [
+        sh:path dcterms:creator ;
+        sh:node ex:OrganizationShape, ex:IndividualShape ;
+    ] .
