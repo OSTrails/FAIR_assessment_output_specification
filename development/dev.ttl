@@ -241,6 +241,11 @@ dcat:version rdf:type owl:DatatypeProperty ;
              rdfs:isDefinedBy dcat: .
 
 
+###  http://www.w3.org/ns/prov#value
+prov:value rdf:type owl:DatatypeProperty ;
+           rdfs:isDefinedBy prov: .
+
+
 ###  https://w3id.org/ftr#affectedElements
 :affectedElements rdf:type owl:DatatypeProperty ;
                   rdfs:domain :TestResult ;
