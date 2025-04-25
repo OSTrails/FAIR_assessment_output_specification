@@ -10,11 +10,11 @@
 @base <https://w3id.org/ftr#> .
 
 <https://w3id.org/ftr#> rdf:type owl:Ontology ;
-                         owl:versionIRI <https://w3id.org/ftr/1.0.0> ;
+                         owl:versionIRI <https://w3id.org/ftr/1.1.0> ;
                          <http://purl.org/dc/elements/1.1/description> "A vocabulary to define FAIR test results, metrics, and benchmarks"@en ;
                          <http://purl.org/dc/elements/1.1/title> "FAIR Test Results vocabulary"@en ;
                          <http://purl.org/dc/terms/abstract> "A vocabulary to define FAIR test results."@en ;
-                         <http://purl.org/dc/terms/created> "January 27th, 2025"@en ;
+                         <http://purl.org/dc/terms/created> "April 25th, 2025"@en ;
                          <http://purl.org/dc/terms/creator> "Allyson Lister"@en ,
                                                             "Clement Jonquet"@en ,
                                                             "Daniel Garijo"@en ,
@@ -26,13 +26,12 @@
                                                             "Pablo Alarcón"@en ,
                                                             "Rober Huber"@en ,
                                                             "Wim Hugo"@en ;
-                         <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
                          <http://purl.org/dc/terms/source> "https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing"^^xsd:anyURI ,
                                                            "https://raw.githubusercontent.com/OSTrails/FAIR_assessment_output_specification/main/cqs/cqs.csv"^^xsd:anyURI ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "ftr"@en ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ftr#" ;
                          owl:priorVersion <https://w3id.org/ftr/0.0.1> ;
-                         owl:versionInfo "1.0.0"@en ;
+                         owl:versionInfo "1.1.0"@en ;
                          <https://schema.org/codeRepository> "https://github.com/OSTrails/FAIR_assessment_output_specification"^^xsd:anyURI ;
                          <https://schema.org/image> "https://ostrails.github.io/FAIR_assessment_output_specification/development/img/FAIRTestResult_diagram_v8.drawio.png"^^xsd:anyURI .
 
@@ -103,7 +102,7 @@
 
 ###  http://www.w3.org/ns/dcat#contactPoint
 dcat:contactPoint rdf:type owl:ObjectProperty ;
-                  rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> .
+                  rdfs:isDefinedBy dcat: .
 
 
 ###  http://www.w3.org/ns/dcat#endpointDescription
@@ -268,6 +267,18 @@ dcat:version rdf:type owl:DatatypeProperty ;
         rdfs:label "status"@en .
 
 
+###  https://w3id.org/ftr#supportedBy
+:supportedBy rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Metric
+                                         :Test
+                                       )
+                         ] ;
+             rdfs:range xsd:anyURI ;
+             rdfs:comment "Describes which tools support this particular metric or test" ;
+             rdfs:label "supported by" .
+
+
 ###  https://w3id.org/ftr#usedAPI
 :usedAPI rdf:type owl:DatatypeProperty ;
          rdfs:domain :TestExecutionActivity ;
@@ -362,6 +373,19 @@ prov:Entity rdf:type owl:Class ;
                                prov:Entity ;
                rdfs:comment "A set of FAIR test results, together with their respective metadata. Common metadata may describe the set. For example, if all results where run by a request to the same API."@en ;
                rdfs:label "Test result set"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://creativecommons.org/licenses/by/4.0/
+<http://creativecommons.org/licenses/by/4.0/> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/ftr#
+<https://w3id.org/ftr#> rdf:type owl:NamedIndividual ;
+                        <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> .
 
 
 #################################################################
