@@ -177,6 +177,11 @@ prov:wasStartedBy rdf:type owl:ObjectProperty ;
                                                   rdfs:label "has implementation" .
 
 
+###  https://w3id.org/dpv#isApplicableFor
+<https://w3id.org/dpv#isApplicableFor> rdf:type owl:ObjectProperty ;
+                                       rdfs:isDefinedBy <https://w3id.org/dpv#> .
+
+
 ###  https://w3id.org/ftr#hasAssociatedMetric
 :hasAssociatedMetric rdf:type owl:ObjectProperty ;
                      owl:inverseOf :hasBenchmark ;
