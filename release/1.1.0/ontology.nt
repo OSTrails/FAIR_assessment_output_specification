@@ -1,9 +1,9 @@
 <https://w3id.org/ftr#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/ftr#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/ftr/1.0.0> .
+<https://w3id.org/ftr#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/ftr/1.1.0> .
 <https://w3id.org/ftr#> <http://purl.org/dc/elements/1.1/description> "A vocabulary to define FAIR test results, metrics, and benchmarks"@en .
 <https://w3id.org/ftr#> <http://purl.org/dc/elements/1.1/title> "FAIR Test Results vocabulary"@en .
 <https://w3id.org/ftr#> <http://purl.org/dc/terms/abstract> "A vocabulary to define FAIR test results."@en .
-<https://w3id.org/ftr#> <http://purl.org/dc/terms/created> "January 27th, 2025"@en .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/created> "April 25th, 2025"@en .
 <https://w3id.org/ftr#> <http://purl.org/dc/terms/creator> "Allyson Lister"@en .
 <https://w3id.org/ftr#> <http://purl.org/dc/terms/creator> "Clement Jonquet"@en .
 <https://w3id.org/ftr#> <http://purl.org/dc/terms/creator> "Daniel Garijo"@en .
@@ -19,8 +19,8 @@
 <https://w3id.org/ftr#> <http://purl.org/dc/terms/source> "https://raw.githubusercontent.com/OSTrails/FAIR_assessment_output_specification/main/cqs/cqs.csv"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://w3id.org/ftr#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ftr"@en .
 <https://w3id.org/ftr#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ftr#" .
-<https://w3id.org/ftr#> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/ftr/0.0.1> .
-<https://w3id.org/ftr#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0"@en .
+<https://w3id.org/ftr#> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/ftr/1.0.0> .
+<https://w3id.org/ftr#> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0"@en .
 <https://w3id.org/ftr#> <https://schema.org/codeRepository> "https://github.com/OSTrails/FAIR_assessment_output_specification"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://w3id.org/ftr#> <https://schema.org/image> "https://ostrails.github.io/FAIR_assessment_output_specification/development/img/FAIRTestResult_diagram_v8.drawio.png"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 # 
@@ -146,6 +146,10 @@
 <https://semanticscience.org/resource/SIO_000234> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semanticscience.org/ontology/sio.owl> .
 <https://semanticscience.org/resource/SIO_000234> <http://www.w3.org/2000/01/rdf-schema#label> "has implementation" .
 # 
+# https://w3id.org/dpv#isApplicableFor
+<https://w3id.org/dpv#isApplicableFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dpv#isApplicableFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/dpv#> .
+# 
 # https://w3id.org/ftr#hasAssociatedMetric
 <https://w3id.org/ftr#hasAssociatedMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/ftr#hasAssociatedMetric> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ftr#hasBenchmark> .
@@ -201,6 +205,10 @@
 <http://www.w3.org/ns/dcat#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.w3.org/ns/dcat#version> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat#> .
 # 
+# http://www.w3.org/ns/prov#value
+<http://www.w3.org/ns/prov#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/prov#value> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+# 
 # https://w3id.org/ftr#affectedElements
 <https://w3id.org/ftr#affectedElements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/ftr#affectedElements> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ftr#TestResult> .
@@ -227,6 +235,21 @@
 <https://w3id.org/ftr#status> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/ftr#status> <http://www.w3.org/2000/01/rdf-schema#comment> "Status of the resource: For example, if status is describing a test result this may be pass/fail/unknown. If status describes a test, it may be whether it's active or deprecated."@en .
 <https://w3id.org/ftr#status> <http://www.w3.org/2000/01/rdf-schema#label> "status"@en .
+# 
+# https://w3id.org/ftr#supportedBy
+<https://w3id.org/ftr#supportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ftr#supportedBy> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ftr#Test> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ftr#Metric> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ftr#supportedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/ftr#supportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes which tools support this particular metric or test" .
+<https://w3id.org/ftr#supportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "supported by" .
 # 
 # https://w3id.org/ftr#usedAPI
 <https://w3id.org/ftr#usedAPI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -343,4 +366,4 @@
 # 
 <http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
 # 
-# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
+# Generated by the OWL API (version 5.1.18.2021-07-30T21:49:07Z) https://github.com/owlcs/owlapi/
