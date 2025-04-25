@@ -22,13 +22,15 @@ We distinguish the following main concepts:
 - **Benchmark**: Benchmarks are community-specific groupings of a set of Metrics that provides a narrative of those particular ways in which that community defines FAIR for assessment purposes.
 - **Algorithm**: Piece of code that contextualises the sum of all test results for a given benchmark, into a final quantitative assessment result. 
 
-![diagram](./development/img/FAIRTestResult_diagram_v9.drawio.png "Test result overview")
+![diagram](./development/img/FAIRTestResult_diagram_v10.drawio.png "Test result overview")
 
 ## Exemplar metadata
 
-### Test Result 
+### Test and Test Result 
 
 Test results have basic metadata to understand which test did they run, an explanation and whether they passes or not (or whether they were completed to a certain extend, if applicable).
+
+The following snippet shows a test result over the entity `https://go-fair.org`:
 
 ```turtle
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -42,18 +44,18 @@ Test results have basic metadata to understand which test did they run, an expla
 
 
 <urn:fairtestoutput:873a8370-77e0-40ad-a6e5-0d8349fdaea4>
+    a ftr:TestResult ;
     dcterms:description "OUTPUT OF Tests metadata GUID for the ability to implement authentication and authorization in its resolution protocol.  Currently passes InChI Keys, DOIs, Handles, and URLs.  Recognition of other identifiers will be added upon request by the community."^^xsd:string ;
     dcterms:identifier <urn:fairtestoutput:873a8370-77e0-40ad-a6e5-0d8349fdaea4> ;
     dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
     dcterms:title "FAIR Champion: Metadata Authorization OUTPUT"^^xsd:string ;
-    a ftr:TestResult ;
     prov:generatedAtTime "2025-01-14T10:12:13+01:00"^^xsd:date ;
     prov:wasDerivedFrom <https://go-fair.org> ;
     ftr:completion "100"^^xsd:int ;
     ftr:log """INFO: TEST VERSION 'Hvst-1.4.2:Tst-2.0.0'
 PASS:  The GUID of the metadata is a uri, which is known to be allow authentication/authorization."""^^xsd:string ;
     ftr:outputFromTest <urn:ostrails:fairtestsoftware:e5e67c2a-769a-4efd-aa1c-c9cc96148e22> ;
-    ftr:status "pass"^^xsd:string ;
+    prov:value "pass"^^xsd:string ;
     ftr:summary ""^^xsd:string .
 
 <https://go-fair.org>
@@ -61,13 +63,13 @@ PASS:  The GUID of the metadata is a uri, which is known to be allow authenticat
     a prov:Entity .
 
 <urn:ostrails:fairtestsoftware:e5e67c2a-769a-4efd-aa1c-c9cc96148e22>
+    a schema:SoftwareApplication, <https://w3id.org/ftr#Test> ;
     dcterms:description "Tests metadata GUID for the ability to implement authentication and authorization in its resolution protocol.  Currently passes InChI Keys, DOIs, Handles, and URLs.  Recognition of other identifiers will be added upon request by the community."^^xsd:string ;
     dcterms:identifier "https://tests.ostrails.eu/tests/fc_metadata_authorization" ;
     dcterms:license <https://github.com/wilkinsonlab/FAIR-Core-Tests/blob/main/LICENSE> ;
     dcterms:title "FAIR Champion: Metadata Authorization"^^xsd:string ;
     sio:SIO_000233 <https://tests.ostrails.eu/tests/fc_metadata_authorization/about> ;
-    a schema:SoftwareApplication, <https://w3id.org/ftr#Test> ;
-    dcat:endpointDescription <https://tests.ostrails.eu/tests/fc_metadata_authorization> ;
+    dcat:endpointDescription <https://tests.ostrails.eu/tests/fc_metadata_authorization/API> ;
     dcat:endpointURL <https://tests.ostrails.eu/tests/fc_metadata_authorization> ;
     dcat:version "Hvst-1.4.2:Tst-2.0.0"^^xsd:string .
 
