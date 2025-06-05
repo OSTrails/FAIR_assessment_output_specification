@@ -258,8 +258,8 @@ prov:value rdf:type owl:DatatypeProperty ;
 :completion rdf:type owl:DatatypeProperty ;
             rdfs:domain :TestResult ;
             rdfs:range xsd:float ;
-            rdfs:label "Percentage value of completion of a test result for a given resource. For example, if the test passes, completion is expected to be 1. Otherwise, completion is a value 0..1."@en ,
-                       "completion"@en .
+            rdfs:comment "Percentage value of completion of a test result for a given resource. For example, if the test passes, completion is expected to be 1. Otherwise, completion is a value 0..1."@en ;
+            rdfs:label "completion"@en .
 
 
 ###  https://w3id.org/ftr#log
