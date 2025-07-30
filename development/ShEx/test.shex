@@ -11,39 +11,42 @@ PREFIX doap: <http://usefulinc.com/ns/doap#>
 PREFIX dqv: <http://www.w3.org/ns/dqv#>
 PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
 PREFIX : <http://www.example.org/me#>
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dpv: <https://w3id.org/dpv#>
 
 :organizationShape IRI {
-   vcard:organization-name xsd:string or rdf:langString ? ;
+   vcard:organization-name LITERAL ? ;
    a [vcard:Organization] ;
 }
 
 :individualShape IRI {
-   vcard:fn xsd:string or rdf:langString ? ;
-   vcard:hasEmail IRI? ;
+   vcard:fn LITERAL ? ;
+   vcard:hasEmail IRI ? ;
    a [vcard:Individual] ;
 }
 
 :testShape IRI {
    a [ftr:Test dcat:DataService]+ ;
-   dcterms:identifier IRI ;
-   dcterms:title xsd:string or rdf:langString;
-   dcterms:description xsd:string or rdf:langString ;
-   dcat:keyword xsd:string or rdf:langString * ;
-   vivo:abbreviation xsd:string or rdf:langString * ;
-   dqv:inDimension IRI? ;
+   dcterms:identifier xsd:string ;
+   dcterms:title LITERAL;
+   dcterms:description LITERAL ;
+   dcat:keyword LITERAL * ;
+   vivo:abbreviation LITERAL * ;
+   dqv:inDimension IRI * ;
    dcat:endpointDescription IRI ? ;
-   dcat:endpointURL IRI? ;
-   doap:repository IRI? ;
-   dcterms:type IRI? ;
+   dcat:endpointURL IRI ? ;
+   doap:repository IRI ? ;
+   dcterms:type IRI ? ;
    dcterms:license IRI ;
-   dcat:theme IRI? ;
-   dcat:version xsd:string or rdf:langString ;
-   adms:versionNotes xsd:string or rdf:langString  ? ;
-   ftr:status xsd:string or rdf:langString * ;
+	ftr:applicationArea  IRI * ;
+   dcat:version LITERAL ;
+   adms:versionNotes LITERAL  ? ;
+   ftr:status LITERAL * ;
    dcat:contactPoint @:organizationShape or @:individualShape + ;
    dcterms:creator @:organizationShape or @:individualShape or IRI + ;
    sio:SIO_000233 @:metricShape ;
+   ftr:supportedBy IRI * ;
+	dpv:isApplicableFor IRI *
 }
 
 :metricShape IRI {
