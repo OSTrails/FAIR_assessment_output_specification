@@ -1,5 +1,3 @@
-PREFIX pro: <http://purl.org/hpi/patchr#>
-PREFIX pr: <http://purl.org/ontology/prv/core#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -14,42 +12,43 @@ PREFIX dqv: <http://www.w3.org/ns/dqv#>
 PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
 PREFIX : <http://www.example.org/me#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dpv: <https://w3id.org/dpv#>
 
 :testResultSetShape{
-   a [ftr:TestResultSet prov:Collection]+ ;
-   dcterms:identifier IRI ;
-   dcterms:title xsd:string or rdf:langString ;
-   dcterms:license IRI; 
-   prov:wasGeneratedBy @:testExecutionSetActivity ;
-   prov:wasDerivedFrom @:entityShape ;
+   a [ftr:TestResultSet] ;
+   dcterms:identifier xsd:string ;
+   dcterms:title LITERAL ;
+   dcterms:license IRI ; 
+   prov:wasGeneratedBy @:testExecutionSetActivity ? ;
+   ftr:assessmentTarget @:entityShape ;
    prov:hadMember @:testResultShape +
 }
 
 :testShape IRI {
-   a [ftr:Test dcat:DataService]+ ;
+   a [ftr:Test ] ;
 }
 
-:entityShape{
-   a [prov:Entity]
+:entityShape IRI {
+   dcterms:identifier xsd:string ? ;
+   a [ prov:Entity ]
 }
 
 :testResultShape IRI {
-   a [ftr:TestResult] ;
-   dcterms:identifier IRI ;
-   dcterms:title xsd:string or rdf:langString ;
-   dcterms:description xsd:string or rdf:langString ;
+   a [ ftr:TestResult ] ;
+   dcterms:identifier xsd:string ;
+   dcterms:title LITERAL ;
+   dcterms:description LITERAL ;
    dcterms:license IRI ;
-   prov:value xsd:string or rdf:langString ;
-   ftr:log xsd:string or rdf:langString ;
-   ftr:completion xsd:int *;
-   ftr:affectedElements IRI *;
+   prov:value LITERAL or xsd:float or xsd:integer ; # Not yet well defined
+   ftr:log LITERAL ;
+   ftr:completion xsd:integer * ;
+   ftr:affectedElements IRI * ;
    ftr:outputFromTest @:testShape ;
-   prov:wasDerivedFrom @:entityShape
+   ftr:assessmentTarget @:entityShape
 }
 
-:testExecutionActivity{
-   a [ftr:TestExecutionActivity] ;
-   prov:generated @:testResultShape ;
+:testExecutionActivity IRI {
+   a [ ftr:TestExecutionActivity ] ;
    prov:used @:entityShape ;
    prov:wasAssociatedWith @:testShape
 }
