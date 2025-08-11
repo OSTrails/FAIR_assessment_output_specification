@@ -34,7 +34,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/OntologyAssessmentRequest'
+              $ref: '#/components/schemas/ResourceAssessmentRequest'
       parameters:
         - name: test_identifier
           in: path
@@ -144,7 +144,7 @@ paths:
 
 components:
   schemas:
-    OntologyAssessmentRequest:
+    ResourceAssessmentRequest:
       type: object
       required:
         - resource_identifier
