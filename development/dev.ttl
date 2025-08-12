@@ -315,6 +315,9 @@ dqv:Dimension rdf:type owl:Class ;
 dqv:Metric rdf:type owl:Class ;
            rdfs:isDefinedBy <https://www.w3.org/TR/vocab-dqv/> .
 
+### http://www.w3.org/ns/dqv#QualityMeasurement
+dqv:QualityMeasurement rdf:type owl:Class ;
+           rdfs:isDefinedBy <https://www.w3.org/TR/vocab-dqv/> .
 
 ###  http://www.w3.org/ns/prov#Activity
 prov:Activity rdf:type owl:Class ;
@@ -336,16 +339,22 @@ prov:Entity rdf:type owl:Class ;
             rdfs:isDefinedBy prov: .
 
 
-###  https://w3id.org/ftr#Algorithm
-:Algorithm rdf:type owl:Class ;
+###  https://w3id.org/ftr#ScoringAlgorithm
+:ScoringAlgorithm rdf:type owl:Class ;
            rdfs:comment "Piece of code that contextualises the sum of all test results for a given benchmark, into a final quantitative assessment result. The execution of an algorithm yields an assessment result." ;
-           rdfs:label "Algorithm"@en .
+           rdfs:label "Scoring algorithm"@en .
 
 
 ###  https://w3id.org/ftr#Benchmark
 :Benchmark rdf:type owl:Class ;
            rdfs:comment "Benchmarks are community-specific groupings of a set of Metrics that provides a narrative of those particular ways in which that community defines FAIR for assessment purposes."@en ;
            rdfs:label "Benchmark"@en .
+
+###  https://w3id.org/ftr#BenchmarkScore
+:BenchmarkScore rdf:type owl:Class ;
+           rdfs:subClassOf dqv:QualityMeasurement;
+           rdfs:comment "Score obtained after executing a scoring algorithm over a set of test results. The benchmark score includes a value, a log and a link to the test results used to obtain the score. "@en ;
+           rdfs:label "Benchmark score"@en .
 
 
 ###  https://w3id.org/ftr#Metric
