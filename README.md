@@ -1,4 +1,4 @@
-# FAIR_assessment_output_specification
+# FAIR Testing Resource Vocabulary (FTR)
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip) (work in progress)
 
 Repository to track the requirements and specifications of FAIR assessment reports.
