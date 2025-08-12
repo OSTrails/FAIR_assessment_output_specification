@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+<link rel="icon" type="image/png" href="resources/rdf.icon"/> <title>FAIR Test Results vocabulary</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ftr#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ftr#","name":"FAIR Test Results vocabulary", "headline":"A vocabulary to define FAIR test results.", "dateReleased":"April 25th, 2025", "version":"1.1.0", "license":"http://creativecommons.org/licenses/by/4.0/", "codeRepository":"https://github.com/OSTrails/FAIR_assessment_output_specification", "author":[{"@type":"Person","name":"Allyson Lister"},{"@type":"Person","name":"Clement Jonquet"},{"@type":"Person","name":"Daniel Garijo"},{"@type":"Person","name":"Elli Papadopoulou"},{"@type":"Person","name":"Leonidas Pispiringas"},{"@type":"Person","name":"Lukas Arnhold"},{"@type":"Person","name":"Mark Wilkinson"},{"@type":"Person","name":"Neil Chue Hong"},{"@type":"Person","name":"Pablo Alarcón"},{"@type":"Person","name":"Rober Huber"},{"@type":"Person","name":"Wim Hugo"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ };    $(function(){
+      $("#abstract").load("sections/abstract-en.html"); 
+      $("#introduction").load("sections/introduction-en.html"); 
+      $("#nstable").load("sections/ns-en.html"); 
+      $("#overview").load("sections/overview-en.html"); 
+      $("#description").load("sections/description-en.html"); 
+      $("#changelog").load("sections/changelog-en.html"); 
+      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
+    });
+    </script>
+	<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Add example button selection logic
+    for (const button of document.querySelectorAll(".ds-selector-tabs .selectors button")) {
+      button.onclick = () => {
+        const ex = button.closest(".ds-selector-tabs");
+        ex.querySelector("button.selected").classList.remove("selected");
+        ex.querySelector(".selected").classList.remove("selected");
+        button.classList.add('selected');
+        ex.querySelector("." + button.dataset.selects).classList.add("selected");
+      }
+    }
+
+    // Toggle show/hide changes
+    for (const elem of document.querySelectorAll(".show-changes")) {
+      elem.onclick = () => {
+        if (elem.classList.contains("selected")) {
+          // Remove highlight class from elements having "changed" class
+          elem.classList.remove("selected");
+          for (const changed of document.querySelectorAll(".changed")) {
+            changed.classList.remove("highlight");
+          }
+        } else {
+          // Add highlight class to elements having "changed" class
+          elem.classList.add("selected");
+          for (const changed of document.querySelectorAll(".changed")) {
+            changed.classList.add("highlight");
+          }
+        }
+      }
+    }
+  });
+</script>
+<style>
+  .hl-bold { font-weight: bold; color: #0a3; }
+  .comment { color: #999; }
+  table, thead, tr, td { padding: 5px; border-width: 1px; border-spacing: 0px; border-style: solid; border-collapse: collapse; }
+  table.example {width: 100%;}
+  .example > pre.context:before {
+    content: "Context";
+    float: right;
+    font: x-large Arial, sans-serif;
+    color: gray;
+    border: solid thin black;
+    padding: 0.2em;
+  }
+  .example > pre.frame:before {
+    content: "Frame";
+    float: right;
+    font: x-large Arial, sans-serif;
+    color: gray;
+    border: solid thin black;
+    padding: 0.2em;
+  }
+  .example > pre.input:before {
+    content: "Input";
+    float: right;
+    font: x-large Arial, sans-serif;
+    color: gray;
+    border: solid thin black;
+    padding: 0.2em;
+  }
+  .example > pre.result:before {
+    content: "Result";
+    float: right;
+    font: x-large Arial, sans-serif;
+    color: gray;
+    border: solid thin black;
+    padding: 0.2em;
+  }
+  .example > pre.turtle:before {
+    content: "Turtle";
+    float: right;
+    font: x-large Arial, sans-serif;
+    color: gray;
+    border: solid thin black;
+    padding: 0.2em;
+  }
+  .highlight.changed, .show-changes {
+    background-color: lime;
+  }
+  .show-changes.selected:before {
+    content: "de-highlight";
+  }
+  .show-changes:before {
+    content: "highlight";
+  }
+  aside.example {
+    overflow-y: hidden;
+  }
+  /* example tab selection */
+  .ds-selector-tabs {
+    padding-bottom: 2em;
+  }
+  .ds-selector-tabs .selectors {
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+    height: 28px;
+  }
+  .ds-selector-tabs .selectors button {
+    display: inline-block;
+    min-width: 54px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    height: 27px;
+    padding: 0 8px;
+    line-height: 27px;
+    transition: all,0.218s;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    color: #666;
+    border: 1px solid transparent;
+  }
+  .ds-selector-tabs .selectors button:first-child {
+    margin-left: 2px;
+  }
+  .ds-selector-tabs .selectors button.selected {
+    color: #202020 !important;
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #fff !important;
+  }
+  .ds-selector-tabs .selectors button:hover {
+    background-color: transparent;
+    color: #202020;
+    cursor: pointer;
+  }
+  .ds-selector-tabs pre:not(.preserve), .ds-selector-tabs table:not(.preserve) {
+    display: none;
+  }
+  .ds-selector-tabs pre.selected, .ds-selector-tabs table.selected {
+    display: block;
+  }
+  a.playground {
+    display: inline-block;
+    width: 150px;
+    border: 1px solid transparent;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    background-color: rgb(192, 192, 192);
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  a[href].playground {
+    padding: 4px 0 3px 8px;
+    border-bottom: none;
+    text-decoration: none;
+    color: #666;
+  }
+</style> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>FAIR Test Results vocabulary</h1>
+<h2>Release: April 25th, 2025</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/ftr/1.1.0">https://w3id.org/ftr/1.1.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="https://w3id.org/ftr#">https://w3id.org/ftr#</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="https://w3id.org/ftr/1.0.0">https://w3id.org/ftr/1.0.0</a></dd>
+<dt>Revision:</dt>
+<dd>1.1.0</dd>
+<dt>Authors:</dt>
+<dd>Daniel Garijo</dd><dd>Mark Wilkinson</dd><dd>Pablo Alarcón</dd><dd>Allyson Lister</dd><dd>Elli Papadopoulou</dd><dd>Leonidas Pispiringas</dd><dd>Lukas Arnhold</dd><dd>Neil Chue Hong</dd><dd>Rober Huber</dd><dd>Wim Hugo</dd><dd>Clement Jonquet</dd>
+
+<dt>Source:</dt>
+<dd><a href="https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing">https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing</a></dd><dd><a href="https://raw.githubusercontent.com/OSTrails/FAIR_assessment_output_specification/main/cqs/cqs.csv">https://raw.githubusercontent.com/OSTrails/FAIR_assessment_output_specification/main/cqs/cqs.csv</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by/4.0/-blue.svg" alt="http://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>
+	Daniel Garijo, 	Mark Wilkinson, Pablo Alarcón, 	Allyson Lister, 	Leonidas Pispiringas, 	 Elli Papadopoulou,   Lukas Arnhold,  Neil Chue Hong,  Rober Huber, Wim Hugo, Clement Jonquet. FAIR Test Results vocabulary. Revision: 1.0.0. Retrieved from: https://w3id.org/ftr/1.0.0</dd>
+<dt>Vocabulary maintained at:</dt>
+<dd><a href="https://github.com/OSTrails/FAIR_assessment_output_specification">https://github.com/OSTrails/FAIR_assessment_output_specification</a></dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"></div>
+
+<div>
+<aside class="example ds-selector-tabs" id="example-3-sample-json-ld-document-using-full-iris-instead-of-terms"><div class="marker">
+    <a class="self-link" href="#example-3-sample-json-ld-document-using-full-iris-instead-of-terms">Example<bdi> 3</bdi></a><span class="example-title">: Sample JSON-LD document using full IRIs instead of terms</span>
+  </div>
+    <div class="selectors">
+      <button class="selected" data-selects="expanded">JSON-LD</button>
+      <button data-selects="turtle" class="">Turtle</button>
+    </div>
+    <pre class="expanded json-ld nohighlight selected">{
+        "<span class="hl-bold">http://schema.org/name</span>": "Manu Sporny",
+        "<span class="hl-bold">http://schema.org/url</span>": <span class="hl-bold">{
+            "@id": </span>"http://manu.sporny.org/"
+            <span class="comment">↑ The '@id' keyword means 'This value is an identifier that is an IRI'</span>
+        <span class="hl-bold">}</span>,
+        "<span class="hl-bold">http://schema.org/image</span>": <span class="hl-bold">{
+            "@id": </span>"http://manu.sporny.org/images/manu.png"
+        <span class="hl-bold">}</span>
+}</pre>
+    <pre class="turtle" data-content-type="text/turtle" data-result-for="Sample JSON-LD document using full IRIs instead of terms-expanded" data-to-rdf="" aria-busy="false"><code class="hljs">@prefix schema: &lt;http://schema.org/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+ [
+   schema:image &lt;http://manu.sporny.org/images/manu.png&gt;;
+   schema:name "Manu Sporny";
+   schema:url &lt;http://manu.sporny.org/&gt;
+ ] .</code></pre>
+  </aside>
+
+	</div>
+
+<div id="toc"></div>     <div id="introduction"></div>
+	  <div id="nstable"></div>
+     <div id="overview"></div>
+     <div id="description"></div>
+     <div id="crossref"></div>
+     <div id="changelog"></div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

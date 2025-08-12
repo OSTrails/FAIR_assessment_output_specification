@@ -1,5 +1,5 @@
 # FAIR Testing Resource Vocabulary (FTR)
-[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip) (work in progress)
+[![Project Status: The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) 
 
 Repository to track the requirements and specifications of FAIR assessment reports.
 
@@ -20,7 +20,7 @@ We distinguish the following main concepts:
 - **TestExecutionActivity**: The action carried out by an agent of calling an API in which a test (or set of tests) were run. The result of this activity is either a `TestResult` or a `TestResultSet`.
 - **Metric**: Narrative domain-agnostic description that a Test must wholly implement.
 - **Benchmark**: Benchmarks are community-specific groupings of a set of Metrics that provides a narrative of those particular ways in which that community defines FAIR for assessment purposes.
-- **Algorithm**: Piece of code that contextualises the sum of all test results for a given benchmark, into a final quantitative assessment result. 
+- **ScoringAlgorithm**: Piece of code that contextualises the sum of all test results for a given benchmark, into a final quantitative assessment result. 
 
 ![diagram](./development/img/FAIRTestResult_diagram_v1_2_0.drawio.png "Test result overview")
 
