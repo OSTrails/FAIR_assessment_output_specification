@@ -1,3 +1,9 @@
+.description-image {
+    display: block;           
+    width: 80%;               
+    height: auto;             
+    margin: 0 auto;     
+  }
 body {
     text-align: justify;    
 }

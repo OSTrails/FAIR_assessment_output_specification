@@ -2,35 +2,7 @@
 
 <span class="markdown">A vocabulary to define FAIR test results. The figure below shows an overview of the main classes and properties defined in FTR: </span>
 
-<img src="https://ostrails.github.io/FAIR_testing_resource_vocabulary/development/img/FAIRTestResult_diagram_v12.drawio.png">
-
-
-<aside class="example ds-selector-tabs" id="example-3-sample-json-ld-document-using-full-iris-instead-of-terms"><div class="marker">
-    <a class="self-link" href="#example-3-sample-json-ld-document-using-full-iris-instead-of-terms">Example<bdi> 3</bdi></a><span class="example-title">: Sample JSON-LD document using full IRIs instead of terms</span>
-  </div>
-    <div class="selectors">
-      <button class="selected" data-selects="expanded">JSON-LD</button>
-      <button data-selects="turtle" class="">Turtle</button>
-    </div>
-    <pre class="expanded input nohighlight selected">{
-        "<span class="hl-bold">http://schema.org/name</span>": "Manu Sporny",
-        "<span class="hl-bold">http://schema.org/url</span>": <span class="hl-bold">{
-            "@id": </span>"http://manu.sporny.org/"
-            <span class="comment">↑ The '@id' keyword means 'This value is an identifier that is an IRI'</span>
-        <span class="hl-bold">}</span>,
-        "<span class="hl-bold">http://schema.org/image</span>": <span class="hl-bold">{
-            "@id": </span>"http://manu.sporny.org/images/manu.png"
-        <span class="hl-bold">}</span>
-}</pre>
-    <pre class="turtle" data-content-type="text/turtle" data-result-for="Sample JSON-LD document using full IRIs instead of terms-expanded" data-to-rdf="" aria-busy="false"><code class="hljs">@prefix schema: &lt;http://schema.org/&gt; .
-@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
-
- [
-   schema:image &lt;http://manu.sporny.org/images/manu.png&gt;;
-   schema:name "Manu Sporny";
-   schema:url &lt;http://manu.sporny.org/&gt;
- ] .</code></pre>
-  </aside>
+<img src="https://ostrails.github.io/FAIR_testing_resource_vocabulary/development/img/FAIRTestResult_diagram_v12.drawio.png" class="description-image">
 
 <span class="markdown">
 We distinguish the following main concepts:
@@ -50,6 +22,98 @@ Test results have basic metadata to understand which test did they run, an expla
 Test results have basic metadata to understand which test did they run, an explanation and whether they passes or not (or whether they were completed to a certain extend, if applicable).
 
 The following snippet shows a test result over the entity `https://go-fair.org`:
+</span>
+
+<aside class="example ds-selector-tabs" id="test-example">
+    <div class="selectors">
+      <button class="selected" data-selects="expanded">JSON-LD</button>
+      <button data-selects="turtle" class="">Turtle</button>
+    </div>
+    <pre class="expanded json-ld nohighlight selected">
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "urn:foops:c8e0f7a4-fa0c-432f-b1bc-d63206422e4a",
+  "@type": "https://w3id.org/ftr#TestResult",
+  "description": "All the minimum metadata were found!",
+  "identifier": {
+    "@id": "urn:foops:c8e0f7a4-fa0c-432f-b1bc-d63206422e4a"
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "title": "Output from running test: OM1 (https://w3id.org/foops/test/OM1)",
+  "value": "ok",
+  "assessmentTarget": {
+    "@id": "https://w3id.org/example"
+  },
+  "completion": {
+    "@value": 100
+  },
+  "log": "All the minimum metadata were found!",
+  "outputFromTest": {
+    "@id": "https://w3id.org/foops/test/OM1",
+    "@type": "Test"
+  },
+  "generatedAtTime": {
+    "@type": "http://www.w3.org/2001/XMLSchema#date",
+    "@value": "Wed Aug 13 18:25:34 CEST 2025"
+  },
+  "wasGeneratedBy": {
+    "@type": "TestExecutionActivity",
+    "used": {
+      "@id": "https://w3id.org/example"
+    },
+    "wasAssociatedWith": {
+      "@id": "https://w3id.org/foops/test/OM1",
+      "identifier": "https://w3id.org/foops/test/OM1",
+      "title": "Ontology minimum metadata is declared",
+      "description": "This check verifies if the following  minimum metadata are present in the ontology metadata [... definition omitted for simplicity...]",
+      "endpointDescription": {
+        "@id": "https://w3id.org/foops/api"
+      },
+      "endpointURL": {
+        "@id": "https://foops.linkeddata.es/assess/test/OM1"
+      }
+    }
+  }
+}
+    </pre>
+    <pre class="turtle" data-content-type="text/turtle" data-result-for="Sample JSON-LD document using full IRIs instead of terms-expanded" data-to-rdf="" aria-busy="false">
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt;
+@prefix ftr: &lt;https://w3id.org/ftr#&gt;
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt;
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+@prefix prov: &lt;http://www.w3.org/ns/prov#&gt;
+
+&lt;urn:foops:c8e0f7a4-fa0c-432f-b1bc-d63206422e4a&gt;
+  a &lt;https://w3id.org/ftr#TestResult&gt; ;
+  dcterms:description "All the minimum metadata were found!" ;
+  ftr:assessmentTarget &lt;https://w3id.org/example&gt; ;
+  dcterms:identifier &lt;urn:foops:c8e0f7a4-fa0c-432f-b1bc-d63206422e4a&gt; ;
+  dcterms:license &lt;http://creativecommons.org/licenses/by/4.0/&gt; ;
+  dcterms:title "Output from running test: OM1 (https://w3id.org/foops/test/OM1)" ;
+  prov:generatedAtTime "Wed Aug 13 18:25:34 CEST 2025"^^xsd:date ;
+  prov:value "pass" ;
+  prov:wasGeneratedBy [
+    a &lt;https://w3id.org/ftr#TestExecutionActivity&gt; ;
+    prov:used &lt;https://w3id.org/example&gt; ;
+    prov:wasAssociatedWith &lt;https://w3id.org/foops/test/OM1&gt;
+  ] ;
+  ftr:completion 100 ;
+  ftr:log "All the minimum metadata were found!" ;
+  ftr:outputFromTest &lt;https://w3id.org/foops/test/OM1&gt; .
+
+&lt;https://w3id.org/foops/test/OM1&gt;
+  a &lt;https://w3id.org/ftr#Test&gt; ;
+  dcterms:description """This check verifies if the following  minimum metadata are present in the ontology metadata [... definition omitted for simplicity...]""" ;
+  dcterms:identifier "https://w3id.org/foops/test/OM1" ;
+  dcterms:title "Ontology minimum metadata is declared" ;
+  dcat:endpointDescription &lt;https://w3id.org/foops/api&gt; ;
+  dcat:endpointURL &lt;https://w3id.org/foops/api/assess/test/OM1&gt; .         
+    </pre>
+</aside>
+
+<span class = "markdown">
 
 ```turtle
 @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .

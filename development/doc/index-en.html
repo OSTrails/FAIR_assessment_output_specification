@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ftr#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ftr#","name":"FAIR Testing Resource Vocabulary", "headline":"A vocabulary to describe FAIR testing results in a trasnparent manner.", "dateReleased":"August 12th, 2025", "version":"1.2.0", "license":"http://creativecommons.org/licenses/by/4.0/", "codeRepository":"https://github.com/OSTrails/FAIR_testing_resource_vocabulary", "author":[{"@type":"Person","name":"Allyson Lister"},{"@type":"Person","name":"Clement Jonquet"},{"@type":"Person","name":"Daniel Garijo"},{"@type":"Person","name":"Elli Papadopoulou"},{"@type":"Person","name":"Leonidas Pispiringas"},{"@type":"Person","name":"Lukas Arnhold"},{"@type":"Person","name":"Mark Wilkinson"},{"@type":"Person","name":"Neil Chue Hong"},{"@type":"Person","name":"Pablo Alarcón"},{"@type":"Person","name":"Rober Huber"},{"@type":"Person","name":"Wim Hugo"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/ftr#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/ftr#","name":"FAIR Testing Resource Vocabulary", "headline":"A vocabulary to describe FAIR testing results in a trasnparent manner.", "dateReleased":"August 12th, 2025", "version":"1.2.0", "license":"http://creativecommons.org/licenses/by/4.0/", "codeRepository":"https://github.com/OSTrails/FAIR_testing_resource_vocabulary", "author":[{"@type":"Person","name":"Allyson Lister"},{"@type":"Person","name":"Daniel Garijo"},{"@type":"Person","name":"Elli Papadopoulou"},{"@type":"Person","name":"Leonidas Pispiringas"},{"@type":"Person","name":"Lukas Arnhold"},{"@type":"Person","name":"Mark Wilkinson"},{"@type":"Person","name":"Pablo Alarcón"},{"@type":"Person","name":"Wim Hugo"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -29,6 +29,7 @@ function loadHash() {
 	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
 }
 	loadTOC();
+  
 }
 function loadTOC(){
 	//process toc dynamically
@@ -62,88 +63,50 @@ function loadTOC(){
       $("#overview").load("sections/overview-en.html"); 
       $("#description").load("sections/description-en.html"); 
       $("#references").load("sections/references-en.html"); 
-      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
+      $("#crossref").load("sections/crossref-en.html", null, loadHash);
     });
-    </script>
-	<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    // Add example button selection logic
-    for (const button of document.querySelectorAll(".ds-selector-tabs .selectors button")) {
-      button.onclick = () => {
-        const ex = button.closest(".ds-selector-tabs");
-        ex.querySelector("button.selected").classList.remove("selected");
-        ex.querySelector(".selected").classList.remove("selected");
-        button.classList.add('selected');
-        ex.querySelector("." + button.dataset.selects).classList.add("selected");
-      }
+</script>
+<!-- Custom script for examples in JSON-LD / TTL-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  
+  // Delegated tab selection logic
+  document.body.addEventListener("click", (e) => {
+    if (e.target.matches(".ds-selector-tabs .selectors button")) {
+      const button = e.target;
+      const ex = button.closest(".ds-selector-tabs");
+      ex.querySelector("button.selected").classList.remove("selected");
+      ex.querySelector(".selected").classList.remove("selected");
+      button.classList.add("selected");
+      ex.querySelector("." + button.dataset.selects).classList.add("selected");
     }
+  });
 
-    // Toggle show/hide changes
-    for (const elem of document.querySelectorAll(".show-changes")) {
-      elem.onclick = () => {
-        if (elem.classList.contains("selected")) {
-          // Remove highlight class from elements having "changed" class
-          elem.classList.remove("selected");
-          for (const changed of document.querySelectorAll(".changed")) {
-            changed.classList.remove("highlight");
-          }
-        } else {
-          // Add highlight class to elements having "changed" class
-          elem.classList.add("selected");
-          for (const changed of document.querySelectorAll(".changed")) {
-            changed.classList.add("highlight");
-          }
-        }
+  // Delegated show/hide changes toggle
+  document.body.addEventListener("click", (e) => {
+    if (e.target.matches(".show-changes")) {
+      const elem = e.target;
+      if (elem.classList.contains("selected")) {
+        elem.classList.remove("selected");
+        document.querySelectorAll(".changed").forEach((changed) => {
+          changed.classList.remove("highlight");
+        });
+      } else {
+        elem.classList.add("selected");
+        document.querySelectorAll(".changed").forEach((changed) => {
+          changed.classList.add("highlight");
+        });
       }
     }
   });
+
+});
 </script>
+
 
 <style> 
 .hl-bold { font-weight: bold; color: #0a3; }
-  .comment { color: #999; }
-  table, thead, tr, td { padding: 5px; border-width: 1px; border-spacing: 0px; border-style: solid; border-collapse: collapse; }
   table.example {width: 100%;}
-  .example > pre.context:before {
-    content: "Context";
-    float: right;
-    font: x-large Arial, sans-serif;
-    color: gray;
-    border: solid thin black;
-    padding: 0.2em;
-  }
-  .example > pre.frame:before {
-    content: "Frame";
-    float: right;
-    font: x-large Arial, sans-serif;
-    color: gray;
-    border: solid thin black;
-    padding: 0.2em;
-  }
-  .example > pre.input:before {
-    content: "Input";
-    float: right;
-    font: x-large Arial, sans-serif;
-    color: gray;
-    border: solid thin black;
-    padding: 0.2em;
-  }
-  .example > pre.result:before {
-    content: "Result";
-    float: right;
-    font: x-large Arial, sans-serif;
-    color: gray;
-    border: solid thin black;
-    padding: 0.2em;
-  }
-  .example > pre.turtle:before {
-    content: "Turtle";
-    float: right;
-    font: x-large Arial, sans-serif;
-    color: gray;
-    border: solid thin black;
-    padding: 0.2em;
-  }
   .highlight.changed, .show-changes {
     background-color: lime;
   }
@@ -199,23 +162,6 @@ function loadTOC(){
   .ds-selector-tabs pre.selected, .ds-selector-tabs table.selected {
     display: block;
   }
-  a.playground {
-    display: inline-block;
-    width: 150px;
-    border: 1px solid transparent;
-    border-top-right-radius: 2px;
-    border-top-left-radius: 2px;
-    background-color: rgb(192, 192, 192);
-    text-decoration: none;
-    font-size: 13px;
-    margin-bottom: 10px;
-  }
-  a[href].playground {
-    padding: 4px 0 3px 8px;
-    border-bottom: none;
-    text-decoration: none;
-    color: #666;
-  }
 </style>
   </head> 
 
@@ -256,7 +202,10 @@ function loadTOC(){
 <div>
 <span>Ontology Specification Draft</span>
 </div>
-</div>     <div id="abstract"></div>
+</div>     
+
+</div>
+<div id="abstract"></div>
 <div id="toc"></div>     <div id="introduction"></div>
 	  <div id="nstable"></div>
      <div id="overview"></div>
