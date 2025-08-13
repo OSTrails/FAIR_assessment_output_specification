@@ -1,0 +1,487 @@
+<https://w3id.org/ftr#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/ftr#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/ftr/1.2.0> .
+<https://w3id.org/ftr#> <http://purl.org/dc/elements/1.1/description> "A vocabulary to define FAIR test results, metrics, benchmarks and scoring algorithms in a transparent manner."@en .
+<https://w3id.org/ftr#> <http://purl.org/dc/elements/1.1/title> "FAIR Testing Resource Vocabulary"@en .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/abstract> "A vocabulary to describe FAIR testing results in a trasnparent manner."@en .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/created> "August 12th, 2025"@en .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/creator> "Allyson Lister"@en .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/creator> "Clement Jonquet"@en .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/creator> "Daniel Garijo"@en .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/creator> "Elli Papadopoulou"@en .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/creator> "Leonidas Pispiringas"@en .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/creator> "Lukas Arnhold"@en .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/creator> "Mark Wilkinson"@en .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/creator> "Neil Chue Hong"@en .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/creator> "Pablo Alarcón"@en .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/creator> "Rober Huber"@en .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/creator> "Wim Hugo"@en .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/source> "https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/source> "https://raw.githubusercontent.com/OSTrails/FAIR_assessment_output_specification/main/cqs/cqs.csv"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/ftr#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ftr"@en .
+<https://w3id.org/ftr#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ftr#" .
+<https://w3id.org/ftr#> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/ftr/1.1.0> .
+<https://w3id.org/ftr#> <http://www.w3.org/2002/07/owl#versionInfo> "1.2.0"@en .
+<https://w3id.org/ftr#> <https://schema.org/codeRepository> "https://github.com/OSTrails/FAIR_testing_resource_vocabulary"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/ftr#> <https://schema.org/image> "https://ostrails.github.io/FAIR_assessment_output_specification/development/img/FAIRTestResult_diagram_v12.drawio.png"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/codeRepository
+<https://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/image
+<https://schema.org/image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://usefulinc.com/ns/doap#repository
+<http://usefulinc.com/ns/doap#repository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://usefulinc.com/ns/doap#repository> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#repository> <http://www.w3.org/2000/01/rdf-schema#label> "repository" .
+# 
+# http://www.w3.org/ns/dcat#contactPoint
+<http://www.w3.org/ns/dcat#contactPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dcat#contactPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat#> .
+<http://www.w3.org/ns/dcat#contactPoint> <http://www.w3.org/2000/01/rdf-schema#label> "contact point"@en .
+# 
+# http://www.w3.org/ns/dcat#endpointDescription
+<http://www.w3.org/ns/dcat#endpointDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dcat#endpointDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat#> .
+<http://www.w3.org/ns/dcat#endpointDescription> <http://www.w3.org/2000/01/rdf-schema#label> "endpoint description"@en .
+# 
+# http://www.w3.org/ns/dcat#endpointURL
+<http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat#> .
+<http://www.w3.org/ns/dcat#endpointURL> <http://www.w3.org/2000/01/rdf-schema#label> "endpoint URL"@en .
+# 
+# http://www.w3.org/ns/dcat#landingPage
+<http://www.w3.org/ns/dcat#landingPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dcat#landingPage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat#> .
+<http://www.w3.org/ns/dcat#landingPage> <http://www.w3.org/2000/01/rdf-schema#label> "landing page"@en .
+# 
+# http://www.w3.org/ns/dcat#theme
+<http://www.w3.org/ns/dcat#theme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dcat#theme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat#> .
+<http://www.w3.org/ns/dcat#theme> <http://www.w3.org/2000/01/rdf-schema#label> "theme"@en .
+# 
+# http://www.w3.org/ns/dqv#inDimension
+<http://www.w3.org/ns/dqv#inDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dqv#inDimension> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dqv#> .
+<http://www.w3.org/ns/dqv#inDimension> <http://www.w3.org/2000/01/rdf-schema#label> "in dimension"@en .
+# 
+# http://www.w3.org/ns/prov#hadMember
+<http://www.w3.org/ns/prov#hadMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#hadMember> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov#hadMember> <http://www.w3.org/2000/01/rdf-schema#label> "had member"@en .
+# 
+# http://www.w3.org/ns/prov#used
+<http://www.w3.org/ns/prov#used> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#used> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov#used> <http://www.w3.org/2000/01/rdf-schema#label> "used"@en .
+# 
+# http://www.w3.org/ns/prov#wasAssociatedWith
+<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "was associated with"@en .
+# 
+# http://www.w3.org/ns/prov#wasAttributedTo
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/2000/01/rdf-schema#label> "was attributed to"@en .
+# 
+# http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov#wasDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "was derived from"@en .
+# 
+# http://www.w3.org/ns/prov#wasGeneratedBy
+<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#label> "was generated by"@en .
+# 
+# http://www.w3.org/ns/prov#wasStartedBy
+<http://www.w3.org/ns/prov#wasStartedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#wasStartedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov#wasStartedBy> <http://www.w3.org/2000/01/rdf-schema#label> "was started by"@en .
+# 
+# https://semanticscience.org/resource/SIO_000233
+<https://semanticscience.org/resource/SIO_000233> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://semanticscience.org/resource/SIO_000233> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semanticscience.org/ontology/sio.owl> .
+<https://semanticscience.org/resource/SIO_000233> <http://www.w3.org/2000/01/rdf-schema#label> "is implementation of" .
+# 
+# https://semanticscience.org/resource/SIO_000234
+<https://semanticscience.org/resource/SIO_000234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://semanticscience.org/resource/SIO_000234> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semanticscience.org/ontology/sio.owl> .
+<https://semanticscience.org/resource/SIO_000234> <http://www.w3.org/2000/01/rdf-schema#label> "has implementation" .
+# 
+# https://w3id.org/dpv#isApplicableFor
+<https://w3id.org/dpv#isApplicableFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/dpv#isApplicableFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Property designed to indicate the type of digital object the metric or test is applicable for. See [https://github.com/OSTrails/digital-object-commons/blob/main/object_types_draft.csv](https://github.com/OSTrails/digital-object-commons/blob/main/object_types_draft.csv) for a set of supported digital object types" .
+<https://w3id.org/dpv#isApplicableFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/dpv#> .
+<https://w3id.org/dpv#isApplicableFor> <http://www.w3.org/2000/01/rdf-schema#label> "is applicable for"@en .
+# 
+# https://w3id.org/ftr#assessmentTarget
+<https://w3id.org/ftr#assessmentTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ftr#assessmentTarget> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasDerivedFrom> .
+<https://w3id.org/ftr#assessmentTarget> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ftr#TestResultSet> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ftr#TestResult> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ftr#assessmentTarget> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/ftr#assessmentTarget> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship indicating that was the resource being assessed. The property links the results of the assessment ot the resource itself. For example, a dataset with URI example.org/myData was the target of the FAIR assessment result."@en .
+<https://w3id.org/ftr#assessmentTarget> <http://www.w3.org/2000/01/rdf-schema#label> "assessment target"@en .
+# 
+# https://w3id.org/ftr#hasAssociatedMetric
+<https://w3id.org/ftr#hasAssociatedMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ftr#hasAssociatedMetric> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ftr#hasBenchmark> .
+<https://w3id.org/ftr#hasAssociatedMetric> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ftr#Benchmark> .
+<https://w3id.org/ftr#hasAssociatedMetric> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ftr#Metric> .
+<https://w3id.org/ftr#hasAssociatedMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "Property used to link a benchmark with the metrics included in it. A benchmark may contain many metrics" .
+<https://w3id.org/ftr#hasAssociatedMetric> <http://www.w3.org/2000/01/rdf-schema#label> "has associated metric"@en .
+# 
+# https://w3id.org/ftr#hasBenchmark
+<https://w3id.org/ftr#hasBenchmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ftr#hasBenchmark> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ftr#Metric> .
+<https://w3id.org/ftr#hasBenchmark> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ftr#Benchmark> .
+<https://w3id.org/ftr#hasBenchmark> <http://www.w3.org/2000/01/rdf-schema#comment> "Property used to link a metric to the benchmarks it belongs to. A metric may belong to many benchmarks."@en .
+<https://w3id.org/ftr#hasBenchmark> <http://www.w3.org/2000/01/rdf-schema#label> "has benchmark"@en .
+# 
+# https://w3id.org/ftr#invokesTest
+<https://w3id.org/ftr#invokesTest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ftr#invokesTest> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ftr#ScoringAlgorithm> .
+<https://w3id.org/ftr#invokesTest> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ftr#Test> .
+<https://w3id.org/ftr#invokesTest> <http://www.w3.org/2000/01/rdf-schema#comment> "Property used to determine which concrete tests are expected to be invoked by a benchmark scoring algorithm"@en .
+<https://w3id.org/ftr#invokesTest> <http://www.w3.org/2000/01/rdf-schema#comment> "invokes test"@en .
+# 
+# https://w3id.org/ftr#outputFromAlgorithm
+<https://w3id.org/ftr#outputFromAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ftr#outputFromAlgorithm> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasDerivedFrom> .
+<https://w3id.org/ftr#outputFromAlgorithm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ftr#BenchmarkScore> .
+<https://w3id.org/ftr#outputFromAlgorithm> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ftr#ScoringAlgorithm> .
+<https://w3id.org/ftr#outputFromAlgorithm> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship to indicate which scoring algorithm was used to obtain a benchmark score from grading a set of test results."@en .
+<https://w3id.org/ftr#outputFromAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "output from algorithm"@en .
+# 
+# https://w3id.org/ftr#outputFromTest
+<https://w3id.org/ftr#outputFromTest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ftr#outputFromTest> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasDerivedFrom> .
+<https://w3id.org/ftr#outputFromTest> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ftr#TestResult> .
+<https://w3id.org/ftr#outputFromTest> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ftr#Test> .
+<https://w3id.org/ftr#outputFromTest> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a test result with its corresponding test"@en .
+<https://w3id.org/ftr#outputFromTest> <http://www.w3.org/2000/01/rdf-schema#label> "output from test" .
+# 
+# https://w3id.org/ftr#scoredTestResults
+<https://w3id.org/ftr#scoredTestResults> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ftr#scoredTestResults> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasDerivedFrom> .
+<https://w3id.org/ftr#scoredTestResults> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ftr#BenchmarkScore> .
+<https://w3id.org/ftr#scoredTestResults> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ftr#TestResultSet> .
+<https://w3id.org/ftr#scoredTestResults> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship designed to link a benchmark score (which contains the value of an assessment) to the set of test results that contain the pass/fail status and are used to create the numeric value of the assessment according to the indications of a scoring algorithm"@en .
+<https://w3id.org/ftr#scoredTestResults> <http://www.w3.org/2000/01/rdf-schema#label> "scored test results"@en .
+# 
+# https://w3id.org/ftr#scoringFunction
+<https://w3id.org/ftr#scoringFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ftr#scoringFunction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ftr#Benchmark> .
+<https://w3id.org/ftr#scoringFunction> <http://www.w3.org/2000/01/rdf-schema#range> <https://semanticscience.org/resource/SIO_000090> .
+<https://w3id.org/ftr#scoringFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "Property used to link a benchmark with the specification document that indicates how to score it. The benchmark itself may be implemented with a scoring algorithm"@en .
+<https://w3id.org/ftr#scoringFunction> <http://www.w3.org/2000/01/rdf-schema#label> "scoring function"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
+# 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#label> "title"@en .
+# 
+# http://vivoweb.org/ontology/core#abbreviation
+<http://vivoweb.org/ontology/core#abbreviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://vivoweb.org/ontology/core#abbreviation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vivoweb.org/ontology/core#> .
+<http://vivoweb.org/ontology/core#abbreviation> <http://www.w3.org/2000/01/rdf-schema#label> "abbreviation"@en .
+# 
+# http://www.w3.org/ns/dcat#keyword
+<http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/2000/01/rdf-schema#comment> <http://www.w3.org/ns/dcat#> .
+<http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/2000/01/rdf-schema#label> "keyword"@en .
+# 
+# http://www.w3.org/ns/dcat#version
+<http://www.w3.org/ns/dcat#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/dcat#version> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat#> .
+<http://www.w3.org/ns/dcat#version> <http://www.w3.org/2000/01/rdf-schema#label> "version"@en .
+# 
+# http://www.w3.org/ns/prov#value
+<http://www.w3.org/ns/prov#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/prov#value> <http://www.w3.org/2000/01/rdf-schema#comment> "Property used to indicate th value of a test results (e.g., pass/fail). When used in a benchmarkScore, the value may be a number that indicates the assessment score according a benchmark scoring algorihtm." .
+<http://www.w3.org/ns/prov#value> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov#value> <http://www.w3.org/2000/01/rdf-schema#label> "value"@en .
+# 
+# https://w3id.org/ftr#affectedElements
+<https://w3id.org/ftr#affectedElements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ftr#affectedElements> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ftr#TestResult> .
+<https://w3id.org/ftr#affectedElements> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/ftr#affectedElements> <http://www.w3.org/2000/01/rdf-schema#comment> "Elements affected by the test execution. For example, if a test assesses whether the contents of a resource comply agains a standard, this property may be used  to indicate which elements within the resource have issues."@en .
+<https://w3id.org/ftr#affectedElements> <http://www.w3.org/2000/01/rdf-schema#label> "affected elements"@en .
+# 
+# https://w3id.org/ftr#applicationArea
+<https://w3id.org/ftr#applicationArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ftr#applicationArea> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ftr#Metric> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ftr#Benchmark> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ftr#applicationArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/ftr#applicationArea> <http://www.w3.org/2000/01/rdf-schema#comment> "Area of research that a metric or benchmark is applicable for. E.g., a scientific domain."@en .
+<https://w3id.org/ftr#applicationArea> <http://www.w3.org/2000/01/rdf-schema#label> "application area"@en .
+# 
+# https://w3id.org/ftr#completion
+<https://w3id.org/ftr#completion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ftr#completion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ftr#TestResult> .
+<https://w3id.org/ftr#completion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/ftr#completion> <http://www.w3.org/2000/01/rdf-schema#comment> "Percentage value of completion of a test result for a given resource. For example, if the test passes, completion is expected to be 1. Otherwise, completion is a value between 0..1."@en .
+<https://w3id.org/ftr#completion> <http://www.w3.org/2000/01/rdf-schema#label> "completion"@en .
+# 
+# https://w3id.org/ftr#hasNegativeValidation
+<https://w3id.org/ftr#hasNegativeValidation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ftr#hasNegativeValidation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ftr#Metric> .
+<https://w3id.org/ftr#hasNegativeValidation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/ftr#hasNegativeValidation> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links to a resource that does not pass the metric (a negative example)"@en .
+<https://w3id.org/ftr#hasNegativeValidation> <http://www.w3.org/2000/01/rdf-schema#label> "has negative example"@en .
+# 
+# https://w3id.org/ftr#hasPositiveValidation
+<https://w3id.org/ftr#hasPositiveValidation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ftr#hasPositiveValidation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ftr#Metric> .
+<https://w3id.org/ftr#hasPositiveValidation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/ftr#hasPositiveValidation> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links to a resource that may be used to pass the metric (a positive example)"@en .
+<https://w3id.org/ftr#hasPositiveValidation> <http://www.w3.org/2000/01/rdf-schema#label> "has positive validation"@en .
+# 
+# https://w3id.org/ftr#log
+<https://w3id.org/ftr#log> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ftr#log> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ftr#TestResult> .
+<https://w3id.org/ftr#log> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/ftr#log> <http://www.w3.org/2000/01/rdf-schema#comment> "Log associated with the test (if any)"@en .
+<https://w3id.org/ftr#log> <http://www.w3.org/2000/01/rdf-schema#label> "log"@en .
+# 
+# https://w3id.org/ftr#status
+<https://w3id.org/ftr#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ftr#status> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/ftr#status> <http://www.w3.org/2000/01/rdf-schema#comment> "Status of the resource: For example, i.e., whether it's active or deprecated. The value of a test result is captured with prov:value."@en .
+<https://w3id.org/ftr#status> <http://www.w3.org/2000/01/rdf-schema#label> "status"@en .
+# 
+# https://w3id.org/ftr#supportedBy
+<https://w3id.org/ftr#supportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ftr#supportedBy> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ftr#Test> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/ftr#Metric> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ftr#supportedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/ftr#supportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes which tools support this particular metric or test" .
+<https://w3id.org/ftr#supportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "supported by" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/dcat#DataService
+<http://www.w3.org/ns/dcat#DataService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dcat#DataService> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat#> .
+<http://www.w3.org/ns/dcat#DataService> <http://www.w3.org/2000/01/rdf-schema#label> "Data service"@en .
+# 
+# http://www.w3.org/ns/dqv#Dimension
+<http://www.w3.org/ns/dqv#Dimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dqv#Dimension> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dqv#> .
+<http://www.w3.org/ns/dqv#Dimension> <http://www.w3.org/2000/01/rdf-schema#label> "Dimension"@en .
+# 
+# http://www.w3.org/ns/dqv#Metric
+<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/TR/vocab-dqv/> .
+<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/2000/01/rdf-schema#label> "Metric"@en .
+# 
+# http://www.w3.org/ns/dqv#QualityMeasurement
+<http://www.w3.org/ns/dqv#QualityMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dqv#QualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/TR/vocab-dqv/> .
+<http://www.w3.org/ns/dqv#QualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Quality measurement"@en .
+# 
+# http://www.w3.org/ns/prov#Activity
+<http://www.w3.org/ns/prov#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#Activity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov#Activity> <http://www.w3.org/2000/01/rdf-schema#label> "Activity"@en .
+# 
+# http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent"@en .
+# 
+# http://www.w3.org/ns/prov#Collection
+<http://www.w3.org/ns/prov#Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#Collection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov#Collection> <http://www.w3.org/2000/01/rdf-schema#label> "Collection"@en .
+# 
+# http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/2000/01/rdf-schema#label> "Entity"@en .
+# 
+# https://semanticscience.org/resource/SIO_000090
+<https://semanticscience.org/resource/SIO_000090> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://semanticscience.org/resource/SIO_000090> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semanticscience.org/ontology/sio.owl> .
+<https://semanticscience.org/resource/SIO_000090> <http://www.w3.org/2000/01/rdf-schema#label> "Specification"@en .
+# 
+# https://w3id.org/ftr#Benchmark
+<https://w3id.org/ftr#Benchmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ftr#Benchmark> <http://www.w3.org/2000/01/rdf-schema#comment> "Benchmarks are community-specific groupings of a set of Metrics that provides a narrative of those particular ways in which that community defines FAIR for assessment purposes."@en .
+<https://w3id.org/ftr#Benchmark> <http://www.w3.org/2000/01/rdf-schema#label> "Benchmark"@en .
+# 
+# https://w3id.org/ftr#BenchmarkScore
+<https://w3id.org/ftr#BenchmarkScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ftr#BenchmarkScore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dqv#QualityMeasurement> .
+<https://w3id.org/ftr#BenchmarkScore> <http://www.w3.org/2000/01/rdf-schema#comment> "Score obtained after executing a scoring algorithm over a set of test results. The benchmark score includes a value, a log and a link to the test results used to obtain the score. "@en .
+<https://w3id.org/ftr#BenchmarkScore> <http://www.w3.org/2000/01/rdf-schema#label> "Benchmark score"@en .
+# 
+# https://w3id.org/ftr#Metric
+<https://w3id.org/ftr#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ftr#Metric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dqv#Metric> .
+<https://w3id.org/ftr#Metric> <http://www.w3.org/2000/01/rdf-schema#comment> "Narrative description that a Test must wholly implement. Metrics may be domain-agnostic or not."@en .
+<https://w3id.org/ftr#Metric> <http://www.w3.org/2000/01/rdf-schema#label> "Metric"@en .
+# 
+# https://w3id.org/ftr#ScoringAlgorithm
+<https://w3id.org/ftr#ScoringAlgorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ftr#ScoringAlgorithm> <http://www.w3.org/2000/01/rdf-schema#comment> "A benchmark implementation in the form of an interpretative algorithm\nAlgorithms may specify the exact set of tests which are to be run by the assessment service. Algorithms contextualise the sum of all test results for a given benchmark, into a final quantitative assessment result. The execution of an algorithm yields an assessment result."@en .
+<https://w3id.org/ftr#ScoringAlgorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Scoring algorithm"@en .
+# 
+# https://w3id.org/ftr#Test
+<https://w3id.org/ftr#Test> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ftr#Test> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#DataService> .
+<https://w3id.org/ftr#Test> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
+<https://w3id.org/ftr#Test> <http://www.w3.org/2000/01/rdf-schema#comment> "Service, formed by an API and associated piece of code that implements a Metric, and is executed (by a FAIR assessment tool), retrieving a particular result."@en .
+<https://w3id.org/ftr#Test> <http://www.w3.org/2000/01/rdf-schema#label> "Test"@en .
+# 
+# https://w3id.org/ftr#TestExecutionActivity
+<https://w3id.org/ftr#TestExecutionActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ftr#TestExecutionActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/ftr#TestExecutionActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "The action carried out by an agent of calling an API in which a test (or set of tests) were run. The result of this activity is either a `TestResult` or a `TestResultSet`."@en .
+<https://w3id.org/ftr#TestExecutionActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Test execution activity"@en .
+# 
+# https://w3id.org/ftr#TestResult
+<https://w3id.org/ftr#TestResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ftr#TestResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/ftr#TestResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Output of running a test over a resource. A test result also should contain provenance metadata about the process followed to create it. `TestResult`is represented as an extension of `prov:Entity`. A test result points to the corresponding test specification through the `ftr:definedBy` property." .
+<https://w3id.org/ftr#TestResult> <http://www.w3.org/2000/01/rdf-schema#label> "Test result"@en .
+# 
+# https://w3id.org/ftr#TestResultSet
+<https://w3id.org/ftr#TestResultSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ftr#TestResultSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Collection> .
+<https://w3id.org/ftr#TestResultSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/ftr#TestResultSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of FAIR test results, together with their respective metadata. Common metadata may describe the set. For example, if all results where run by a request to the same API."@en .
+<https://w3id.org/ftr#TestResultSet> <http://www.w3.org/2000/01/rdf-schema#label> "Test result set"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://creativecommons.org/licenses/by/4.0/
+<http://creativecommons.org/licenses/by/4.0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/ftr#
+<https://w3id.org/ftr#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/ftr#> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#label> "creator"@en .
+# 
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#label> "license"@en .
+# 
+# Generated by the OWL API (version 5.1.18.2021-07-30T21:49:07Z) https://github.com/owlcs/owlapi/
