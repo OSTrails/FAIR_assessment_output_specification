@@ -193,6 +193,7 @@ prov:wasStartedBy rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/dpv#isApplicableFor
 <https://w3id.org/dpv#isApplicableFor> rdf:type owl:ObjectProperty ;
+                                       rdfs:comment "Property designed to indicate the type of digital object the metric or test is applicable for. See [https://github.com/OSTrails/digital-object-commons/blob/main/object_types_draft.csv](https://github.com/OSTrails/digital-object-commons/blob/main/object_types_draft.csv) for a set of supported digital object types" ;
                                        rdfs:isDefinedBy <https://w3id.org/dpv#> ;
                                        rdfs:label "is applicable for"@en .
 
@@ -314,6 +315,18 @@ prov:value rdf:type owl:DatatypeProperty ;
                   rdfs:range xsd:anyURI ;
                   rdfs:comment "Elements affected by the test execution. For example, if a test assesses whether the contents of a resource comply agains a standard, this property may be used  to indicate which elements within the resource have issues."@en ;
                   rdfs:label "affected elements"@en .
+
+
+###  https://w3id.org/ftr#applicationArea
+:applicationArea rdf:type owl:DatatypeProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :Benchmark
+                                             :Metric
+                                           )
+                             ] ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Area of research that a metric or benchmark is applicable for. E.g., a scientific domain."@en ;
+                 rdfs:label "application area"@en .
 
 
 ###  https://w3id.org/ftr#completion
