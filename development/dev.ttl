@@ -455,7 +455,7 @@ prov:Entity rdf:type owl:Class ;
 ###  https://w3id.org/ftr#Metric
 :Metric rdf:type owl:Class ;
         rdfs:subClassOf dqv:Metric ;
-        rdfs:comment "Narrative domain-agnostic description that a Test must wholly implement."@en ;
+        rdfs:comment "Narrative description that a Test must wholly implement. Metrics may be domain-agnostic or not."@en ;
         rdfs:label "Metric"@en .
 
 
