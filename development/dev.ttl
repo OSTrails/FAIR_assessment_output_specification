@@ -305,6 +305,7 @@ dcat:version rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3.org/ns/prov#value
 prov:value rdf:type owl:DatatypeProperty ;
+           rdfs:comment "Property used to indicate th value of a test results (e.g., pass/fail). When used in a benchmarkScore, the value may be a number that indicates the assessment score according a benchmark scoring algorihtm." ;
            rdfs:isDefinedBy prov: ;
            rdfs:label "value"@en .
 
@@ -333,7 +334,7 @@ prov:value rdf:type owl:DatatypeProperty ;
 :completion rdf:type owl:DatatypeProperty ;
             rdfs:domain :TestResult ;
             rdfs:range xsd:float ;
-            rdfs:comment "Percentage value of completion of a test result for a given resource. For example, if the test passes, completion is expected to be 1. Otherwise, completion is a value 0..1."@en ;
+            rdfs:comment "Percentage value of completion of a test result for a given resource. For example, if the test passes, completion is expected to be 1. Otherwise, completion is a value between 0..1."@en ;
             rdfs:label "completion"@en .
 
 
