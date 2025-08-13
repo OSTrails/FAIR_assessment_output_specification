@@ -33,7 +33,7 @@
                          owl:priorVersion <https://w3id.org/ftr/1.1.0> ;
                          owl:versionInfo "1.2.0"@en ;
                          <https://schema.org/codeRepository> "https://github.com/OSTrails/FAIR_testing_resource_vocabulary"^^xsd:anyURI ;
-                         <https://schema.org/image> "https://ostrails.github.io/FAIR_assessment_output_specification/development/img/FAIRTestResult_diagram_v12.drawio.png"^^xsd:anyURI .
+                         <https://schema.org/image> "https://ostrails.github.io/FAIR_testing_resource_vocabulary/development/img/FAIRTestResult_diagram_v12.drawio.png" .
 
 #################################################################
 #    Annotation properties

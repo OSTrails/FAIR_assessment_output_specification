@@ -64,7 +64,40 @@ function loadTOC(){
       $("#references").load("sections/references-en.html"); 
       $("#crossref").load("sections/crossref-en.html", null, loadHash); 
     });
-    </script> 
+    </script>
+	<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Add example button selection logic
+    for (const button of document.querySelectorAll(".ds-selector-tabs .selectors button")) {
+      button.onclick = () => {
+        const ex = button.closest(".ds-selector-tabs");
+        ex.querySelector("button.selected").classList.remove("selected");
+        ex.querySelector(".selected").classList.remove("selected");
+        button.classList.add('selected');
+        ex.querySelector("." + button.dataset.selects).classList.add("selected");
+      }
+    }
+
+    // Toggle show/hide changes
+    for (const elem of document.querySelectorAll(".show-changes")) {
+      elem.onclick = () => {
+        if (elem.classList.contains("selected")) {
+          // Remove highlight class from elements having "changed" class
+          elem.classList.remove("selected");
+          for (const changed of document.querySelectorAll(".changed")) {
+            changed.classList.remove("highlight");
+          }
+        } else {
+          // Add highlight class to elements having "changed" class
+          elem.classList.add("selected");
+          for (const changed of document.querySelectorAll(".changed")) {
+            changed.classList.add("highlight");
+          }
+        }
+      }
+    }
+  });
+</script> 
   </head> 
 
 <body>
@@ -85,15 +118,15 @@ function loadTOC(){
 <dt>Revision:</dt>
 <dd>1.2.0</dd>
 <dt>Authors:</dt>
-<dd>Allyson Lister</dd><dd>Clement Jonquet</dd><dd>Daniel Garijo</dd><dd>Elli Papadopoulou</dd><dd>Leonidas Pispiringas</dd><dd>Lukas Arnhold</dd><dd>Mark Wilkinson</dd><dd>Neil Chue Hong</dd><dd>Pablo Alarcón</dd><dd>Rober Huber</dd><dd>Wim Hugo</dd>
+<dd>Daniel Garijo</dd><dd>Mark Wilkinson</dd><dd>Pablo Alarcón</dd><dd>Allyson Lister</dd><dd>Elli Papadopoulou</dd><dd>Leonidas Pispiringas</dd><dd>Lukas Arnhold</dd><dd>Wim Hugo</dd>
 
 <dt>Source:</dt>
 <dd><a href="https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing">https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing</a></dd><dd><a href="https://raw.githubusercontent.com/OSTrails/FAIR_assessment_output_specification/main/cqs/cqs.csv">https://raw.githubusercontent.com/OSTrails/FAIR_assessment_output_specification/main/cqs/cqs.csv</a></dd>
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by/4.0/-blue.svg" alt="http://creativecommons.org/licenses/by/4.0/" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
-<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Allyson Lister, Clement Jonquet, Daniel Garijo, Elli Papadopoulou, Leonidas Pispiringas, Lukas Arnhold, Mark Wilkinson, Neil Chue Hong, Pablo Alarcón, Rober Huber, Wim Hugo. FAIR Testing Resource Vocabulary. Revision: 1.2.0. Retrieved from: https://w3id.org/ftr/1.2.0</dd>
+<dd>
+	Daniel Garijo, 	Mark Wilkinson, Pablo Alarcón, 	Allyson Lister, 	Leonidas Pispiringas, 	 Elli Papadopoulou,   Lukas Arnhold,  Wim Hugo. FAIR Test Results vocabulary. Revision: 1.2.0. Retrieved from: https://w3id.org/ftr/1.2.0</dd>
 <dt>Vocabulary maintained at:</dt>
 <dd><a href="https://github.com/OSTrails/FAIR_testing_resource_vocabulary">https://github.com/OSTrails/FAIR_testing_resource_vocabulary</a></dd>
 </dl>
