@@ -24,12 +24,12 @@
                                                             "Wim Hugo"@en ;
                          <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/2.0/> ;
                          <http://purl.org/dc/terms/source> "https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing"^^xsd:anyURI ,
-                                                           "https://raw.githubusercontent.com/OSTrails/FAIR_assessment_output_specification/main/cqs/cqs.csv"^^xsd:anyURI ;
+                                                           "https://raw.githubusercontent.com/OSTrails/FAIR_testing_resource_vocabulary/main/cqs/cqs.csv"^^xsd:anyURI ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "ftr"@en ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ftr#" ;
                          owl:versionInfo "0.0.1"@en ;
-                         <https://schema.org/codeRepository> "https://github.com/OSTrails/FAIR_assessment_output_specification"^^xsd:anyURI ;
-                         <https://schema.org/image> "https://ostrails.github.io/FAIR_assessment_output_specification/development/img/FAIRTestResult_diagram_v3.drawio.png"^^xsd:anyURI .
+                         <https://schema.org/codeRepository> "https://github.com/OSTrails/FAIR_testing_resource_vocabulary"^^xsd:anyURI ;
+                         <https://schema.org/image> "https://ostrails.github.io/FAIR_testing_resource_vocabulary/development/img/FAIRTestResult_diagram_v3.drawio.png"^^xsd:anyURI .
 
 #################################################################
 #    Annotation properties

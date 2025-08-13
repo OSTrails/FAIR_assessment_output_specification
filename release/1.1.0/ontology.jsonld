@@ -303,7 +303,7 @@
     "@value" : "https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing"
   }, {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "https://raw.githubusercontent.com/OSTrails/FAIR_assessment_output_specification/main/cqs/cqs.csv"
+    "@value" : "https://raw.githubusercontent.com/OSTrails/FAIR_testing_resource_vocabulary/main/cqs/cqs.csv"
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@language" : "en",
@@ -324,11 +324,11 @@
   } ],
   "https://schema.org/codeRepository" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "https://github.com/OSTrails/FAIR_assessment_output_specification"
+    "@value" : "https://github.com/OSTrails/FAIR_testing_resource_vocabulary"
   } ],
   "https://schema.org/image" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "https://ostrails.github.io/FAIR_assessment_output_specification/development/img/FAIRTestResult_diagram_v8.drawio.png"
+    "@value" : "https://ostrails.github.io/FAIR_testing_resource_vocabulary/development/img/FAIRTestResult_diagram_v8.drawio.png"
   } ]
 }, {
   "@id" : "https://w3id.org/ftr#Algorithm",

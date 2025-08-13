@@ -97,7 +97,126 @@ function loadTOC(){
       }
     }
   });
-</script> 
+</script>
+
+<style> 
+.hl-bold { font-weight: bold; color: #0a3; }
+  .comment { color: #999; }
+  table, thead, tr, td { padding: 5px; border-width: 1px; border-spacing: 0px; border-style: solid; border-collapse: collapse; }
+  table.example {width: 100%;}
+  .example > pre.context:before {
+    content: "Context";
+    float: right;
+    font: x-large Arial, sans-serif;
+    color: gray;
+    border: solid thin black;
+    padding: 0.2em;
+  }
+  .example > pre.frame:before {
+    content: "Frame";
+    float: right;
+    font: x-large Arial, sans-serif;
+    color: gray;
+    border: solid thin black;
+    padding: 0.2em;
+  }
+  .example > pre.input:before {
+    content: "Input";
+    float: right;
+    font: x-large Arial, sans-serif;
+    color: gray;
+    border: solid thin black;
+    padding: 0.2em;
+  }
+  .example > pre.result:before {
+    content: "Result";
+    float: right;
+    font: x-large Arial, sans-serif;
+    color: gray;
+    border: solid thin black;
+    padding: 0.2em;
+  }
+  .example > pre.turtle:before {
+    content: "Turtle";
+    float: right;
+    font: x-large Arial, sans-serif;
+    color: gray;
+    border: solid thin black;
+    padding: 0.2em;
+  }
+  .highlight.changed, .show-changes {
+    background-color: lime;
+  }
+  .show-changes.selected:before {
+    content: "de-highlight";
+  }
+  .show-changes:before {
+    content: "highlight";
+  }
+  aside.example {
+    overflow-y: hidden;
+  }
+  /* example tab selection */
+  .ds-selector-tabs {
+    padding-bottom: 2em;
+  }
+  .ds-selector-tabs .selectors {
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+    height: 28px;
+  }
+  .ds-selector-tabs .selectors button {
+    display: inline-block;
+    min-width: 54px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    height: 27px;
+    padding: 0 8px;
+    line-height: 27px;
+    transition: all,0.218s;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    color: #666;
+    border: 1px solid transparent;
+  }
+  .ds-selector-tabs .selectors button:first-child {
+    margin-left: 2px;
+  }
+  .ds-selector-tabs .selectors button.selected {
+    color: #202020 !important;
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #fff !important;
+  }
+  .ds-selector-tabs .selectors button:hover {
+    background-color: transparent;
+    color: #202020;
+    cursor: pointer;
+  }
+  .ds-selector-tabs pre:not(.preserve), .ds-selector-tabs table:not(.preserve) {
+    display: none;
+  }
+  .ds-selector-tabs pre.selected, .ds-selector-tabs table.selected {
+    display: block;
+  }
+  a.playground {
+    display: inline-block;
+    width: 150px;
+    border: 1px solid transparent;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    background-color: rgb(192, 192, 192);
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  a[href].playground {
+    padding: 4px 0 3px 8px;
+    border-bottom: none;
+    text-decoration: none;
+    color: #666;
+  }
+</style>
   </head> 
 
 <body>

@@ -28,13 +28,13 @@
         <terms:creator xml:lang="en">Rober Huber</terms:creator>
         <terms:creator xml:lang="en">Wim Hugo</terms:creator>
         <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing</terms:source>
-        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/OSTrails/FAIR_assessment_output_specification/main/cqs/cqs.csv</terms:source>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/OSTrails/FAIR_testing_resource_vocabulary/main/cqs/cqs.csv</terms:source>
         <vann:preferredNamespacePrefix xml:lang="en">ftr</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/ftr#</vann:preferredNamespaceUri>
         <owl:priorVersion rdf:resource="https://w3id.org/ftr/1.0.0"/>
         <owl:versionInfo xml:lang="en">1.1.0</owl:versionInfo>
-        <schema:codeRepository rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/OSTrails/FAIR_assessment_output_specification</schema:codeRepository>
-        <schema:image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ostrails.github.io/FAIR_assessment_output_specification/development/img/FAIRTestResult_diagram_v8.drawio.png</schema:image>
+        <schema:codeRepository rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/OSTrails/FAIR_testing_resource_vocabulary</schema:codeRepository>
+        <schema:image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ostrails.github.io/FAIR_testing_resource_vocabulary/development/img/FAIRTestResult_diagram_v8.drawio.png</schema:image>
     </owl:Ontology>
     
 
