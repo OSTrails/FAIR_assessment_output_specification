@@ -447,7 +447,8 @@ prov:Entity rdf:type owl:Class ;
 
 ###  https://w3id.org/ftr#ScoringAlgorithm
 :ScoringAlgorithm rdf:type owl:Class ;
-                  rdfs:comment "Piece of code that contextualises the sum of all test results for a given benchmark, into a final quantitative assessment result. The execution of an algorithm yields an assessment result."@en ;
+                  rdfs:comment """A benchmark implementation in the form of an interpretative algorithm
+Algorithms may specify the exact set of tests which are to be run by the assessment service. Algorithms contextualise the sum of all test results for a given benchmark, into a final quantitative assessment result. The execution of an algorithm yields an assessment result."""@en ;
                   rdfs:label "Scoring algorithm"@en .
 
 
