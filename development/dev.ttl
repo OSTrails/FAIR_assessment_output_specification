@@ -102,12 +102,14 @@
 
 ###  http://www.w3.org/ns/dcat#contactPoint
 dcat:contactPoint rdf:type owl:ObjectProperty ;
-                  rdfs:isDefinedBy dcat: .
+                  rdfs:isDefinedBy dcat: ;
+                  rdfs:label "contact point"@en .
 
 
 ###  http://www.w3.org/ns/dcat#endpointDescription
 dcat:endpointDescription rdf:type owl:ObjectProperty ;
-                         rdfs:isDefinedBy dcat: .
+                         rdfs:isDefinedBy dcat: ;
+                         rdfs:label "endpoint description"@en .
 
 
 ###  http://www.w3.org/ns/dcat#endpointURL
@@ -180,6 +182,13 @@ prov:wasStartedBy rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/dpv#isApplicableFor
 <https://w3id.org/dpv#isApplicableFor> rdf:type owl:ObjectProperty ;
                                        rdfs:isDefinedBy <https://w3id.org/dpv#> .
+
+
+###  https://w3id.org/ftr#assessmentTarget
+:assessmentTarget rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf prov:wasDerivedFrom ;
+                  rdfs:comment "Relationship indicating that was the resource being assessed. The property links the results of the assessment ot the resource itself. For example, a dataset with URI example.org/myData was the target of the FAIR assessment result."@en ;
+                  rdfs:label "assessment target"@en .
 
 
 ###  https://w3id.org/ftr#hasAssociatedMetric
@@ -289,60 +298,56 @@ prov:value rdf:type owl:DatatypeProperty ;
              rdfs:label "supported by" .
 
 
-###  https://w3id.org/ftr#usedAPI
-:usedAPI rdf:type owl:DatatypeProperty ;
-         rdfs:domain :TestExecutionActivity ;
-         rdfs:range xsd:anyURI ;
-         rdfs:comment "API used in a test execution activity (if known)"@en ;
-         rdfs:label "used api"@en .
-
-
 #################################################################
 #    Classes
 #################################################################
 
 ###  http://www.w3.org/ns/dcat#DataService
 dcat:DataService rdf:type owl:Class ;
-                 rdfs:isDefinedBy dcat: .
+                 rdfs:isDefinedBy dcat: ;
+                 rdfs:label "Data service"@en .
 
 
 ###  http://www.w3.org/ns/dqv#Dimension
 dqv:Dimension rdf:type owl:Class ;
-              rdfs:isDefinedBy dqv: .
+              rdfs:isDefinedBy dqv: ;
+              rdfs:label "Dimension"@en .
 
 
 ###  http://www.w3.org/ns/dqv#Metric
 dqv:Metric rdf:type owl:Class ;
-           rdfs:isDefinedBy <https://www.w3.org/TR/vocab-dqv/> .
+           rdfs:isDefinedBy <https://www.w3.org/TR/vocab-dqv/> ;
+           rdfs:label "Metric"@en .
 
-### http://www.w3.org/ns/dqv#QualityMeasurement
+
+###  http://www.w3.org/ns/dqv#QualityMeasurement
 dqv:QualityMeasurement rdf:type owl:Class ;
-           rdfs:isDefinedBy <https://www.w3.org/TR/vocab-dqv/> .
+                       rdfs:isDefinedBy <https://www.w3.org/TR/vocab-dqv/> ;
+                       rdfs:label "Quality measurement"@en .
+
 
 ###  http://www.w3.org/ns/prov#Activity
 prov:Activity rdf:type owl:Class ;
-              rdfs:isDefinedBy prov: .
+              rdfs:isDefinedBy prov: ;
+              rdfs:label "Activity"@en .
 
 
 ###  http://www.w3.org/ns/prov#Agent
 prov:Agent rdf:type owl:Class ;
-           rdfs:isDefinedBy prov: .
+           rdfs:isDefinedBy prov: ;
+           rdfs:label "Agent"@en .
 
 
 ###  http://www.w3.org/ns/prov#Collection
 prov:Collection rdf:type owl:Class ;
-                rdfs:isDefinedBy prov: .
+                rdfs:isDefinedBy prov: ;
+                rdfs:label "Collection"@en .
 
 
 ###  http://www.w3.org/ns/prov#Entity
 prov:Entity rdf:type owl:Class ;
-            rdfs:isDefinedBy prov: .
-
-
-###  https://w3id.org/ftr#ScoringAlgorithm
-:ScoringAlgorithm rdf:type owl:Class ;
-           rdfs:comment "Piece of code that contextualises the sum of all test results for a given benchmark, into a final quantitative assessment result. The execution of an algorithm yields an assessment result." ;
-           rdfs:label "Scoring algorithm"@en .
+            rdfs:isDefinedBy prov: ;
+            rdfs:label "Entity"@en .
 
 
 ###  https://w3id.org/ftr#Benchmark
@@ -350,11 +355,12 @@ prov:Entity rdf:type owl:Class ;
            rdfs:comment "Benchmarks are community-specific groupings of a set of Metrics that provides a narrative of those particular ways in which that community defines FAIR for assessment purposes."@en ;
            rdfs:label "Benchmark"@en .
 
+
 ###  https://w3id.org/ftr#BenchmarkScore
 :BenchmarkScore rdf:type owl:Class ;
-           rdfs:subClassOf dqv:QualityMeasurement;
-           rdfs:comment "Score obtained after executing a scoring algorithm over a set of test results. The benchmark score includes a value, a log and a link to the test results used to obtain the score. "@en ;
-           rdfs:label "Benchmark score"@en .
+                rdfs:subClassOf dqv:QualityMeasurement ;
+                rdfs:comment "Score obtained after executing a scoring algorithm over a set of test results. The benchmark score includes a value, a log and a link to the test results used to obtain the score. "@en ;
+                rdfs:label "Benchmark score"@en .
 
 
 ###  https://w3id.org/ftr#Metric
@@ -362,6 +368,12 @@ prov:Entity rdf:type owl:Class ;
         rdfs:subClassOf dqv:Metric ;
         rdfs:comment "Narrative domain-agnostic description that a Test must wholly implement."@en ;
         rdfs:label "Metric"@en .
+
+
+###  https://w3id.org/ftr#ScoringAlgorithm
+:ScoringAlgorithm rdf:type owl:Class ;
+                  rdfs:comment "Piece of code that contextualises the sum of all test results for a given benchmark, into a final quantitative assessment result. The execution of an algorithm yields an assessment result."@en ;
+                  rdfs:label "Scoring algorithm"@en .
 
 
 ###  https://w3id.org/ftr#Test
