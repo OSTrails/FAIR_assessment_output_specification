@@ -5,7 +5,7 @@ Repository to track the requirements and specifications of FAIR assessment repor
 
 **Permanent identifier:** [https://w3id.org/ftr#](https://w3id.org/ftr#) (click to see documentation and examples)
 
-**Authors**:  Daniel Garijo, Mark Wilkinson, Pablo Alarcón, Rober Huber, Lukas Arnhold, Allyson Lister, Elli Papadopoulou, Leonidas Pispiringas, Neil Chue Hong, Clement Jonquet, Wim Hugo
+**Authors**:  Daniel Garijo, Mark Wilkinson, Pablo Alarcón, Esteban Gonzalez-Guardia, Lukas Arnhold, Allyson Lister, Elli Papadopoulou, Leonidas Pispiringas, Rober Huber, Neil Chue Hong, Clement Jonquet, Wim Hugo
 
 **Source document**: [https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing](https://docs.google.com/document/d/1HusredfHgymRg2ub4L0GnVSRV8IWZvFJyMkE6POejpc/edit?usp=sharing), with contributions from an initial modeling by Robert Huber and a [diagram](https://owncloud.tuwien.ac.at/index.php/s/VaGxqnf5MxfDtzz#/files_mediaviewer/dmp-dqv.png) authored by Lukas Arnhold.
 
