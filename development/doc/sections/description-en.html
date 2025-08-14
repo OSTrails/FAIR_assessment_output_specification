@@ -13,6 +13,7 @@ We distinguish the following main concepts:
 - **Metric**: Narrative domain-agnostic description that a Test must wholly implement.
 - **Benchmark**: Benchmarks are community-specific groupings of a set of Metrics that provides a narrative of those particular ways in which that community defines FAIR for assessment purposes.
 - **Scoring algorithm**: A benchmark implementation in the form of an interpretative algorithm. Algorithms may specify the exact set of tests which are to be run by the assessment service. Algorithms contextualise the sum of all test results for a given benchmark, into a final quantitative assessment result. The execution of an algorithm yields an assessment result. 
+- **Benchmark score**: Score obtained after executing a scoring algorithm over a set of test results. The benchmark score includes a value, a log and a link to the test results used to obtain the score. 
 
 In the following we describe with examples how to adopt each of the classes and properties in the specification.
     
@@ -76,7 +77,7 @@ Test results have basic metadata to understand which test did they run, an expla
   }
 }
     </pre>
-    <pre class="turtle" data-content-type="text/turtle" data-result-for="Sample JSON-LD document using full IRIs instead of terms-expanded" data-to-rdf="" aria-busy="false">
+    <pre class="turtle" data-content-type="text/turtle" data-result-for="Sample test result metadata" data-to-rdf="" aria-busy="false">
 @prefix dcterms: &lt;http://purl.org/dc/terms/&gt;
 @prefix ftr: &lt;https://w3id.org/ftr#&gt;
 @prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt;
@@ -163,88 +164,131 @@ PASS:  The GUID of the metadata is a uri, which is known to be allow authenticat
 -->
 <span class = "markdown">
 
-### Example: Defining a Metric and associating it with a test
+### Example: Grouping test results in a test result set
+Many assessment tools run a set of tests (e.g., organized under a benchmark). In those cases, we propose a flexible approach by using a test result set to record their common provenance information (e.g., the assessment target). For example, the following result set describes two successful test results from two tests (one for checking compliance with URI schemes and another one for content negotiation) over the same resource as before ([https://w3id.org/example](https://w3id.org/example)). Both JSON-LD and Turtle serializations are provided:
+</span>
 
-FAIR Metric contains basic metadata to undertand the test must wholly implement. This is exemplar representation of a Metric:
-
-```turtle
-
-@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
-@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
-@prefix vcard: &lt;http://www.w3.org/2006/vcard/ns#&gt; .
+<aside class="example ds-selector-tabs" id="test-example">
+    <div class="selectors">
+      <button class="selected" data-selects="expanded">JSON-LD</button>
+      <button data-selects="turtle" class="">Turtle</button>
+    </div>
+    <pre class="expanded json-ld nohighlight selected">
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "urn:foops:66b6e48a-b8db-4ac9-b935-1a94b8d93ea7",
+  "@type": "https://w3id.org/ftr#TestResultSet",
+  "description": "Set of test results that includes two tests for FAIR assessment of ontologies.",
+  "identifier": {
+    "@id": "urn:foops:66b6e48a-b8db-4ac9-b935-1a94b8d93ea7"
+  },
+  "assessmentTarget": {
+    "@id": "https://w3id.org/example"
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "title": "Results from running two tests for benchmark: General Benchmark for FAIR Principles",
+  "generatedAtTime": {
+    "@type": "http://www.w3.org/2001/XMLSchema#date",
+    "@value": "Wed Aug 13 22:07:39 CEST 2025"
+  },
+  "hadMember": [
+    {
+      "@id": "urn:foops:5d81b8b7-4083-4d4a-8269-e06270b4e9f7",
+      "@type": "https://w3id.org/ftr#TestResult",
+      "description": "Ontology URI follows a follows a persistent URI scheme (URI: https://w3id.org/example )",
+      "identifier": {
+        "@id": "urn:foops:5d81b8b7-4083-4d4a-8269-e06270b4e9f7"
+      },
+      "title": "Output from running test: PURL1 (https://w3id.org/foops/test/PURL1)",
+      "value": "ok",
+      "completion": {
+        "@value": 100
+      },
+      "log": "Ontology URI follows a follows a persistent URI scheme (URI: https://w3id.org/example )",
+      "outputFromTest": {
+        "@id": "https://w3id.org/foops/test/PURL1",
+        "@type": "Test",
+        "description": "This test verifies if the ontology has a persistent URL. [description shortened]",
+        "identifier": "https://w3id.org/foops/test/PURL1",
+        "title": "Ontology has a persistent URL"
+      }
+    },
+    {
+      "@id": "urn:foops:ff848be7-fc65-438c-b701-b96ca78d3aa2",
+      "@type": "https://w3id.org/ftr#TestResult",
+      "description": "Ontology URL is resolvable in application/rdf+xml",
+      "identifier": {
+        "@id": "urn:foops:ff848be7-fc65-438c-b701-b96ca78d3aa2"
+      },
+      "title": "Output from running test: URI1 (https://w3id.org/foops/test/URI1)",
+      "value": "ok",
+      "completion": {
+        "@value": 100
+      },
+      "log": "Ontology URL is resolvable in application/rdf+xml",
+      "outputFromTest": {
+        "@id": "https://w3id.org/foops/test/URI1",
+        "@type": "Test",
+        "description": "This test verifies if the ontology URI that was found within the ontology document is resolvable. [... description shortened]",
+        "identifier": "https://w3id.org/foops/test/URI1",
+        "title": "Ontology URI is resolvable"
+      }
+    }
+  ]
+}
+    </pre>
+    <pre class="turtle" data-content-type="text/turtle" data-result-for="Sample test result set metadata" data-to-rdf="" aria-busy="false">
+@prefix dc: &lt;http://purl.org/dc/terms/&gt; .
+@prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
 @prefix ftr: &lt;https://w3id.org/ftr#&gt; .
-@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
-@prefix doap: &lt;http://usefulinc.com/ns/doap#&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-@prefix dqv: &lt;http://www.w3.org/ns/dqv#&gt; .
-@prefix vivo: &lt;http://vivoweb.org/ontology/core#&gt; . 
 
-&lt;https://w3id.org/foops/metric/CN1&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/CN1&gt; ;
-	dcterms:title "Content negotiation for RDF"@en ;
-	dcterms:description """ 
+&lt;urn:foops:66b6e48a-b8db-4ac9-b935-1a94b8d93ea7&gt;
+  a ftr:TestResultSet ;
+  dc:description "Set of test results that includes two tests for FAIR assessment of ontologies." ;
+  dc:identifier &lt;urn:foops:66b6e48a-b8db-4ac9-b935-1a94b8d93ea7&gt; ;
+  dc:license &lt;http://creativecommons.org/licenses/by/4.0/&gt; ;
+  dc:title "Results from running two tests for benchmark: General Benchmark for FAIR Principles" ;
+  prov:generatedAtTime "Wed Aug 13 22:07:39 CEST 2025"^^xsd:date ;
+  prov:hadMember &lt;urn:foops:5d81b8b7-4083-4d4a-8269-e06270b4e9f7&gt;, &lt;urn:foops:ff848be7-fc65-438c-b701-b96ca78d3aa2&gt; .
 
-This metric ensures that the vocabulary is accessible in recognized RDF serialization formats.
+&lt;urn:foops:5d81b8b7-4083-4d4a-8269-e06270b4e9f7&gt;
+  a ftr:TestResult ;
+  dc:description "Ontology URI follows a follows a persistent URI scheme (URI: https://w3id.org/example )" ;
+  dc:identifier &lt;urn:foops:5d81b8b7-4083-4d4a-8269-e06270b4e9f7&gt; ;
+  dc:title "Output from running test: PURL1 (https://w3id.org/foops/test/PURL1)" ;
+  prov:value "pass" ;
+  ftr:completion 100 ;
+  ftr:log "Ontology URI follows a follows a persistent URI scheme (URI: https://w3id.org/example )" ;
+  ftr:outputFromTest &lt;https://w3id.org/foops/test/PURL1&gt; .
 
-**What is being measured?**
+&lt;urn:foops:ff848be7-fc65-438c-b701-b96ca78d3aa2&gt;
+  a ftr:TestResult ;
+  dc:description "Ontology URL is resolvable in application/rdf+xml" ;
+  dc:identifier &lt;urn:foops:ff848be7-fc65-438c-b701-b96ca78d3aa2&gt; ;
+  dc:title "Output from running test: URI1 (https://w3id.org/foops/test/URI1)" ;
+  prov:value "pass" ;
+  ftr:completion 100 ;
+  ftr:log "Ontology URL is resolvable in application/rdf+xml" ;
+  ftr:outputFromTest &lt;https://w3id.org/foops/test/URI1&gt; .
 
-The accessibility of the vocabulary in any of the following RDF serializations:
+&lt;https://w3id.org/foops/test/PURL1&gt;
+  a ftr:Test ;
+  dc:description "This test verifies if the ontology has a persistent URL. [description shortened]" ;
+  dc:identifier "https://w3id.org/foops/test/PURL1" ;
+  dc:title "Ontology has a persistent URL" .
 
-* RDF/XML
-* Turtle (TTL)
-* N-Triples
-* JSON-LD
+&lt;https://w3id.org/foops/test/URI1&gt;
+  a ftr:Test ;
+  dc:description "This test verifies if the ontology URI that was found within the ontology document is resolvable. [... description shortened]" ;
+  dc:identifier "https://w3id.org/foops/test/URI1" ;
+  dc:title "Ontology URI is resolvable" .         
+    </pre>
+</aside>
 
-**Why should we measure it?**
-
-RDF serializations are fundamental for semantic web technologies. Ensuring accessibility in at least one of these formats allows tools and systems to process the vocabulary effectively, enabling interoperability and usability across platforms.
-
-**What must be provided for the measurement?**
-
-An ontology URI.
-
-**What are considered valid results?**
-
-Valid results occur if the ontology is accessible in at least one specified RDF serialization. The test fails if no recognized serialization is returned or the serialization does not match the required formats.
-	"""@en ;
-	rdfs:label "Metric CN1"^^xsd:string ;
-	vivo:abbreviation "Metric CN1"^^xsd:string ;	
-    ftr:supportedBy "https://w3id.org/foops/";
-	dcat:contactPoint &lt;https://orcid.org/0000-0003-0454-7145&gt; ;
-	dcterms:creator &lt;https://orcid.org/0000-0003-0454-7145&gt; ;
-	dcterms:creator &lt;https://orcid.org/0000-0003-3587-0367&gt; ;
-	dqv:inDimension  &lt;https://w3id.org/fair/principles/terms/A1&gt; ;
-	dcterms:publisher &lt;https://oeg.fi.upm.es&gt; ;
-	dcat:version "0.0.1"^^xsd:string ;
-	dcterms:license &lt;http://creativecommons.org/licenses/by/2.0/&gt; ;
-	dcat:keyword "Content negotiation"@en , "Metric"@en ;
-	&lt;http://semanticscience.org/resource/SIO_000233&gt; &lt;https://w3id.org/foops/test/CN1&gt; ;
-	dcat:landingPage &lt;https://w3id.org/foops/metric/CN1&gt; ; 
-	ftr:hasBenchmark &lt;https://w3id.org/foops/benchmark/ALL&gt; ; 
-	ftr:status "Active"@en .
-&lt;https://orcid.org/0000-0003-0454-7145&gt; a vcard:Individual;
-	vcard:fn "Daniel Garijo"^^xsd:string ;
-	vcard:hasEmail &lt;mailto:dgarijo@upm.es&gt; .
-&lt;https://orcid.org/0000-0003-3587-0367&gt; a vcard:Individual;
-	vcard:fn "Maria Poveda"^^xsd:string ;
-	vcard:hasEmail &lt;mailto:m.poveda@upm.es&gt; .
-&lt;https://w3id.org/fair/principles/terms/A1&gt; a &lt;https://w3id.org/fair/principles/terms/FAIR-SubPrinciple&gt; ;
-	rdfs:label "A1"^^xsd:string ;
-	vivo:abbreviation "A1"^^xsd:string ;
-	dcterms:description "(meta)data are retrievable by their identifier using a standardized communications protocol"@en .
-&lt;https://oeg.fi.upm.es&gt; a vcard:Organization .
-&lt;https://w3id.org/foops/test/CN1&gt; a ftr:Test .
-&lt;https://w3id.org/foops/benchmark/ALL&gt; a ftr:Benchmark;
-    dcterms:title "General Benchmark ALL for FAIR Principles"@en ;
-    dcterms:description "This benchmark specifies the criteria for evaluating aspects of data quality according to the FAIR principle. Apply to all metrics."@en .
-
-```
-
-
-### Example: Grouping test results in a test set
-Many assessment tools run a set of tests (e.g., organized under a test collection), and they may share common provenance metadata. In those cases, we propose a flexible approach by using a test set to record their provenance information. For example, let us have two tests from an assessment service run over a single resource:
-
+<!--
 ```turtle
 @prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
 @prefix ftr: &lt;https://w3id.org/fair_test_result#&gt; .
@@ -296,11 +340,203 @@ ex:foops a schema:SoftwareApplication;
     schema:url "https://w3id.org/foops"^^xsd:anyURI;
     schema:softwareVersion "0.1.0".
 ```
+-->
+
+<span class = "markdown">
+
+### Example: Defining a metric and associating it with a test
+
+A metric contains basic metadata to undertand what a test must implement. This is an exemplar representation of a Metric designed to assess the availablity of an ontology on the web. In this case, the metric metadata points to its test implementation ([https://w3id.org/foops/metric/CN1](https://w3id.org/foops/metric/CN1)):
+
+</span>
+
+<aside class="example ds-selector-tabs" id="test-example">
+    <div class="selectors">
+      <button class="selected" data-selects="expanded">JSON-LD</button>
+      <button data-selects="turtle" class="">Turtle</button>
+    </div>
+    <pre class="expanded json-ld nohighlight selected">
+{
+  "@context": "https://w3id.org/ftr/context",
+  "@id": "https://w3id.org/foops/metric/CN1",
+  "@type": "dqv:Metric",
+  "dcterms:creator": [
+    {
+      "@id": "https://orcid.org/0000-0003-0454-7145"
+    },
+    {
+      "@id": "https://orcid.org/0000-0003-3587-0367"
+    }
+  ],
+  "description": {
+    "@language": "en",
+    "@value": "This metric ensures that the vocabulary is accessible in recognized RDF serialization formats. [rest of the definition omitted for simplicity]"
+  },
+  "identifier": {
+    "@id": "https://w3id.org/foops/metric/CN1"
+  },
+  "license": {
+    "@id": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "dcterms:publisher": {
+      "@id": "https://oeg.fi.upm.es"
+  },
+  "title": {
+    "@language": "en",
+    "@value": "Ontology has content negotiation for RDF"
+  },
+  "hasImplementation": {
+    "@id": "https://w3id.org/foops/test/CN1"
+  },
+  "abbreviation": {
+    "@type": "http://www.w3.org/2001/XMLSchema#string",
+    "@value": "CN1-M"
+  },
+  "contactPoint": {
+    "@id": "https://orcid.org/0000-0003-0454-7145"
+  },
+  "keyword": [
+    {
+      "@language": "en",
+      "@value": "Content negotiation"
+    },
+    {
+      "@language": "en",
+      "@value": "Metric"
+    },
+    {
+      "@language": "en",
+      "@value": "RDF"
+    }
+  ],
+  "landingPage": {
+    "@id": "https://w3id.org/foops/metric/CN1"
+  },
+  "version": {
+    "@type": "http://www.w3.org/2001/XMLSchema#string",
+    "@value": "0.0.1"
+  },
+  "inDimension": {
+    "@id": "https://w3id.org/fair/principles/terms/A1"
+  },
+  "isApplicableFor": {
+    "@id": "https://schema.org/DefinedTermSet"
+  },
+  "hasBenchmark": {
+    "@id": "https://w3id.org/foops/benchmark/ALL"
+  },
+  "status": {
+    "@language": "en",
+    "@value": "Active"
+  },
+  "supportedBy": {
+    "@id": "https://w3id.org/foops/"
+  }
+}
+    </pre>
+    <pre class="turtle" data-content-type="text/turtle" data-result-for="Sample metric metadata" data-to-rdf="" aria-busy="false">
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+@prefix ftr: &lt;https://w3id.org/ftr#&gt; .
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix dqv: &lt;http://www.w3.org/ns/dqv#&gt; .
+@prefix vivo: &lt;http://vivoweb.org/ontology/core#&gt; . 
+
+&lt;https://w3id.org/foops/metric/CN1&gt; a ftr:Metric ;
+	dcterms:identifier &lt;https://w3id.org/foops/metric/CN1&gt; ;
+	dcterms:title "Content negotiation for RDF"@en ;
+	dcterms:description """ 
+This metric ensures that the vocabulary is accessible in recognized RDF serialization formats.
+[rest of the definition omitted for simplicity]
+	"""@en ;
+	vivo:abbreviation "Metric CN1"^^xsd:string ;	
+    ftr:supportedBy "https://w3id.org/foops/";
+	dcat:contactPoint &lt;https://orcid.org/0000-0003-0454-7145&gt; ;
+	dcterms:creator &lt;https://orcid.org/0000-0003-0454-7145&gt; ; #creator details omitted for simplicity
+	dcterms:creator &lt;https://orcid.org/0000-0003-3587-0367&gt; ;
+	dqv:inDimension  &lt;https://w3id.org/fair/principles/terms/A1&gt; ;
+	dcterms:publisher &lt;https://oeg.fi.upm.es&gt; ;
+	dcat:version "0.0.1"^^xsd:string ;
+	dcterms:license &lt;http://creativecommons.org/licenses/by/2.0/&gt; ;
+	dcat:keyword "Content negotiation"@en , "Metric"@en ;
+	&lt;http://semanticscience.org/resource/SIO_000233&gt; &lt;https://w3id.org/foops/test/CN1&gt; ;
+	dcat:landingPage &lt;https://w3id.org/foops/metric/CN1&gt; ; 
+	ftr:hasBenchmark &lt;https://w3id.org/foops/benchmark/ALL&gt; ; 
+	ftr:status "Active"@en .
+
+&lt;https://w3id.org/foops/benchmark/ALL&gt; a ftr:Benchmark;
+    dcterms:title "General Benchmark ALL for FAIR Principles"@en ;
+    dcterms:description "This benchmark specifies the criteria for evaluating aspects of vocabularies according to the FAIR principles."@en .        
+    </pre>
+</aside>
+<!--
+
+```turtle
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix vcard: &lt;http://www.w3.org/2006/vcard/ns#&gt; .
+@prefix ftr: &lt;https://w3id.org/ftr#&gt; .
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix doap: &lt;http://usefulinc.com/ns/doap#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix dqv: &lt;http://www.w3.org/ns/dqv#&gt; .
+@prefix vivo: &lt;http://vivoweb.org/ontology/core#&gt; . 
+
+&lt;https://w3id.org/foops/metric/CN1&gt; a dqv:Metric ;
+	dcterms:identifier &lt;https://w3id.org/foops/metric/CN1&gt; ;
+	dcterms:title "Content negotiation for RDF"@en ;
+	dcterms:description """ 
+This metric ensures that the vocabulary is accessible in recognized RDF serialization formats.
+[rest of the definition omitted for simplicity]
+	"""@en ;
+	vivo:abbreviation "Metric CN1"^^xsd:string ;	
+    ftr:supportedBy "https://w3id.org/foops/";
+	dcat:contactPoint &lt;https://orcid.org/0000-0003-0454-7145&gt; ;
+	dcterms:creator &lt;https://orcid.org/0000-0003-0454-7145&gt; ; #creator details omitted for simplicity
+	dcterms:creator &lt;https://orcid.org/0000-0003-3587-0367&gt; ;
+	dqv:inDimension  &lt;https://w3id.org/fair/principles/terms/A1&gt; ;
+	dcterms:publisher &lt;https://oeg.fi.upm.es&gt; ;
+	dcat:version "0.0.1"^^xsd:string ;
+	dcterms:license &lt;http://creativecommons.org/licenses/by/2.0/&gt; ;
+	dcat:keyword "Content negotiation"@en , "Metric"@en ;
+	&lt;http://semanticscience.org/resource/SIO_000233&gt; &lt;https://w3id.org/foops/test/CN1&gt; ;
+	dcat:landingPage &lt;https://w3id.org/foops/metric/CN1&gt; ; 
+	ftr:hasBenchmark &lt;https://w3id.org/foops/benchmark/ALL&gt; ; 
+	ftr:status "Active"@en .
+
+&lt;https://w3id.org/foops/benchmark/ALL&gt; a ftr:Benchmark;
+    dcterms:title "General Benchmark ALL for FAIR Principles"@en ;
+    dcterms:description "This benchmark specifies the criteria for evaluating aspects of vocabularies according to the FAIR principles."@en .
+```
+-->
+<span class = "markdown">
+Metrics and benchmarks may be applicable to specific types of digital objects. For example, some metrics are useful for semantic artefacts, while others for datasets or research software. To indicate the type of digital object we recommend using the following types:
+
+| **Object Type Name** | **OSTrails primary identifer** |
+|---|---|
+| Multimedia | https://schema.org/MediaObject |
+| Document | https://schema.org/DigitalDocument |
+| Publication | https://schema.org/ScholarlyArticle |
+| Questionnaire/survey | http://purl.org/coar/resource_type/NHD0-W6SY |
+| Dataset | https://schema.org/Dataset |
+| Image | https://schema.org/ImageObject |
+| Model | http://semanticscience.org/resource/SIO_000510 |
+| Data management plan | https://vocabularies.coar-repositories.org/resource_types/c_ab20/ |
+| Terminology Artifact | https://schema.org/DefinedTermSet |
+| Protocol or Workflow | http://purl.obolibrary.org/obo/NCIT_C42753 |
+| Other Object Type | https://vocabularies.coar-repositories.org/resource_types/c_1843/ |
+| Object Type Agnostic | https://schema.org/CreativeWork |
+| Physical object/material | https://schema.org/IndividualProduct |
+| Software Source Code | https://schema.org/SoftwareSourceCode |
+| Software Application | https://schema.org/SoftwareApplication |
+
+These types are maintained at [https://github.com/OSTrails/digital-object-commons/blob/main/object_types_draft.csv](https://github.com/OSTrails/digital-object-commons/blob/main/object_types_draft.csv)
 
 
-### Example: Declaring a benchamrk with a set of defined metrics
+### Example: Declaring a benchmark with a set of defined metrics
 
-This exemplar metadata describes are community-specific groupings of a set of Metrics that provides a narrative of those particular ways in which that community defines FAIR for assessment purposes.
+Benchmarks describe community-specific groupings of metrics that provides a narrative of those particular ways in which that community defines FAIR for assessment purposes. For example, the following benchmark groups two metrics that are relevant for assessing ontologies (the [original benchmark used for this example](https://oeg-upm.github.io/fair_ontologies/doc/benchmark/ALL/ALL.ttl) contains more metrics, but it is simplified for illustration purposes): 
 
 ```turtle
 @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
@@ -330,35 +566,14 @@ This exemplar metadata describes are community-specific groupings of a set of Me
 	ftr:status "Active"@en ;
     ftr:associatedMetric 
         &lt;https://w3id.org/foops/metric/CN1&gt; ,
-        &lt;https://w3id.org/foops/metric/DOC1&gt; ,
-        &lt;https://w3id.org/foops/metric/FIND1&gt; ,
-        &lt;https://w3id.org/foops/metric/FIND2&gt; ,
-        &lt;https://w3id.org/foops/metric/FIND3&gt; ,
-        &lt;https://w3id.org/foops/metric/FIND_3_BIS&gt; ,
-        &lt;https://w3id.org/foops/metric/HTTP1&gt; ,
-        &lt;https://w3id.org/foops/metric/OM1&gt; ,
-        &lt;https://w3id.org/foops/metric/OM2&gt; ,
-        &lt;https://w3id.org/foops/metric/OM3&gt; ,
-        &lt;https://w3id.org/foops/metric/OM4.1&gt; , 
-        &lt;https://w3id.org/foops/metric/OM4.2&gt; ,
-        &lt;https://w3id.org/foops/metric/OM5.1&gt; ,
-        &lt;https://w3id.org/foops/metric/OM5.2&gt; ,
-        &lt;https://w3id.org/foops/metric/PURL1&gt; ,
-        &lt;https://w3id.org/foops/metric/URI1&gt; ,
-        &lt;https://w3id.org/foops/metric/URI2&gt; ,
-        &lt;https://w3id.org/foops/metric/VER1&gt; ,
-        &lt;https://w3id.org/foops/metric/VER2&gt; ,
-        &lt;https://w3id.org/foops/metric/VOC1&gt; ,
-        &lt;https://w3id.org/foops/metric/VOC2&gt; ,
-        &lt;https://w3id.org/foops/metric/VOC3&gt; ,
-        &lt;https://w3id.org/foops/metric/VOC4&gt; 
+        &lt;https://w3id.org/foops/metric/DOC1&gt; 
          .
 &lt;https://orcid.org/0000-0003-0454-7145&gt; a vcard:Individual;
 	vcard:fn "Daniel Garijo"^^xsd:string ;
-	vcard:hasEmail &lt;mailto:dgarijo@upm.es&gt; .
+	vcard:hasEmail &lt;mailto:example1@upm.es&gt; .
 &lt;https://orcid.org/0000-0003-3587-0367&gt; a vcard:Individual;
 	vcard:fn "Maria Poveda"^^xsd:string ;
-	vcard:hasEmail &lt;mailto:m.poveda@upm.es&gt; .
+	vcard:hasEmail &lt;mailto:example2@upm.es&gt; .
 &lt;https://w3id.org/foops/metric/CN1&gt; a dqv:Metric ;
 	dcterms:identifier &lt;https://w3id.org/foops/metric/CN1&gt; ;
 	rdfs:label "Metric CN1"^^xsd:string ;
@@ -367,89 +582,59 @@ This exemplar metadata describes are community-specific groupings of a set of Me
 	dcterms:identifier &lt;https://w3id.org/foops/metric/DOC1&gt; ;
 	rdfs:label "Metric DOC1"^^xsd:string ;
     vivo:abbreviation "Metric DOC1"^^xsd:string .
-&lt;https://w3id.org/foops/metric/FIND1&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/FIND1&gt; ;
-	rdfs:label "Metric FIND1"^^xsd:string ;
-    vivo:abbreviation "Metric FIND1"^^xsd:string .
-&lt;https://w3id.org/foops/metric/FIND2&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/FIND2&gt; ;
-	rdfs:label "Metric FIND2"^^xsd:string ;
-    vivo:abbreviation "Metric FIND2"^^xsd:string .
-&lt;https://w3id.org/foops/metric/FIND3&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/FIND3&gt; ;
-	rdfs:label "Metric FIND3"^^xsd:string ;
-    vivo:abbreviation "Metric FIND3"^^xsd:string .
-&lt;https://w3id.org/foops/metric/FIND_3_BIS&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/FIND_3_BIS&gt; ;
-	rdfs:label "Metric FIND_3_BIS"^^xsd:string ;
-    vivo:abbreviation "Metric FIND_3_BIS"^^xsd:string .
-&lt;https://w3id.org/foops/metric/HTTP1&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/HTTP1&gt; ;
-	rdfs:label "Metric HTTP1"^^xsd:string ;
-    vivo:abbreviation "Metric HTTP1"^^xsd:string .
-&lt;https://w3id.org/foops/metric/OM1&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/OM1&gt; ;
-	rdfs:label "Metric OM1"^^xsd:string ;
-    vivo:abbreviation "Metric OM1"^^xsd:string .
-&lt;https://w3id.org/foops/metric/OM2&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/OM2&gt; ;
-	rdfs:label "Metric OM2"^^xsd:string ;
-    vivo:abbreviation "Metric OM2"^^xsd:string .
-&lt;https://w3id.org/foops/metric/OM3&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/OM3&gt; ;
-	rdfs:label "Metric OM3"^^xsd:string ;
-    vivo:abbreviation "Metric OM3"^^xsd:string .
-&lt;https://w3id.org/foops/metric/OM4.1&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/OM4.1&gt; ;
-	rdfs:label "Metric OM4.1"^^xsd:string ;
-    vivo:abbreviation "Metric OM4.1"^^xsd:string .
-&lt;https://w3id.org/foops/metric/OM4.2&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/OM4.2&gt; ;
-	rdfs:label "Metric OM4.2"^^xsd:string ;
-    vivo:abbreviation "Metric OM4.2"^^xsd:string .
-&lt;https://w3id.org/foops/metric/OM5.1&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/OM5_1&gt; ;
-	rdfs:label "Metric OM5_1"^^xsd:string ;
-    vivo:abbreviation "Metric OM5_1"^^xsd:string .
-&lt;https://w3id.org/foops/metric/OM5.2&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/OM5_2.1&gt; ;
-	rdfs:label "Metric OM5_2.1"^^xsd:string ;
-    vivo:abbreviation "Metric OM5.2"^^xsd:string .
-&lt;https://w3id.org/foops/metric/PURL1&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/PURL1&gt; ;
-	rdfs:label "Metric PURL1"^^xsd:string ;
-    vivo:abbreviation "Metric PURL1"^^xsd:string .
-&lt;https://w3id.org/foops/metric/URI1&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/URI1&gt; ;
-	rdfs:label "Metric URI1"^^xsd:string ;
-    vivo:abbreviation "Metric URI1"^^xsd:string .
-&lt;https://w3id.org/foops/metric/URI2&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/URI2&gt; ;
-	rdfs:label "Metric URI2"^^xsd:string ;
-    vivo:abbreviation "Metric URI2"^^xsd:string .
-&lt;https://w3id.org/foops/metric/VER1&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/VER1&gt; ;
-	rdfs:label "Metric VER1"^^xsd:string ;
-    vivo:abbreviation "Metric VER1"^^xsd:string .
-&lt;https://w3id.org/foops/metric/VER2&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/VER2&gt; ;
-	rdfs:label "Metric VER2"^^xsd:string ;
-    vivo:abbreviation "Metric VER2"^^xsd:string .
-&lt;https://w3id.org/foops/metric/VOC1&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/VOC1&gt; ;
-	rdfs:label "Metric VOC1"^^xsd:string ;
-    vivo:abbreviation "Metric VOC1"^^xsd:string .
-&lt;https://w3id.org/foops/metric/VOC2&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/VOC2&gt; ;
-	rdfs:label "Metric VOC2"^^xsd:string ;
-    vivo:abbreviation "Metric VOC2"^^xsd:string .
-&lt;https://w3id.org/foops/metric/VOC3&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/VOC3&gt; ;
-	rdfs:label "Metric VOC3"^^xsd:string ;
-    vivo:abbreviation "Metric VOC3"^^xsd:string .
-&lt;https://w3id.org/foops/metric/VOC4&gt; a dqv:Metric ;
-	dcterms:identifier &lt;https://w3id.org/foops/metric/VOC4&gt; ;
-	rdfs:label "Metric VOC4"^^xsd:string ;
-    vivo:abbreviation "Metric VOC4"^^xsd:string .
 ```
+
+### Example: Describing a scoring algortihm with metadata
+Scoring algorithms implement a benchmark by indicating which tests are run and how their scores come to be. Here is a minimal example explaining how the benchmark described above is implemented to receive a score:
+
+```turtle
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix vcard: &lt;http://www.w3.org/2006/vcard/ns#&gt; .
+@prefix ftr: &lt;https://w3id.org/ftr#&gt; .
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix doap: &lt;http://usefulinc.com/ns/doap#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix dqv: &lt;http://www.w3.org/ns/dqv#&gt; .
+@prefix vivo: &lt;http://vivoweb.org/ontology/core#&gt; .
+
+&lt;https://w3id.org/foops/algorithm/ALL&gt; a ftr:ScoringAlgorithm ;
+    dcterms:description """ This algorithm represents how each test. """@en ;
+    dcterms:license &lt;http://creativecommons.org/licenses/by/2.0/&gt; ;
+    dcat:version "0.0.1"^^xsd:string ;
+    dcterms:creator &lt;https://orcid.org/0000-0003-0454-7145&gt; ;
+    ftr:invokesTest 
+        &lt;https://w3id.org/foops/test/CN1&gt; ,
+        &lt;https://w3id.org/foops/test/DOC1&gt .    # concrete tests that will be invoked when running the scoring algorithm
+
+```
+
+### Example: Describing a benchmark score
+Finally, we get to the score obtained by running a scoring algorithm. The score contains a value, a link to the test result set run and a log explaining the score. Following on the previous example:
+
+```turtle
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix vcard: &lt;http://www.w3.org/2006/vcard/ns#&gt; .
+@prefix ftr: &lt;https://w3id.org/ftr#&gt; .
+@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix doap: &lt;http://usefulinc.com/ns/doap#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix dqv: &lt;http://www.w3.org/ns/dqv#&gt; .
+@prefix vivo: &lt;http://vivoweb.org/ontology/core#&gt; .
+
+&lt;urn:foops:66b6e48a-b8db-4ac9-bbbb-example&gt; a ftr:BenchmarkScore ;
+    ftr:outputFromAlgorithm &lt;https://w3id.org/foops/algorithm/ALL&gt;          ## link to the previous algorithm.
+    prov:value "100";                                                       ## all tests are passed! 
+    ftr:log """
+        [Here goes the output rationale]
+        The score was obtained as follows: all passed tests are added and divided by the total number of tests run.
+        Since 2/2 test passed, your score is 100%
+    """;
+    ftr:scoredTestResults &lt;urn:foops:66b6e48a-b8db-4ac9-b935-1a94b8d93ea7&gt; . ## link to the previous test result set example
+```
+
 </span>
+
