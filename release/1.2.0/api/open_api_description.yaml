@@ -1,0 +1,156 @@
+openapi: 3.0.3
+info:
+  title: Api Documentation (template)
+  description: Api Documentation (template)
+  version: "1.0"
+  termsOfService: urn:tos
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0
+servers:
+  - url: https://example.com/your_server_goes_here
+tags:
+  - name: api-controller
+    description: api Controller
+
+paths:
+
+  /assess/test/{test_identifier}:
+    post:
+      tags:
+        - api-controller
+      summary: Runs a test on a resource following the FTR specification.
+      description: |
+        This call returns a JSON response obtained by api.    
+        Example request JSON:
+        ```
+        {
+          "resource_identifier": "https://w3id.org/example#"
+        }
+        ```
+      operationId: postTestAssessmentUsingPOST
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResourceAssessmentRequest'
+      parameters:
+        - name: test_identifier
+          in: path
+          required: true
+          description: Identifier of the test to run
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+        "201":
+          description: Created
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "404":
+          description: Not Found
+
+  /benchmarks:
+    get:
+      tags:
+        - api-controller
+      summary: Get benchmark metadata (in JSON-LD)
+      description: Returns benchmark metadata following the FTR specification. If no `benchmarkid` is provided, all benchmarks will be returned.
+      operationId: getBenchmarkMetadataUsingGET
+      parameters:
+        - name: benchmarkid
+          in: query
+          required: false
+          description: The ID of the benchmark to retrieve (optional)
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/ld+json:
+              schema:
+                type: string
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "404":
+          description: Not Found
+
+  /metrics:
+    get:
+      tags:
+        - api-controller
+      summary: Get metric metadata (in JSON-LD)
+      description: Returns metric metadata following the FTR specification. If no `metricid` is provided, all metrics will be returned.
+      operationId: getMetricMetadataUsingGET
+      parameters:
+        - name: metricid
+          in: query
+          required: false
+          description: The ID of the metric to retrieve (optional)
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/ld+json:
+              schema:
+                type: string
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "404":
+          description: Not Found
+
+  /tests:
+    get:
+      tags:
+        - api-controller
+      summary: Get test metadata (in JSON-LD)
+      description: Returns test metadata following the FTR specification. If no `testid` is provided, all tests will be returned.
+      operationId: getTestMetadataUsingGET
+      parameters:
+        - name: testid
+          in: query
+          required: false
+          description: The ID of the test to retrieve (optional)
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/ld+json:
+              schema:
+                type: string
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "404":
+          description: Not Found
+
+components:
+  schemas:
+    ResourceAssessmentRequest:
+      type: object
+      required:
+        - resource_identifier
+      properties:
+        resource_identifier:
+          type: string
+          description: URI of the resource to be assessed
+          example: https://w3id.org/example#
+
